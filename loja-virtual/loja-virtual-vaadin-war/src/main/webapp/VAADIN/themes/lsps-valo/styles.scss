@@ -1,7 +1,0 @@
-@import "../lsps-valo-base/lsps-valo-base";
-@import "sass/theme-app";
-
-.lsps-valo {
-  @include lsps-valo-base;
-  @include theme-app;
-}
