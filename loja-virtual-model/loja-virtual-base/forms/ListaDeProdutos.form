@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_ZPIygAaIEeOplufPKeswqw"
+    name="ListaDeProdutos"
+    newUI="true">
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_ZPIygQaIEeOplufPKeswqw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_PtKloAaLEeOplufPKeswqw"
+        componentID="">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+          xmi:id="_PtKloQaLEeOplufPKeswqw"
+          horizontal="true">
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdActionLink"
+            xmi:id="_d3zC4AaMEeOplufPKeswqw">
+          <listeners
+              xmi:id="_d3zC4QaMEeOplufPKeswqw"
+              listenerType="ACTION_LISTENER"
+              refresh="EDIT_POPUP">
+            <handle><![CDATA[showProdutoPopup := true;
+isNovoProduto := true;
+popedupProduto := null;]]></handle>
+          </listeners>
+          <text><![CDATA["Novo Produto"]]></text>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdActionLink"
+            xmi:id="_PtKlogaLEeOplufPKeswqw">
+          <listeners
+              xmi:id="_PtKlowaLEeOplufPKeswqw"
+              listenerType="ACTION_LISTENER"
+              refresh="LISTA_PRODUTOS"/>
+          <text><![CDATA["Atualizar"]]></text>
+        </components>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdTable"
+          xmi:id="_PtKlpAaLEeOplufPKeswqw"
+          componentID="LISTA_PRODUTOS">
+        <hints
+            xmi:id="_TTIfYAaOEeOplufPKeswqw"
+            key="height"
+            option="100%"/>
+        <columns
+            xmi:id="_PtKlpQaLEeOplufPKeswqw">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_PtKlpgaLEeOplufPKeswqw">
+            <content>produto.nome</content>
+          </content>
+          <header><![CDATA["Produto"]]></header>
+        </columns>
+        <columns
+            xmi:id="_ikWHAAaLEeOplufPKeswqw">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_ikWuEAaLEeOplufPKeswqw">
+            <content>produto.valorUnitario</content>
+          </content>
+          <header><![CDATA["Val.Unitário"]]></header>
+        </columns>
+        <columns
+            xmi:id="_jT0cIAaLEeOplufPKeswqw">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_jT0cIQaLEeOplufPKeswqw">
+            <content>produto.custoProducao</content>
+          </content>
+          <header><![CDATA["Custo de Produção"]]></header>
+        </columns>
+        <columns
+            xmi:id="_kCpRAAaLEeOplufPKeswqw">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_kCpRAQaLEeOplufPKeswqw">
+            <content>produto.custoCompraTerceiro</content>
+          </content>
+          <header><![CDATA["Custo de Compra Terceiro"]]></header>
+        </columns>
+        <columns
+            xmi:id="_HaqkUGRNEeWY2PN5hux4yQ">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_HaqkUWRNEeWY2PN5hux4yQ">
+            <content>produto.quantidade</content>
+          </content>
+          <header><![CDATA["Quantidade"]]></header>
+        </columns>
+        <columns
+            xmi:id="_YqZ7gAaNEeOplufPKeswqw">
+          <content
+              xsi:type="com.whitestein.lsps.modeler.form:NfdActionLink"
+              xmi:id="_abjwEAaNEeOplufPKeswqw">
+            <listeners
+                xmi:id="_fBNFgAaNEeOplufPKeswqw"
+                listenerType="ACTION_LISTENER"
+                refresh="EDIT_POPUP">
+              <handle><![CDATA[showProdutoPopup := true;
+isNovoProduto := false;
+popedupProduto := produto;]]></handle>
+            </listeners>
+            <text><![CDATA["Editar"]]></text>
+          </content>
+          <header><![CDATA["Ações"]]></header>
+        </columns>
+        <iterator><![CDATA[&produto]]></iterator>
+        <data>{index, size -> findAll(Produto)}</data>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdPopup"
+          xmi:id="_zYiAcAaMEeOplufPKeswqw"
+          componentID="EDIT_POPUP">
+        <child
+            xsi:type="com.whitestein.lsps.modeler.form:NfdViewModel"
+            xmi:id="_zYiAcQaMEeOplufPKeswqw"
+            componentID="POPUP_VIEW_MODEL">
+          <listeners
+              xmi:id="_zYiAcgaMEeOplufPKeswqw"
+              listenerType="INIT_LISTENER">
+            <handle>if isNovoProduto then popedupProduto := new Produto() end</handle>
+          </listeners>
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+              xmi:id="_zYiAcwaMEeOplufPKeswqw">
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+                xmi:id="_zYiAeAaMEeOplufPKeswqw"
+                componentID="NOME">
+              <binding><![CDATA[&popedupProduto.nome]]></binding>
+              <required>true</required>
+              <label><![CDATA["Nome:"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+                xmi:id="_e9hVcAioEeOfyMEsIkGYKw"
+                componentID="VAL_UNITARIO">
+              <binding><![CDATA[&popedupProduto.valorUnitario]]></binding>
+              <required>true</required>
+              <label><![CDATA["Valor Unitário:"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+                xmi:id="_e9hVcQioEeOfyMEsIkGYKw"
+                componentID="CUSTO_PRODUCAO">
+              <binding><![CDATA[&popedupProduto.custoProducao]]></binding>
+              <required>true</required>
+              <label><![CDATA["Custo de Produção:"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+                xmi:id="_e9hVcgioEeOfyMEsIkGYKw"
+                componentID="CUSTO_COMPRA_TERCEIRO">
+              <binding><![CDATA[&popedupProduto.custoCompraTerceiro]]></binding>
+              <required>true</required>
+              <label><![CDATA["Custo de compra terceiro:"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+                xmi:id="__98UEGRMEeWY2PN5hux4yQ"
+                componentID="QUANTIDADE">
+              <binding><![CDATA[&popedupProduto.quantidade]]></binding>
+              <required>true</required>
+              <label><![CDATA["Quantidade em Estoque:"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+                xmi:id="_zYiAeQaMEeOplufPKeswqw">
+              <components
+                  xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+                  xmi:id="_zYiAegaMEeOplufPKeswqw">
+                <content><![CDATA[""]]></content>
+              </components>
+              <components
+                  xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+                  xmi:id="_zYiAewaMEeOplufPKeswqw"
+                  horizontal="true">
+                <hints
+                    xmi:id="_zYiAfAaMEeOplufPKeswqw"
+                    key="width"
+                    option="100%"/>
+                <components
+                    xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+                    xmi:id="_zYiAfQaMEeOplufPKeswqw"
+                    horizontal="true">
+                  <hints
+                      xmi:id="_zYiAfgaMEeOplufPKeswqw"
+                      key="align"
+                      option="Bottom right"/>
+                  <components
+                      xsi:type="com.whitestein.lsps.modeler.form:NfdButton"
+                      xmi:id="_zYiAfwaMEeOplufPKeswqw">
+                    <listeners
+                        xmi:id="_zYiAgAaMEeOplufPKeswqw"
+                        listenerType="ACTION_LISTENER"
+                        refresh="EDIT_POPUP, LISTA_PRODUTOS"
+                        mergeViewModel="POPUP_VIEW_MODEL">
+                      <validators
+                          xmi:id="_zYiAgQaMEeOplufPKeswqw"
+                          placement="NOME">
+                        <message><![CDATA[if isEmpty(popedupProduto.nome) then "Informe nome" end]]></message>
+                      </validators>
+                      <validators
+                          xmi:id="_5NzyYQioEeOfyMEsIkGYKw"
+                          placement="VAL_UNITARIO">
+                        <message><![CDATA[if popedupProduto.valorUnitario = null then "Informe valor unitário" end]]></message>
+                      </validators>
+                      <validators
+                          xmi:id="__XP10QioEeOfyMEsIkGYKw"
+                          placement="CUSTO_PRODUCAO">
+                        <message><![CDATA[if popedupProduto.custoProducao = null then "Informe custo de produção" end]]></message>
+                      </validators>
+                      <validators
+                          xmi:id="__XP10AioEeOfyMEsIkGYKw"
+                          placement="CUSTO_COMPRA_TERCEIRO">
+                        <message><![CDATA[if popedupProduto.custoCompraTerceiro = null then "Informe custo de compra terceiro" end]]></message>
+                      </validators>
+                      <persistAction
+                          xmi:id="_jscGMAipEeOfyMEsIkGYKw">
+                        <persistAction></persistAction>
+                      </persistAction>
+                      <handle><![CDATA[showProdutoPopup := false;
+popedupProduto := null;]]></handle>
+                    </listeners>
+                    <hints
+                        xmi:id="_zYiAhAaMEeOplufPKeswqw"
+                        key="align"
+                        option="Bottom right"/>
+                    <text><![CDATA["Submeter"]]></text>
+                  </components>
+                  <components
+                      xsi:type="com.whitestein.lsps.modeler.form:NfdButton"
+                      xmi:id="_zYiAhQaMEeOplufPKeswqw">
+                    <listeners
+                        xmi:id="_zYiAhgaMEeOplufPKeswqw"
+                        listenerType="ACTION_LISTENER"
+                        refresh="EDIT_POPUP"
+                        clearViewModel="POPUP_VIEW_MODEL"
+                        scopeType="TOP_LEVEL">
+                      <handle><![CDATA[showProdutoPopup := false;
+popedupProduto := null;]]></handle>
+                    </listeners>
+                    <hints
+                        xmi:id="_zYiAhwaMEeOplufPKeswqw"
+                        key="align"
+                        option="Bottom right"/>
+                    <text><![CDATA["Cancelar"]]></text>
+                  </components>
+                </components>
+              </components>
+            </components>
+          </child>
+          <mergeType>MergeType.screenLevel</mergeType>
+        </child>
+        <visibleExpression>showProdutoPopup</visibleExpression>
+        <title><![CDATA[if isNovoProduto then "Novo Produto" else "Editar Produto" end]]></title>
+        <modalExpression>true</modalExpression>
+        <show></show>
+      </components>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_MM3HoAaLEeOplufPKeswqw"
+      name="produto"
+      variableType="Produto"/>
+  <variables
+      xmi:id="_mRvwYAaMEeOplufPKeswqw"
+      name="popedupProduto"
+      variableType="Produto"/>
+  <variables
+      xmi:id="_opRocAaMEeOplufPKeswqw"
+      name="showProdutoPopup"
+      variableType="Boolean">
+    <initialValueExpression>false</initialValueExpression>
+  </variables>
+  <variables
+      xmi:id="_GOojwAaNEeOplufPKeswqw"
+      name="isNovoProduto"
+      variableType="Boolean">
+    <initialValueExpression>false</initialValueExpression>
+  </variables>
+</com.whitestein.lsps.modeler.form:FormDefinition>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleConstants
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_2x190BLlEeKI580xfSNZyw">
+  <constants
+      xmi:id="_Bf1kkBN1EeKI580xfSNZyw"
+      name="ALIVE"
+      type="String">
+    <description>A constant representing the Alive execution state.</description>
+    <expression><![CDATA["ALIVE"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_-cgo4KUJEeOk8p-jxXj8sw"
+      name="EMAIL_REGEXP"
+      type="String">
+    <description>Regular expression for email address.</description>
+    <expression><![CDATA["^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_HGfrEBN1EeKI580xfSNZyw"
+      name="NOT_FINISHED"
+      type="String">
+    <description>A constant representing the Not finished execution state.</description>
+    <expression><![CDATA["NOT FINISHED"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_MbwfkBN1EeKI580xfSNZyw"
+      name="INACTIVE"
+      type="String">
+    <description>A constant representing the Inactive execution state.</description>
+    <expression><![CDATA["INACTIVE"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_QUoOkBN1EeKI580xfSNZyw"
+      name="ACTIVE"
+      type="String">
+    <description>A constant representing the Active execution state.</description>
+    <expression><![CDATA["ACTIVE"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_UdceEBN1EeKI580xfSNZyw"
+      name="READY"
+      type="String">
+    <description>A constant representing the Ready execution state.</description>
+    <expression><![CDATA["READY"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_YRk3ABN1EeKI580xfSNZyw"
+      name="RUNNING"
+      type="String">
+    <description>A constant representing the Running execution state.</description>
+    <expression><![CDATA["RUNNING"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_b7CRABN1EeKI580xfSNZyw"
+      name="FINISHED"
+      type="String">
+    <description>A constant representing the Finished execution state.</description>
+    <expression><![CDATA["FINISHED"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_gfKjgBN1EeKI580xfSNZyw"
+      name="ACHIEVED"
+      type="String">
+    <description>A constant representing the Achieved execution state.</description>
+    <expression><![CDATA["ACHIEVED"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_j7HtABN1EeKI580xfSNZyw"
+      name="FAILED"
+      type="String">
+    <description>A constant representing the Failed execution state.</description>
+    <expression><![CDATA["FAILED"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_nqJjgBN1EeKI580xfSNZyw"
+      name="DEACTIVATED"
+      type="String">
+    <description>A constant representing the Deactivated execution state.</description>
+    <expression><![CDATA["DEACTIVATED"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_rUcrABN1EeKI580xfSNZyw"
+      name="DEBUG_LEVEL"
+      type="Integer">
+    <description>A constant representing the Debug log level.</description>
+    <expression>100</expression>
+  </constants>
+  <constants
+      xmi:id="_ubRSABN1EeKI580xfSNZyw"
+      name="INFO_LEVEL"
+      type="Integer">
+    <description>A constant representing the Info log level.</description>
+    <expression>200</expression>
+  </constants>
+  <constants
+      xmi:id="_xk58cBN1EeKI580xfSNZyw"
+      name="WARNING_LEVEL"
+      type="Integer">
+    <description>A constant representing the Warning log level.</description>
+    <expression>300</expression>
+  </constants>
+  <constants
+      xmi:id="_0jaU8BN1EeKI580xfSNZyw"
+      name="ERROR_LEVEL"
+      type="Integer">
+    <description>A constant representing the Error log level.</description>
+    <expression>400</expression>
+  </constants>
+</com.whitestein.lsps.modeler.func:ModuleConstants>

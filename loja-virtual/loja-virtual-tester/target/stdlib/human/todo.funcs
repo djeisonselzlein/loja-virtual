@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_oeHUIH6XEeOazrC8xQ9gxw">
+  <functions
+      xmi:id="_pmji4H6XEeOazrC8xQ9gxw"
+      name="getTodoSubmitter"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getTodoSubmitter"
+      type="Person"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_pmji4X6XEeOazrC8xQ9gxw"
+        name="todo"
+        parameterType="Todo"
+        required="true">
+      <description>todo</description>
+    </parameters>
+    <description><![CDATA[If the specified todo is in the "Accomplished" state, the function returns the person who submitted that todo. Otherwise, the function returns null.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_rFPHYH6XEeOazrC8xQ9gxw"
+      name="getTodoPerformers"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getTodoPerformers"
+      type="Set&lt;Performer>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_rFPHYX6XEeOazrC8xQ9gxw"
+        name="todo"
+        parameterType="Todo"
+        required="true"/>
+    <description><![CDATA[Returns a set of the original performers of the specified todo, as given by the corresponding task.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_sdX_AH6XEeOazrC8xQ9gxw"
+      name="getTodoCurrentAssignees"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getTodoCurrentAssignees"
+      type="Set&lt;Person>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_sdX_AX6XEeOazrC8xQ9gxw"
+        name="todo"
+        parameterType="Todo"
+        required="true"/>
+    <description><![CDATA[Returns a set of persons the specified todo is currently issued (visible) to, taking into account also delegation, rejection and substitution.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_t0HvgH6XEeOazrC8xQ9gxw"
+      name="getTodosFor"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getTodosFor"
+      type="Set&lt;Todo>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_t0HvgX6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <description><![CDATA[Returns a set of active to-dos assigned to the specified person and not allocated by other persons.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_uMUNEH6XEeOazrC8xQ9gxw"
+      name="getTodosFor"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getTodosFor"
+      type="Set&lt;Todo>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_uMUNEX6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <parameters
+        xmi:id="_uMUNEn6XEeOazrC8xQ9gxw"
+        name="includeAllocatedByOthers"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a set of active to-dos assigned to the specified person. The parameter includeAllocatedByOthers determines whether the output set contains also to-dos assigned to the person, but currently allocated by other persons.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vkuKcH6XEeOazrC8xQ9gxw"
+      name="unallocateTodo"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.unallocateTodo"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_vkuKcX6XEeOazrC8xQ9gxw"
+        name="todo"
+        parameterType="Todo"
+        required="true"/>
+    <description><![CDATA[Unallocates the specified todo. If the todo is currently not allocated, the function has no effect.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_whQrMH6XEeOazrC8xQ9gxw"
+      name="reassignTodo"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.reassignTodo"
+      type="Null">
+    <parameters
+        xmi:id="_whQrMX6XEeOazrC8xQ9gxw"
+        name="todo"
+        parameterType="Todo"
+        required="true"/>
+    <parameters
+        xmi:id="_whQrMn6XEeOazrC8xQ9gxw"
+        name="performers"
+        parameterType="Set&lt;Performer>"
+        required="true"/>
+    <description><![CDATA[Changes the set of performers of the specified todo. Possible delegations and allocation of the todo are removed. If the todo has already been accomplished, the function has no effect.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_z27mgH6XEeOazrC8xQ9gxw"
+      name="getCurrentTodo"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getCurrentTodo"
+      type="Todo">
+    <description>Returns the currently opened to-do. If the function is not called from the context of a to-do, it returns null.</description>
+  </functions>
+  <functions
+      xmi:id="_328O8BPqEeSSbYMZL1I3UA"
+      name="allocateTodo"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.allocateTodo"
+      type="Null">
+    <parameters
+        xmi:id="_6d5qIBPqEeSSbYMZL1I3UA"
+        name="todo"
+        parameterType="Todo"
+        required="true"/>
+    <parameters
+        xmi:id="_8Jm-ABPqEeSSbYMZL1I3UA"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <description><![CDATA[Allocates the specified todo to the person. The given person must belong to the
+set of persons resolved from the current todo assignees, else an exception is
+thrown. If the todo is currently allocated to another person, the function
+performs reallocation.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+-"PersonIsNotAssigneeError" - The specified person does not belong to the set of the current toto assignees.
+]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

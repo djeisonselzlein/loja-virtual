@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.module:ModuleDescription
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.module="http:///com/whitestein/lsps/modeler/module.ecore"
+    xmi:id="_HhjgIF2iEeW11s0e87ySiA"
+    version="1.0"
+    description=""
+    main="true">
+  <moduleImports
+      xmi:id="_wgAz4GDSEeWNIfab4pmUQw"
+      moduleName="core"
+      description=""/>
+  <moduleImports
+      xmi:id="_w0hrUGDSEeWNIfab4pmUQw"
+      moduleName="human"
+      description=""/>
+  <moduleImports
+      xmi:id="_xG-GMGDSEeWNIfab4pmUQw"
+      moduleName="ui"
+      description=""/>
+  <moduleImports
+      xmi:id="_2MnfcGDUEeWNIfab4pmUQw"
+      moduleName="loja-virtual-base"
+      description=""/>
+  <terminateCondition></terminateCondition>
+</com.whitestein.lsps.modeler.module:ModuleDescription>

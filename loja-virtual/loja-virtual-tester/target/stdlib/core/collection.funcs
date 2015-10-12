@@ -1,0 +1,2640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_L1UlIOMPEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_OOKr0OMPEeK4rchgp2zFsA"
+      name="add"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.add"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr0eMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr0uMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a list created by adding the specified elements at the end of the list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr0-MPEeK4rchgp2zFsA"
+      name="add"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.add"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr1OMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr1eMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a set created by adding the specified elements to the set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr1uMPEeK4rchgp2zFsA"
+      name="add"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.add"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr1-MPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr2OMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a collection created by adding the specified elements at the end of the input collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr2eMPEeK4rchgp2zFsA"
+      name="add"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.add"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_OOKr2uMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr2-MPEeK4rchgp2zFsA"
+        name="key"
+        parameterType="K"/>
+    <parameters
+        xmi:id="_OOKr3OMPEeK4rchgp2zFsA"
+        name="value"
+        parameterType="V"/>
+    <description><![CDATA[Returns a map created by adding the specified key-value pair to the map. If the key already exists in the map, the specified value overwrites the original one.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr3eMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAll"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr3uMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr3-MPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr4OMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list created by adding the specified elements (given as collections) to the list, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and any subsequent elements to the right and increments the indices of the shifted elements with the number of the elements added to the specified list. The original order of the added elements is preserved also in the returned list. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index > size(list)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr4eMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAll"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr4uMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr4-MPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr5OMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set created by adding the specified elements to the set parameter, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and any subsequent elements to the right and increments the indices of the shifted elements with the number of the different elements added to the specified set. The original order of the added elements is preserved also in the returned set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index > size(set)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr5eMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAllCollections"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr5uMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr5-MPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr6OMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a collection created by adding the specified elements to the collection parameter, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and any subsequent elements to the right and increments the indices of the shifted elements with the number of the elements added to the specified collection. The original order of the added elements is preserved also in the returned collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index > size(collection)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr6eMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAll"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr6uMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr6-MPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list created as concatenation of the list and  collections.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr7OMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAll"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr7eMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr7uMPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set created by concatenation of the  set and  collections.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr7-MPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAllCollections"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr8OMPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list created as concatenation of the specified lists. If the first input collection is a set, the returned type is Set. If the first input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr8eMPEeK4rchgp2zFsA"
+      name="addAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAll"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_OOKr8uMPEeK4rchgp2zFsA"
+        name="maps"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <description><![CDATA[Returns a map created as union of keys and their respective values from all specified maps. If more than one map contains the same key, its value is set to the value of the key specified by the most recent map containing that key.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr8-MPEeK4rchgp2zFsA"
+      name="addAt"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAt"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr9OMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr9eMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr9uMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a list created by adding the specified elements to the list, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and its subsequent elements (if any) to the right and increments the indices of the shifted elements with the number of the elements added to the list. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the index is out of range (index < 0 or index > size(list)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr9-MPEeK4rchgp2zFsA"
+      name="addAt"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAt"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr-OMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr-eMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr-uMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a set created by adding the specified elements to the set parameter, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and its subsequent elements (if any) to the right and increments the indices of the shifted elements with the number of the different elements added to the set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the index is out of range (index < 0 or index > size(set)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr--MPEeK4rchgp2zFsA"
+      name="addAt"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.addAt"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_OOKr_OMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr_eMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKr_uMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="E"/>
+    <description><![CDATA[Returns a collection created by adding the specified elements to the collection, starting from the position specified by the index. Shifts the element currently at that position (if there is any) and its subsequent elements (if any) to the right and increments the indices of the shifted elements with the number of the elements added to the list. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the index is out of range (index < 0 or index > size(collection)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKr_-MPEeK4rchgp2zFsA"
+      name="collect"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collect"
+      type="List&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_OOKsAOMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsAeMPEeK4rchgp2zFsA"
+        name="function"
+        parameterType="{E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a list of values obtained by applying the function to each item of the list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsAuMPEeK4rchgp2zFsA"
+      name="collect"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collect"
+      type="Set&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_OOKsA-MPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsBOMPEeK4rchgp2zFsA"
+        name="function"
+        parameterType="{E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a set of values obtained by applying the function to each item of the set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsBeMPEeK4rchgp2zFsA"
+      name="collect"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collect"
+      type="Collection&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_OOKsBuMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsB-MPEeK4rchgp2zFsA"
+        name="function"
+        parameterType="{E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a collection of values obtained by applying the function to each item of the input collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Po4joHOZEeO08NXMZHEheg"
+      name="collectWithIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collectWithIndex"
+      type="List&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_T0H1AHOZEeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_T0H1AXOZEeO08NXMZHEheg"
+        name="function"
+        parameterType="{Integer, E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a list of values obtained by applying the function to each item of the list.
+The function parameter takes 2 values: index of the item and the item itself.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_tg8YgHOZEeO08NXMZHEheg"
+      name="collectWithIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collectWithIndex"
+      type="Set&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_wL14gHOZEeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_wL14gXOZEeO08NXMZHEheg"
+        name="function"
+        parameterType="{Integer, E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a set of values obtained by applying the function to each item of the set.
+The function parameter takes 2 values: index of the item and the item itself.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_41XBIHObEeO08NXMZHEheg"
+      name="collectWithIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.collectWithIndex"
+      type="Collection&lt;T>"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_8aOPAHObEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_8aOPAXObEeO08NXMZHEheg"
+        name="function"
+        parameterType="{Integer, E : T}"
+        required="true"/>
+    <description><![CDATA[Returns a collection of values obtained by applying the function to each item of the collection.
+The function parameter takes 2 values: index of the item and the item itself.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_9Xyb8HPGEeOhe5qYoN1P6g"
+      name="compact"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.compact"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="__KJKYHPGEeOhe5qYoN1P6g"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list containing non-null elements from a given list.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_E0bzsHPHEeOhe5qYoN1P6g"
+      name="compact"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.compact"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_E0bzsXPHEeOhe5qYoN1P6g"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set containing non-null elements from a given set.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_HXoJMHPHEeOhe5qYoN1P6g"
+      name="compact"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.compact"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_HXoJMXPHEeOhe5qYoN1P6g"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a collection containing non-null elements from a given collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsCOMPEeK4rchgp2zFsA"
+      name="contains"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.contains"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OOKsCeMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsCuMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Object"/>
+    <description><![CDATA[Returns true, if the collection contains all specified elements.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsC-MPEeK4rchgp2zFsA"
+      name="containsAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.containsAll"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OOKsDOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsDeMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the collection contains all specified elements.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsDuMPEeK4rchgp2zFsA"
+      name="containsKeys"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.containsKeys"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OOKsD-MPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;Object, Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsEOMPEeK4rchgp2zFsA"
+        name="keys"
+        parameterType="Object"/>
+    <description><![CDATA[Returns true, if the map contains all specified keys.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OOKsEeMPEeK4rchgp2zFsA"
+      name="containsValues"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.containsValues"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OOKsEuMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;Object, Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_OOKsE-MPEeK4rchgp2zFsA"
+        name="values"
+        parameterType="Object"/>
+    <description><![CDATA[Returns true, if the map contains all specified values.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_YrBB4LQYEeOHfIbNzelb8w"
+      name="count"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.count"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_bl6FsLQYEeOHfIbNzelb8w"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_bl6FsbQYEeOHfIbNzelb8w"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the number of elements in the given collection which satisfy the given condition.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_RKtVcOMPEeK4rchgp2zFsA"
+      name="exists"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.exists"
+      type="Boolean"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_RKtVceMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_RKtVcuMPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns true, if the condition is true for at least one element in the collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_GVRGYHOdEeO08NXMZHEheg"
+      name="findIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_JQLYUHOdEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_LlBv0HOdEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the first occurrence of the collection element which satisfies the specified condition; returns -1 if the condition is false for all elements of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_5JaPcHOkEeO08NXMZHEheg"
+      name="findIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_5JaPcXOkEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_6TicEHOrEeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_5JaPcnOkEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the first occurrence of the collection element, starting at fromIndex (inclusive), which satisfies the specified condition; returns -1 if the condition is false for all elements of the collection starting at fromIndex. If the fromIndex parameter is null or is less than 0, the finding starts from the beginning of the collection (index 0).
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_fbuPoHOsEeO08NXMZHEheg"
+      name="findIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_fbuPoXOsEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_fbuPonOsEeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_ipJ08HOsEeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_fbuPo3OsEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the first occurrence of the collection element, starting at the fromIndex (inclusive) and ending at the toIndex (exclusive), which satisfies the specified condition; returns -1 if the condition is false for all elements in the specified range. If the fromIndex parameter is null or is less than 0, the finding starts from the beginning of the collection (index 0). If the toIndex parameter is null or greater or equal to the size of the collection, the finding ends at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_acR38HOdEeO08NXMZHEheg"
+      name="findLastIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findLastIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_acR38XOdEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_acR38nOdEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the last occurrence of the collection element which satisfies the specified condition; returns -1 if the condition is false for all elements of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_5JaPc3OkEeO08NXMZHEheg"
+      name="findLastIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findLastIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_5Ja2gHOkEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_NcbYgHOsEeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_5Ja2gXOkEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the last occurrence of the collection element which satisfies the specified condition, searching backwards starting at index toIndex - 1; returns -1 if no such element is found. If the toIndex parameter is null or greater or equal to the size of the collection, the finding starts at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_bXTX8HOsEeO08NXMZHEheg"
+      name="findLastIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.findLastIndex"
+      type="Integer"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_bXTX8XOsEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_1HTLQHOsEeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_1HTLQXOsEeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_bXTX8nOsEeO08NXMZHEheg"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns the index of the last occurrence of the collection element, searching backwards in the range starting at fromIndex (inclusive) and ending at toIndex (exclusive), which satisfies the specified condition; returns -1 if the condition is false for all elements in the specified range. If the fromIndex parameter is null or is less than 0, the search ends at the beginning of the collection (index 0). If the toIndex parameter is null or greater or equal to the size of the collection, the finding starts at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_RKtVc-MPEeK4rchgp2zFsA"
+      name="fold"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.fold"
+      type="T"
+      typeParameterNames="E,T">
+    <parameters
+        xmi:id="_RKtVdOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_RKtVdeMPEeK4rchgp2zFsA"
+        name="initialValue"
+        parameterType="T"/>
+    <parameters
+        xmi:id="_RKtVduMPEeK4rchgp2zFsA"
+        name="function"
+        parameterType="{T,E : T}"
+        required="true"/>
+    <description><![CDATA[Combines the elements of the collection together using the binary function, from left to right, and starting with the initialValue. The function is applied iteratively on the previously computed interim value and a next element of the collection. In each iteration the function computes the subsequent interim value. The last computed value represents the result of the fold function.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OobcEHRxEeOGl43kxCxJjA"
+      name="foldWithIndex"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.foldWithIndex"
+      type="T"
+      typeParameterNames="E, T">
+    <parameters
+        xmi:id="_RXBJQHRxEeOGl43kxCxJjA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_RXBJQXRxEeOGl43kxCxJjA"
+        name="initialValue"
+        parameterType="T"/>
+    <parameters
+        xmi:id="_RXBJQnRxEeOGl43kxCxJjA"
+        name="function"
+        parameterType="{Integer, T, E : T}"
+        required="true"/>
+    <description><![CDATA[Combines the elements of the collection together using the binary function, from left to right, and starting with the initialValue. The function is applied iteratively on the previously computed interim value and a next element of the collection. In each iteration the function computes the subsequent interim value. The last computed value represents the result of the fold function. 0-based index of element is passed to function as the first argument.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_RKtVd-MPEeK4rchgp2zFsA"
+      name="forAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.forAll"
+      type="Boolean"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_RKtVeOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_RKtVeeMPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns true, if the condition is true for all elements in the collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_q3T8cHOcEeO08NXMZHEheg"
+      name="getFirst"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.getFirst"
+      type="E"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tQIN8HOcEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns the first item of the collection, or null if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_01p04HOcEeO08NXMZHEheg"
+      name="getLast"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.getLast"
+      type="E"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_2d4W8HOcEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns the last item of the collection, or null if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_K6ytcL5DEeO11bUmgwlcRA"
+      name="hasDuplicates"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.hasDuplicates"
+      type="Boolean">
+    <parameters
+        xmi:id="_NsOTQL5DEeO11bUmgwlcRA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true if the collection contains duplicate elements, false otherwise.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDgOMPEeK4rchgp2zFsA"
+      name="indexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.indexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gGYDgeMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_gGYDguMPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="Object"/>
+    <description><![CDATA[Returns the index of the first occurrence of the specified element in the collection; returns -1 if the collection does not contain the specified element.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDg-MPEeK4rchgp2zFsA"
+      name="isEmpty"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.isEmpty"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gGYDhOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified collection contains no elements.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDheMPEeK4rchgp2zFsA"
+      name="isEmpty"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.isEmpty"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gGYDhuMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;Object, Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified map contains no elements.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDh-MPEeK4rchgp2zFsA"
+      name="isSubset"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.isSubset"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gGYDiOMPEeK4rchgp2zFsA"
+        name="set1"
+        parameterType="Set&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_gGYDieMPEeK4rchgp2zFsA"
+        name="set2"
+        parameterType="Set&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the set1 is a subset of the set2.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Gvt7wHRjEeO9x5XDONhe9Q"
+      name="join"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.join"
+      type="String">
+    <parameters
+        xmi:id="_HuDMQHRjEeO9x5XDONhe9Q"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Concatenates all non-empty string representations of the objects within collection, separating them by comma and space (", ").
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Rb1gMHRjEeO9x5XDONhe9Q"
+      name="join"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.join"
+      type="String">
+    <parameters
+        xmi:id="_Ss1OAHRjEeO9x5XDONhe9Q"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_XHmwMHRjEeO9x5XDONhe9Q"
+        name="joinString"
+        parameterType="String"/>
+    <description><![CDATA[Concatenates all non-empty string representations of the objects within collection, separating them by joinString.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Z08gMHRjEeO9x5XDONhe9Q"
+      name="join"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.join"
+      type="String">
+    <parameters
+        xmi:id="_eXjIsHRjEeO9x5XDONhe9Q"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_eXjIsXRjEeO9x5XDONhe9Q"
+        name="joinString"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_flErwHRjEeO9x5XDONhe9Q"
+        name="includeEmpty"
+        parameterType="Boolean"/>
+    <description><![CDATA[Concatenates all string representations of the objects within collection, separating them by joinString.
+If includeEmpty is true, also null and empty strings are included in the result string.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDiuMPEeK4rchgp2zFsA"
+      name="keys"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.keys"
+      type="Set&lt;K>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_gGYDi-MPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <description><![CDATA[Returns a set of keys contained in the specified map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDjOMPEeK4rchgp2zFsA"
+      name="keysOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.keysOf"
+      type="Set&lt;K>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_gGYDjeMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_gGYDjuMPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="V"/>
+    <description><![CDATA[Returns the keys for all occurrences of the specified value included in the map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYDj-MPEeK4rchgp2zFsA"
+      name="lastIndexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.lastIndexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gGYqkOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_gGYqkeMPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="Object"/>
+    <description><![CDATA[Returns the index of the last occurrence of the specified element in the collection; returns -1 if the collection does not contain the specified element.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_C66oMJ8HEeOGSeuyyweuLQ"
+      name="listUnion"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.listUnion"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_EmQvsJ8HEeOGSeuyyweuLQ"
+        name="collections"
+        parameterType="Collection&lt;Collection&lt;E>>"/>
+    <description><![CDATA[Returns a list containing all elements from all given collections.
+Null values of collection are treated as empty collections.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_gGYqkuMPEeK4rchgp2zFsA"
+      name="map"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.map"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_gGYqk-MPEeK4rchgp2zFsA"
+        name="keys"
+        parameterType="Collection&lt;K>"
+        required="true"/>
+    <parameters
+        xmi:id="_gGYqlOMPEeK4rchgp2zFsA"
+        name="values"
+        parameterType="Collection&lt;V>"
+        required="true"/>
+    <description><![CDATA[Returns a map by combining collections of keys and values. The number of keys must be equal to the number of values. At least one key and one value must be specified in order to determine the type of the created map. If the keys parameter contains the same key several times, the most recently used key-value pair is included in the resulting map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"WrongSizeError" if either the number of keys is not equal to the number of values, or one of the input collection is empty.]]></description>
+  </functions>
+  <functions
+      xmi:id="_bX5WQLmnEeOHe9ZU-UvFyg"
+      name="map"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.map"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_e2rKQLmnEeOHe9ZU-UvFyg"
+        name="keys"
+        parameterType="Collection&lt;K>"
+        required="true"/>
+    <parameters
+        xmi:id="_hSYXsLmnEeOHe9ZU-UvFyg"
+        name="valueFunction"
+        parameterType="{ K : V }"
+        required="true"/>
+    <description><![CDATA[Returns a map by combining given keys and computed values. For each key in the given collection of keys, the given closure is executed to obtain a map value.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_44nCILmnEeOHe9ZU-UvFyg"
+      name="map"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.map"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V, E">
+    <parameters
+        xmi:id="_63QgILmnEeOHe9ZU-UvFyg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_9dKLYLmnEeOHe9ZU-UvFyg"
+        name="keyFunction"
+        parameterType="{ E : K }"
+        required="true"/>
+    <parameters
+        xmi:id="_92Qn4LmnEeOHe9ZU-UvFyg"
+        name="valueFunction"
+        parameterType="{ E : V }"
+        required="true"/>
+    <description><![CDATA[Returns a map by combining computed keys and computed values. For each element in the given collection, the keyFunction is executed to obtain a map key and valueFunction is executed to obtain a map value.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_fMGtAHOxEeO08NXMZHEheg"
+      name="max"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.max"
+      type="Date">
+    <parameters
+        xmi:id="_hSET8HOxEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Date>"
+        required="true"/>
+    <description><![CDATA[Returns maximal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_AKpxsHOyEeO08NXMZHEheg"
+      name="max"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.max"
+      type="Decimal">
+    <parameters
+        xmi:id="_AKpxsXOyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Decimal>"
+        required="true"/>
+    <description><![CDATA[Returns maximal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_CvDBEHOyEeO08NXMZHEheg"
+      name="max"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.max"
+      type="Integer">
+    <parameters
+        xmi:id="_CvDBEXOyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Integer>"
+        required="true"/>
+    <description><![CDATA[Returns maximal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Fq2q4HOyEeO08NXMZHEheg"
+      name="max"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.max"
+      type="String">
+    <parameters
+        xmi:id="_Fq2q4XOyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;String>"
+        required="true"/>
+    <description><![CDATA[Returns maximal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iEPiUHOyEeO08NXMZHEheg"
+      name="min"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.min"
+      type="Date">
+    <parameters
+        xmi:id="_iEPiUXOyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Date>"
+        required="true"/>
+    <description><![CDATA[Returns minimal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iEPiUnOyEeO08NXMZHEheg"
+      name="min"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.min"
+      type="Decimal">
+    <parameters
+        xmi:id="_iEPiU3OyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Decimal>"
+        required="true"/>
+    <description><![CDATA[Returns minimal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iEPiVHOyEeO08NXMZHEheg"
+      name="min"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.min"
+      type="Integer">
+    <parameters
+        xmi:id="_iEPiVXOyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Integer>"
+        required="true"/>
+    <description><![CDATA[Returns minimal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iEPiVnOyEeO08NXMZHEheg"
+      name="min"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.min"
+      type="String">
+    <parameters
+        xmi:id="_iEPiV3OyEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;String>"
+        required="true"/>
+    <description><![CDATA[Returns minimal value from collection; or null, if the collection is empty.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_SgNFUHO1EeO08NXMZHEheg"
+      name="notEmpty"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.notEmpty"
+      type="Boolean">
+    <parameters
+        xmi:id="_TujHwHO1EeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified collection contains some elements.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gPe4wHO1EeO08NXMZHEheg"
+      name="notEmpty"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.notEmpty"
+      type="Boolean">
+    <parameters
+        xmi:id="_hvAKwHO1EeO08NXMZHEheg"
+        name="map"
+        parameterType="Map&lt;Object, Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified map contains some elements.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jQOMPEeK4rchgp2zFsA"
+      name="remove"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.remove"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jQeMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jQuMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a list created by removing the first occurrences of the specified elements from the list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jQ-MPEeK4rchgp2zFsA"
+      name="remove"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.remove"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jROMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jReMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a set created by removing the specified elements from the set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jRuMPEeK4rchgp2zFsA"
+      name="remove"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.remove"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jR-MPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jSOMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a collection created by removing the first occurrences of the specified elements from the collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jSeMPEeK4rchgp2zFsA"
+      name="removeAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAll"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jSuMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jS-MPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns a list created by removing all occurrences of the elements from the list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jTOMPEeK4rchgp2zFsA"
+      name="removeAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAll"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jTeMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jTuMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns a set created by removing all elements from the set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jT-MPEeK4rchgp2zFsA"
+      name="removeAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAll"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jUOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jUeMPEeK4rchgp2zFsA"
+        name="elements"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns a collection created by removing all occurrences of the elements from the collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jUuMPEeK4rchgp2zFsA"
+      name="removeAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAt"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jU-MPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jVOMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a list created by removing that element of the list, which is at the position specified by the index. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(list)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jVeMPEeK4rchgp2zFsA"
+      name="removeAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAt"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jVuMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jV-MPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a set created by removing that element of the set, which is at the position specified by the index.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(set)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jWOMPEeK4rchgp2zFsA"
+      name="removeAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeAt"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jWeMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jWuMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a collection created by removing that element of the collection, which is at the position specified by the index. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(collection)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jW-MPEeK4rchgp2zFsA"
+      name="removeKey"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeKey"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_pF5jXOMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jXeMPEeK4rchgp2zFsA"
+        name="keys"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a map created by removing the specified keys (and their corresponding values) from the map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_xsyCYNXnEeOehfkfX7qcWg"
+      name="removeKeys"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeKeys"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_0gC0MNXnEeOehfkfX7qcWg"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_2d7dMNXnEeOehfkfX7qcWg"
+        name="keys"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns a map created by removing the specified keys (and their corresponding values) from the map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_uMiNAHO2EeO08NXMZHEheg"
+      name="removeRange"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeRange"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_wgnvgHO2EeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_xhsyAHO2EeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_yOjQ8HO2EeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a portion of the set representing removing elements from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the range starts from the beginning of the collection (index 0). If the toIndex parameter is null or greater or equal to the size of the collection, the range ends at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+-"OutOfBoundsError" - fromIndex > toIndex.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_EMrDYHO3EeO08NXMZHEheg"
+      name="removeRange"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeRange"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_EMrDYXO3EeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_EMrDYnO3EeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_EMrDY3O3EeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a portion of the list representing removing elements from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the range starts from the beginning of the collection (index 0). If the toIndex parameter is null or greater or equal to the size of the collection, the range ends at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+-"OutOfBoundsError" - fromIndex > toIndex.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_Jjdh4HO3EeO08NXMZHEheg"
+      name="removeRange"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeRange"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_Jjdh4XO3EeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_Jjdh4nO3EeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_Jjdh43O3EeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a portion of the collection representing removing elements from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the range starts from the beginning of the collection (index 0). If the toIndex parameter is null or greater or equal to the size of the collection, the range ends at the end of the collection.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+-"OutOfBoundsError" - fromIndex > toIndex.
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jXuMPEeK4rchgp2zFsA"
+      name="removeValue"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.removeValue"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_pF5jX-MPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jYOMPEeK4rchgp2zFsA"
+        name="values"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a map created by removing all occurrences of the specified values (and their corresponding keys) from the map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jYeMPEeK4rchgp2zFsA"
+      name="replace"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.replace"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jYuMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jY-MPEeK4rchgp2zFsA"
+        name="element1"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_pF5jZOMPEeK4rchgp2zFsA"
+        name="element2"
+        parameterType="E"/>
+    <description><![CDATA[Returns a list created by replacing all occurrences of the element1 with the element2 in the specified list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jZeMPEeK4rchgp2zFsA"
+      name="replace"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.replace"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jZuMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jZ-MPEeK4rchgp2zFsA"
+        name="element1"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_pF5jaOMPEeK4rchgp2zFsA"
+        name="element2"
+        parameterType="E"/>
+    <description><![CDATA[Returns a set created by replacing the element1 with the element2 in the specified set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jaeMPEeK4rchgp2zFsA"
+      name="replace"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.replace"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_pF5jauMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5ja-MPEeK4rchgp2zFsA"
+        name="element1"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_pF5jbOMPEeK4rchgp2zFsA"
+        name="element2"
+        parameterType="E"/>
+    <description><![CDATA[Returns a collection created by replacing all occurrences of the element1 with the element2 in the specified collection. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pF5jbeMPEeK4rchgp2zFsA"
+      name="replaceValue"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.replaceValue"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_pF5jbuMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_pF5jb-MPEeK4rchgp2zFsA"
+        name="value1"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_pF5jcOMPEeK4rchgp2zFsA"
+        name="value2"
+        parameterType="V"/>
+    <description><![CDATA[Returns a map created by replacing all occurrences of the values corresponding to the value1 with the value2 in the specified map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVHEOMPEeK4rchgp2zFsA"
+      name="retainAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.retainAll"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVHEeMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVHEuMPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list of those elements of the list that are contained in the specified collections. The relative order of the retained elements remains unchanged.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuIOMPEeK4rchgp2zFsA"
+      name="retainAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.retainAll"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuIeMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuIuMPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set created by intersection of the specified sets.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuI-MPEeK4rchgp2zFsA"
+      name="retainAll"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.retainAll"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuJOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuJeMPEeK4rchgp2zFsA"
+        name="collections"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list of those elements of the collection that are contained in the specified collections. The relative order of the retained elements remains unchanged. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuJuMPEeK4rchgp2zFsA"
+      name="reverse"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.reverse"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuJ-MPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list created by reversing the order of the elements in the specified list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuKOMPEeK4rchgp2zFsA"
+      name="reverse"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.reverse"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuKeMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set created by reversing the order of the elements in the specified set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuKuMPEeK4rchgp2zFsA"
+      name="reverse"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.reverse"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuK-MPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a collection created by reversing the order of the elements in the specified collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuLOMPEeK4rchgp2zFsA"
+      name="select"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.select"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuLeMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuLuMPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns a list containing those elements from the  list for which the condition is true.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuL-MPEeK4rchgp2zFsA"
+      name="select"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.select"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuMOMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuMeMPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns a set containing those elements from the set for which the condition is true.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuMuMPEeK4rchgp2zFsA"
+      name="select"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.select"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuM-MPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuNOMPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{E : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns a colection containing those elements from the input collectionfor which the condition is true. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuNeMPEeK4rchgp2zFsA"
+      name="select"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.select"
+      type="Map&lt;K, V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_tnVuNuMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuN-MPEeK4rchgp2zFsA"
+        name="condition"
+        parameterType="{K, V : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns a map containing those elements from the map for which the condition is true.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuOOMPEeK4rchgp2zFsA"
+      name="setAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.setAt"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuOeMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuOuMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuO-MPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="E"/>
+    <description><![CDATA[Returns a list created by replacing that element of the list, which is at the position given by the  index, with the specified element. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(list)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuPOMPEeK4rchgp2zFsA"
+      name="setAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.setAt"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuPeMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuPuMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuP-MPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="E"/>
+    <description><![CDATA[Returns a set created by replacing that element of the set, which is at the position given by the index, with the specified element.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(set)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuQOMPEeK4rchgp2zFsA"
+      name="setAt"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.setAt"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuQeMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuQuMPEeK4rchgp2zFsA"
+        name="index"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuQ-MPEeK4rchgp2zFsA"
+        name="element"
+        parameterType="E"/>
+    <description><![CDATA[Returns a list created by replacing that element of the list, which is at the position given by the index, with the specified element. If the input collection is a set, the returned type is Set. If the input collection is a list, the returned type is List.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified index is out of range (index < 0 or index >= size(collection)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuROMPEeK4rchgp2zFsA"
+      name="size"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.size"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_tnVuReMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns the number of elements in the specified collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuRuMPEeK4rchgp2zFsA"
+      name="size"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.size"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_tnVuR-MPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;Object, Object>"
+        required="true"/>
+    <description><![CDATA[Returns the number of elements in the specified map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuSOMPEeK4rchgp2zFsA"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuSeMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuSuMPEeK4rchgp2zFsA"
+        name="comparator"
+        parameterType="{E, E : Integer}"
+        required="true"/>
+    <description><![CDATA[Returns items of the specified list ordered according to the given comparator. The comparator defines a total ordering function returning a negative integer, zero, or a positive integer if the first parameter is less than, equal to, or greater than the second, respectively.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuS-MPEeK4rchgp2zFsA"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuTOMPEeK4rchgp2zFsA"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuTeMPEeK4rchgp2zFsA"
+        name="comparator"
+        parameterType="{E, E : Integer}"
+        required="true"/>
+    <description><![CDATA[Returns items of the specified set ordered according to the given comparator. The comparator defines a total ordering function returning a negative integer, zero, or a positive integer if the first parameter is less than, equal to, or greater than the second, respectively.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuTuMPEeK4rchgp2zFsA"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuT-MPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuUOMPEeK4rchgp2zFsA"
+        name="comparator"
+        parameterType="{E, E : Integer}"
+        required="true"/>
+    <description><![CDATA[Returns items of the specified collection ordered according to the given comparator. The comparator defines a total ordering function returning a negative integer, zero, or a positive integer if the first parameter is less than, equal to, or greater than the second, respectively. If the input collection is a set, the returned
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_jrpXQHOtEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Set&lt;Date>">
+    <parameters
+        xmi:id="_lxJrMHOtEeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;Date>"
+        required="true"/>
+    <parameters
+        xmi:id="_EYL-kHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a set with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_3uNGoHOtEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Set&lt;Decimal>">
+    <parameters
+        xmi:id="_3uNGoXOtEeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;Decimal>"
+        required="true"/>
+    <parameters
+        xmi:id="_JdiHwHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a set with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_7DsbwHOtEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Set&lt;Integer>">
+    <parameters
+        xmi:id="_7DsbwXOtEeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;Integer>"
+        required="true"/>
+    <parameters
+        xmi:id="_Jr1pgHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a set with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_DaVWkHOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Set&lt;String>">
+    <parameters
+        xmi:id="_DaVWkXOuEeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;String>"
+        required="true"/>
+    <parameters
+        xmi:id="_J6d7YHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a set with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_J45VcHOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="List&lt;Date>">
+    <parameters
+        xmi:id="_J45VcXOuEeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;Date>"
+        required="true"/>
+    <parameters
+        xmi:id="_KExt8HOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a list with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_J45VcnOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="List&lt;Decimal>">
+    <parameters
+        xmi:id="_J45Vc3OuEeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;Decimal>"
+        required="true"/>
+    <parameters
+        xmi:id="_KPVYIHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a list with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_J45VdHOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="List&lt;Integer>">
+    <parameters
+        xmi:id="_J45VdXOuEeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;Integer>"
+        required="true"/>
+    <parameters
+        xmi:id="_KcWgcHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a list with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_J45VdnOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="List&lt;String>">
+    <parameters
+        xmi:id="_J45Vd3OuEeO08NXMZHEheg"
+        name="list"
+        parameterType="List&lt;String>"
+        required="true"/>
+    <parameters
+        xmi:id="_KlDJcHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a list with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_4dO6YHOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Collection&lt;Date>">
+    <parameters
+        xmi:id="_4dO6YXOuEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Date>"
+        required="true"/>
+    <parameters
+        xmi:id="_KtIHYHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a collection with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_4dO6YnOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Collection&lt;Decimal>">
+    <parameters
+        xmi:id="_4dO6Y3OuEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Decimal>"
+        required="true"/>
+    <parameters
+        xmi:id="_K5iywHOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a collection with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_4dO6ZHOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Collection&lt;Integer>">
+    <parameters
+        xmi:id="_4dO6ZXOuEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;Integer>"
+        required="true"/>
+    <parameters
+        xmi:id="_LC3G0HOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a collection with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_4dO6ZnOuEeO08NXMZHEheg"
+      name="sort"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sort"
+      type="Collection&lt;String>">
+    <parameters
+        xmi:id="_4dO6Z3OuEeO08NXMZHEheg"
+        name="collection"
+        parameterType="Collection&lt;String>"
+        required="true"/>
+    <parameters
+        xmi:id="_LL344HOxEeO08NXMZHEheg"
+        name="ascending"
+        parameterType="Boolean"
+        required="true"/>
+    <description><![CDATA[Returns a collection with items sorted in ascending or descending order.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuUeMPEeK4rchgp2zFsA"
+      name="subList"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.subList"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuUuMPEeK4rchgp2zFsA"
+        name="list"
+        parameterType="List&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuU-MPEeK4rchgp2zFsA"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_tnVuVOMPEeK4rchgp2zFsA"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a list representing such a portion of the list, which starts from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the sub-list starts from the beginning of the list (index 0). If the toIndex parameter is null or equal/greater than the size of the list, the sub-list ends at the end of the list (index given by size(list)-1). 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if fromIndex > toIndex.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuVeMPEeK4rchgp2zFsA"
+      name="subCollection"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.subCollection"
+      type="Collection&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuVuMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_tnVuV-MPEeK4rchgp2zFsA"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_tnVuWOMPEeK4rchgp2zFsA"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a collection representing such a portion of the collection, which starts from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the sub-list starts from the beginning of the list (index 0). If the toIndex parameter is null or equal/greater than the size of the collection, the sub-collection ends at the end of the collection (index given by size(collection)-1).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if fromIndex > toIndex.]]></description>
+  </functions>
+  <functions
+      xmi:id="_ZjKf0HO3EeO08NXMZHEheg"
+      name="subset"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.subSet"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_ZjKf0XO3EeO08NXMZHEheg"
+        name="set"
+        parameterType="Set&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_ZjKf0nO3EeO08NXMZHEheg"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_ZjKf03O3EeO08NXMZHEheg"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a set representing such a portion of the collection, which starts from the specified fromIndex (inclusive) to the toIndex (exclusive). If the fromIndex parameter is null or is less than 0, the sub-list starts from the beginning of the list (index 0). If the toIndex parameter is null or equal/greater than the size of the collection, the sub-collection ends at the end of the collection (index given by size(set)-1).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if fromIndex > toIndex.]]></description>
+  </functions>
+  <functions
+      xmi:id="_0-eGsHRtEeO9x5XDONhe9Q"
+      name="sum"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.sum"
+      type="E"
+      typeParameterNames="E extends Decimal">
+    <parameters
+        xmi:id="_1xvWsHRtEeO9x5XDONhe9Q"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a sum of decimal or integer numbers in the given collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuWeMPEeK4rchgp2zFsA"
+      name="toList"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.toList"
+      type="List&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuWuMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list of values, in an arbitrary order, contained in the specified collection.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuW-MPEeK4rchgp2zFsA"
+      name="toSet"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.toSet"
+      type="Set&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_tnVuXOMPEeK4rchgp2zFsA"
+        name="collection"
+        parameterType="Collection&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a set of values contained in the specified list.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_tnVuXeMPEeK4rchgp2zFsA"
+      name="values"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.CollectionsFunctions.values"
+      type="List&lt;V>"
+      typeParameterNames="K, V">
+    <parameters
+        xmi:id="_tnVuXuMPEeK4rchgp2zFsA"
+        name="map"
+        parameterType="Map&lt;K, V>"
+        required="true"/>
+    <description><![CDATA[Returns a list of values contained in the specified map.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

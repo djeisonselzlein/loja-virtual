@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_PWE0cBSqEd6GscLY0JTzdw">
+  <functions
+      xmi:id="_PprF4BSqEd6GscLY0JTzdw"
+      name="itensAProduzir"
+      type="List&lt;ItemPedido>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_RR3ywBSqEd6GscLY0JTzdw"
+        name="itens"
+        parameterType="List&lt;ItemPedido>">
+      <description></description>
+    </parameters>
+    <description>Retorna lista de produtos que estão em estoque</description>
+    <expression>select(itens, { i -> i.quantidade > i.produto.quantidade })</expression>
+  </functions>
+  <functions
+      xmi:id="_skCHgBxtEd6pHsdo84Z2vA"
+      name="getCustoTotal"
+      type="Decimal(2)"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vNTP0BxtEd6pHsdo84Z2vA"
+        name="pedido"
+        parameterType="Pedido"/>
+    <expression><![CDATA[if pedido.urgente then
+	fold(
+		pedido.itens,
+		0.0,
+		{
+			tot,
+			item -> tot + item.custo + item.custo*20/100
+		}
+	)
+else
+	fold(
+		pedido.itens,
+		0.0,
+		{ tot, item -> tot + item.custo})
+end]]></expression>
+  </functions>
+  <functions
+      xmi:id="_ddN-EGRkEeWY2PN5hux4yQ"
+      name="getValorTotal"
+      type="Decimal(2)">
+    <parameters
+        xmi:id="_fSalIGRkEeWY2PN5hux4yQ"
+        name="pedido"
+        parameterType="Pedido"/>
+    <expression><![CDATA[fold(
+	pedido.itens,
+	0.0,
+	{ tot, item -> tot + item.valorUnitario}
+)
+]]></expression>
+  </functions>
+  <functions
+      xmi:id="_C73LcF0NEd-4Gb-mD5pukw"
+      name="emEstoque"
+      type="List&lt;ItemPedido>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_I-p0UF0NEd-4Gb-mD5pukw"
+        name="itens"
+        parameterType="List&lt;ItemPedido>">
+      <description></description>
+    </parameters>
+    <expression><![CDATA[select(itens, { i -> i.quantidade <= i.produto.quantidade })]]></expression>
+  </functions>
+  <functions
+      xmi:id="_i8N6UGgVEd-am-rri4zVgQ"
+      status="Not Clear"
+      name="compensaProducao"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_pJ_EIGgVEd-am-rri4zVgQ"
+        name="custoProducao"
+        parameterType="Decimal"/>
+    <parameters
+        xmi:id="_w1O4kGgVEd-am-rri4zVgQ"
+        name="custoPedido"
+        parameterType="Decimal"/>
+    <description></description>
+    <expression><![CDATA[abs((LIMITE_DE_CUSTO - custoProducao)) < abs((LIMITE_DE_CUSTO - custoPedido))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_Jd8eQGgXEd-am-rri4zVgQ"
+      name="itemPedidoEmEstoque"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_PJN6MAW-EeOuld4RHdGSLw"
+        name="pedido"
+        parameterType="Pedido"/>
+    <expression>size(itensAProduzir(pedido.itens)) = 0</expression>
+  </functions>
+  <functions
+      xmi:id="_oJ15AF-nEeWkFqOSSwSe_Q"
+      name="getPaisesDoMundo"
+      type="List&lt;String>">
+    <expression><![CDATA[["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verdi", "Central African Rep", "Chad", "Chile", "China", "Columbia", "Comoros", "Congo", "Congo {Democratic Rep}", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greneda", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland {Republic}", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Morocco", "Mozambique", "Myanmar", "{Burma}", "Namibia", "Narau", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "St Vincent & Grenadines", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikstan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Western Samoa", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe"]]]></expression>
+  </functions>
+  <functions
+      xmi:id="_P_BeUF-oEeWkFqOSSwSe_Q"
+      name="isEmpty"
+      type="Boolean">
+    <parameters
+        xmi:id="_XcLzcF-oEeWkFqOSSwSe_Q"
+        name="string"
+        parameterType="String"/>
+    <expression><![CDATA[string = null or matches(string, #"\s*")]]></expression>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

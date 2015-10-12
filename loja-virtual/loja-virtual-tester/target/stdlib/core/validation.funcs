@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_t0O-wJ1YEeONCNm99wFc3g">
+  <functions
+      xmi:id="_uFGsUJ1YEeONCNm99wFc3g"
+      name="validate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ValidationFunctions.validate"
+      type="List&lt;ConstraintViolation>">
+    <parameters
+        xmi:id="_uFGsUZ1YEeONCNm99wFc3g"
+        name="record"
+        parameterType="Record"/>
+    <parameters
+        xmi:id="_uFGsUp1YEeONCNm99wFc3g"
+        name="property"
+        parameterType="Property"/>
+    <parameters
+        xmi:id="_uFGsU51YEeONCNm99wFc3g"
+        name="tags"
+        parameterType="Collection&lt;Tag>"/>
+    <parameters
+        xmi:id="_uFGsVJ1YEeONCNm99wFc3g"
+        name="context"
+        parameterType="Map&lt;String,Object>"/>
+    <description><![CDATA[Performs a validation of the given record.
+
+If the record is null, an empty list is returned. If the given property parameter is null, all properties of the record are validated.
+
+
+Throws:
+- “IncompatibleTypeError” - if the given property is not a property of the given record
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_aDPSUKoCEeO_ZpV7Z6ms_Q"
+      name="validate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ValidationFunctions.validate"
+      type="List&lt;ConstraintViolation>">
+    <parameters
+        xmi:id="_aDPSUaoCEeO_ZpV7Z6ms_Q"
+        name="record"
+        parameterType="Collection&lt;Record>"/>
+    <parameters
+        xmi:id="_aDPSUqoCEeO_ZpV7Z6ms_Q"
+        name="property"
+        parameterType="Property"/>
+    <parameters
+        xmi:id="_aDPSU6oCEeO_ZpV7Z6ms_Q"
+        name="tags"
+        parameterType="Collection&lt;Tag>"/>
+    <parameters
+        xmi:id="_aDPSVKoCEeO_ZpV7Z6ms_Q"
+        name="context"
+        parameterType="Map&lt;String,Object>"/>
+    <description><![CDATA[Performs a validation of the given collection of records.
+
+If the collection is null, an empty list is returned. Null elements in the collection are ignored. If the given property parameter is null, all properties of the records are validated.
+
+
+Throws:
+- “IncompatibleTypeError” - if the given property is not a property of any given record in the collection
+]]></description>
+  </functions>
+  <functions
+      xmi:id="_Lud7gLpxEeOClYM0ORQ73A"
+      name="findTag"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ValidationFunctions.findTag"
+      type="Tag">
+    <parameters
+        xmi:id="_NFf_4LpxEeOClYM0ORQ73A"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Finds a tag by a given name which can be a simple name or full name. Returns <code>null</code> if the tag is not found. If the simple name is given and it is ambiguous (meaning there are more validation tags with the same name located in different imported modules), an error is thrown.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"AmbiguousNameError" if the given name is ambiguous
+]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

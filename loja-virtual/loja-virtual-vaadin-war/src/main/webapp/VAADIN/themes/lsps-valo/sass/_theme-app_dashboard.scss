@@ -1,0 +1,193 @@
+$theme_dashboard_caption_padding: 0px 4px 0px 10px !default;
+$theme_dashboard_widget_background_color: $v-panel-background-color !default;
+$theme_dashboard_widget_border_color: $v-table-border-color !default;
+$theme_dashboard_ghost_border_color: $v-table-border-color !default;
+
+.dashWidget-ghost{				//	Style for dashboard ghost when moving/resizing. Has to be here, because it is rendered outside of main theme class.
+	position: absolute;
+	border: 1px dashed $theme_dashboard_ghost_border_color;
+}
+
+@mixin theme-app-dashboard{
+	.v-popupbutton-popup{
+		.ui-widget-option{
+			border: none;
+			background: none;
+
+			&:hover{
+				cursor: pointer;
+				background: $v-focus-color;
+				color: valo-font-color($v-focus-color);	
+			}
+		}
+
+	}
+
+	.ui-dashboard{
+		.dashContainer{
+			overflow: auto;
+		}
+
+		.v-popupbutton{
+			.v-button-caption{
+				font-size: round($v-font-size * 1.4);
+			}
+
+			.v-popup-indicator{
+				display: none;
+			}
+		}
+
+		.v-panel-caption-dashWidget{
+			cursor: move;
+			padding: $theme_dashboard_caption_padding;
+
+			span{
+				vertical-align: top;		//	Fix of vaadin middle align
+
+				&:first-child{
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					padding-right: 55px;
+					width: 100%;
+					box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					display: block;
+				}
+			}
+		}
+
+		.v-panel-content{
+			border: none;
+		}
+
+		.dashWidget-buttons{
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			button{
+				background: none;
+				border: none;
+				cursor: pointer;
+				margin: 0;
+				padding: 0 4px;
+				width: 10px;
+				box-sizing: content-box;
+				-moz-box-sizing: content-box;
+				height: $theme_dashboard_caption_height;
+
+				&:before{
+					font-family: 'FontAwesome';
+					color: valo-font-color($theme_dashboard_caption_background_color);
+				}
+			}
+
+			.close{
+				margin-right: 4px;
+				&:before{
+					content: "\f00d";
+				}
+			}
+
+			.minimize{
+				&:before{
+					content: "\f068";
+					position: relative;
+					top: 3px;
+				}
+			}
+
+			.maximize{
+				&:before{
+					content: "\f065";
+					font-size: 11px;
+					position: relative;
+					left: 1px;
+				}
+			}
+
+			.restore{
+				&:before{
+					content: "\f066";
+					font-size: 11px;
+					position: relative;
+					left: 1px;
+				}
+			}
+		}
+
+		// copied from Vaadin
+		.dashWidget-handle {
+			position: absolute;
+			font-size: 0.1px;
+			z-index: 99999;
+			display: block;
+		}
+
+		.dashWidget-handle-n {
+			cursor: n-resize;
+			height: 7px;
+			width: 100%;
+			top: -5px;
+			left: 0;
+		}
+
+		.dashWidget-handle-s {
+			cursor: s-resize;
+			height: 7px;
+			width: 100%;
+			bottom: -5px;
+			left: 0;
+		}
+
+		.dashWidget-handle-e {
+			cursor: e-resize;
+			width: 7px;
+			right: -5px;
+			top: 0;
+			height: 100%;
+		}
+
+		.dashWidget-handle-w {
+			cursor: w-resize;
+			width: 7px;
+			left: -5px;
+			top: 0;
+			height: 100%;
+		}
+
+		.dashWidget-handle-se {
+			cursor: se-resize;
+			width: 9px;
+			height: 9px;
+			right: -5px;
+			bottom: -5px;
+		}
+
+		.dashWidget-handle-sw {
+			cursor: sw-resize;
+			width: 9px;
+			height: 9px;
+			left: -5px;
+			bottom: -5px;
+		}
+
+		.dashWidget-handle-nw {
+			cursor: nw-resize;
+			width: 9px;
+			height: 9px;
+			left: -5px;
+			top: -5px;
+		}
+
+		.dashWidget-handle-ne {
+			cursor: ne-resize;
+			width: 9px;
+			height: 9px;
+			right: -5px;
+			top: -5px;
+		}
+	}
+}

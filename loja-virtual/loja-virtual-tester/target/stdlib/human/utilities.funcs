@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_AA1XkH6YEeOazrC8xQ9gxw">
+  <functions
+      xmi:id="_BPlCoH6YEeOazrC8xQ9gxw"
+      name="sendEmail"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.SendEmailFunction.sendEmail"
+      type="Null"
+      deprecated="true"
+      sideEffect="true">
+    <parameters
+        xmi:id="_BPlCoX6YEeOazrC8xQ9gxw"
+        name="subject"
+        parameterType="String">
+      <description>email subject</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCon6YEeOazrC8xQ9gxw"
+        name="body"
+        parameterType="String"
+        required="true">
+      <description>email body paragraphs</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCo36YEeOazrC8xQ9gxw"
+        name="attachments"
+        parameterType="Set&lt;File>">
+      <description>attachments</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCpH6YEeOazrC8xQ9gxw"
+        name="recipientsTo"
+        parameterType="Set&lt;String>"
+        required="true">
+      <description>email addresses of recipients TO</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCpX6YEeOazrC8xQ9gxw"
+        name="recipientsCc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients CC</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCpn6YEeOazrC8xQ9gxw"
+        name="recipientsBcc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients BCC</description>
+    </parameters>
+    <parameters
+        xmi:id="_BPlCp36YEeOazrC8xQ9gxw"
+        name="charset"
+        parameterType="String">
+      <description><![CDATA[Name of character encoding used for subject and body of e-mail, for
+instance, “ISO-8859-1”, “UTF-8”, “windows-1250”, etc. If not speci-
+fied, the default is “UTF-8”. The supported encodings vary between
+different implementations of the Java 2 platform, see Java docu-
+mentation for details.
+]]></description>
+    </parameters>
+    <description><![CDATA[Sends an e-mail.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+
+Deprecated: use function sendEmail with extended parameters.]]></description>
+  </functions>
+  <functions
+      xmi:id="_kW0TIFCDEeSe250AkEqArw"
+      name="sendEmail"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.SendEmailFunction.sendEmail"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_kW0TIVCDEeSe250AkEqArw"
+        name="subject"
+        parameterType="String">
+      <description>email subject</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TIlCDEeSe250AkEqArw"
+        name="body"
+        parameterType="String"
+        required="true">
+      <description>email body paragraphs</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TI1CDEeSe250AkEqArw"
+        name="attachments"
+        parameterType="Set&lt;File>">
+      <description>attachments</description>
+    </parameters>
+    <parameters
+        xmi:id="_lFL1AFCDEeSe250AkEqArw"
+        name="from"
+        parameterType="String">
+      <description>email address of sender. If not specified, the default (given by application server settings) is used.</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TJFCDEeSe250AkEqArw"
+        name="recipientsTo"
+        parameterType="Set&lt;String>"
+        required="true">
+      <description>email addresses of recipients TO</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TJVCDEeSe250AkEqArw"
+        name="recipientsCc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients CC</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TJlCDEeSe250AkEqArw"
+        name="recipientsBcc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients BCC</description>
+    </parameters>
+    <parameters
+        xmi:id="_kW0TJ1CDEeSe250AkEqArw"
+        name="charset"
+        parameterType="String">
+      <description><![CDATA[Name of character encoding used for subject and body of e-mail, for
+instance, “ISO-8859-1”, “UTF-8”, “windows-1250”, etc. If not speci-
+fied, the default is “UTF-8”. The supported encodings vary between
+different implementations of the Java 2 platform, see Java docu-
+mentation for details.
+]]></description>
+    </parameters>
+    <description><![CDATA[Sends an e-mail.
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Bks-EH6YEeOazrC8xQ9gxw"
+      name="getUIHistory"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.getUIHistory"
+      type="Map&lt;Integer,HistoricalNavigation>"/>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

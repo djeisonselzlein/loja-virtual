@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.document:Documents
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.document="http:///com/whitestein/lsps/modeler/document.ecore"
+    xmi:id="_4nbRsF_nEeWLuIPkTOuq1g"
+    newUI="true">
+  <docs
+      xmi:id="_5Yuy0F_nEeWLuIPkTOuq1g"
+      name="ProdutosDoc">
+    <title><![CDATA["Produtos"]]></title>
+    <uIDefinition>ListaDeProdutos();</uIDefinition>
+    <accessRights>isPersonIn(getCurrentPerson(), 'Responsável de Produção'())</accessRights>
+  </docs>
+</com.whitestein.lsps.modeler.document:Documents>

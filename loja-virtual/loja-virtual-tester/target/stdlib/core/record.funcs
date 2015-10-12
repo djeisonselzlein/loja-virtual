@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_m-3v4OMQEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_oJzR8OMQEeK4rchgp2zFsA"
+      name="deleteRecords"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.deleteAllRecords"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_oJzR8eMQEeK4rchgp2zFsA"
+        name="records"
+        parameterType="Collection&lt;Record>"
+        required="true"/>
+    <description><![CDATA[Deletes the specified records and all related data links navigable from the deleted records. Works for shared and for non-shared records. Value of deleted records become null in all slots (variables, function or task call parameters, etc.) referring to those records. If the record is referred to from a collection or a key in a map, it is removed.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.
+-“RecordNotFoundError” if the records parameter contains a shared record with incorrect reference to a database record.]]></description>
+  </functions>
+  <functions
+      xmi:id="_oJzR8uMQEeK4rchgp2zFsA"
+      name="deleteRecords"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.deleteRecords"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_oJzR8-MQEeK4rchgp2zFsA"
+        name="records"
+        parameterType="Record"
+        required="true"/>
+    <description><![CDATA[Deletes the specified records and all related data links navigable from the deleted records. Works for shared and for non-shared records. Value of deleted records become null in all slots (variables, function or task call parameters, etc.) referring to that records.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.
+-“RecordNotFoundError” if the records parameter contains a shared record with incorrect reference to a database record.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

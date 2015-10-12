@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_HQ0BwH6XEeOazrC8xQ9gxw">
+  <functions
+      xmi:id="_JlcW0H6XEeOazrC8xQ9gxw"
+      name="children"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.children"
+      type="Set&lt;RoleUnit>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_JlcW0X6XEeOazrC8xQ9gxw"
+        name="roleUnit"
+        parameterType="RoleUnit"
+        required="true"/>
+    <description><![CDATA[Returns a set of direct children of an organization role or unit referred to by the roleUnit parameter. In the case of a parametric RoleUnit the values of children's parameters are derived from the specified roleUnit's parameters; i.e., the value of a particular child's parameter is identical with the value of the parent's parameter of the same name.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_LTXRMH6XEeOazrC8xQ9gxw"
+      name="isPersonIn"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.isPersonIn"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_LTXRMX6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <parameters
+        xmi:id="_LTXRMn6XEeOazrC8xQ9gxw"
+        name="roleUnit"
+        parameterType="RoleUnit"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified person belongs to the given roleUnit in the current organization model. A person "belongs" to a given organization role or unit if it belongs to it directly or belongs to any of its descendants (evaluated recursively).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_L4O40H6XEeOazrC8xQ9gxw"
+      name="isPersonStrictlyIn"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.isPersonStrictlyIn"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_L4O40X6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <parameters
+        xmi:id="_L4O40n6XEeOazrC8xQ9gxw"
+        name="role"
+        parameterType="Role"
+        required="true"/>
+    <description><![CDATA[Returns true, if the given  person plays strictly the specified role, but none of its sub-roles. Therefore, this is a non-recursive version of the isPersonIn() function applied to organization roles.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_NRPTIH6XEeOazrC8xQ9gxw"
+      name="personsWith"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.personsWith"
+      type="Set&lt;Person>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_NRPTIX6XEeOazrC8xQ9gxw"
+        name="roleUnit"
+        parameterType="RoleUnit"
+        required="true"/>
+    <description><![CDATA[Returns a set of all persons that belong to the given roleUnit in the current organization model. A person "belongs" to a given organization role or unit if it belongs to it directly or belongs to any of its descendants (evaluated recursively).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_N0QgoH6XEeOazrC8xQ9gxw"
+      name="personsStrictlyWith"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.personsStrictlyWith"
+      type="Set&lt;Person>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_N0QgoX6XEeOazrC8xQ9gxw"
+        name="role"
+        parameterType="Role"
+        required="true"/>
+    <description><![CDATA[Returns a set of all persons that play the given role, but none of its sub-roles. Therefore, this is a non-recursive version of the  personsWith() function applied to organization roles.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_QkEV0H6XEeOazrC8xQ9gxw"
+      name="getPerson"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getPersonWithLogin"
+      type="Person"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_QkEV0X6XEeOazrC8xQ9gxw"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns a person of the specified name.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"PersonNotFoundError" if there is no such a person.]]></description>
+  </functions>
+  <functions
+      xmi:id="_TNZvkH6XEeOazrC8xQ9gxw"
+      name="getPersonWithId"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getPersonWithId"
+      type="Person"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_TNZvkX6XEeOazrC8xQ9gxw"
+        name="id"
+        parameterType="String"
+        required="true">
+      <description></description>
+    </parameters>
+    <description><![CDATA[Returns a person of the specified id.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"PersonNotFoundError" if there is no such a person.]]></description>
+  </functions>
+  <functions
+      xmi:id="_VhMXIH6XEeOazrC8xQ9gxw"
+      name="getRoleUnitByName"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getRoleUnitByName"
+      type="RoleUnit"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_VhMXIX6XEeOazrC8xQ9gxw"
+        name="module"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_VhMXIn6XEeOazrC8xQ9gxw"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns an organization role or an organization unit specified by their name defined in the given module.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"RoleUnitNotFoundError" if there is no such a role or a unit.]]></description>
+  </functions>
+  <functions
+      xmi:id="_X1-dMH6XEeOazrC8xQ9gxw"
+      name="getRoleUnitByName"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getRoleUnitByName"
+      type="RoleUnit"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_X1-dMX6XEeOazrC8xQ9gxw"
+        name="module"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_X1-dMn6XEeOazrC8xQ9gxw"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_X1-dM36XEeOazrC8xQ9gxw"
+        name="parameters"
+        parameterType="Map&lt;String,String>"/>
+    <description><![CDATA[Returns an organization role or an organization unit specified by their name and parameters defined in the given module.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"RoleUnitNotFoundError" if there is no such a role or a unit.]]></description>
+  </functions>
+  <functions
+      xmi:id="_ZfEh8H6XEeOazrC8xQ9gxw"
+      name="anyPerformer"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.anyPerformer"
+      type="Performer"
+      typeParameterNames="">
+    <description>Returns a special performer representing any known process performer. This function is used to specify access to entities (e.g., to-dos, reports, or widgets) available to all known process performers.</description>
+  </functions>
+  <functions
+      xmi:id="_aeZQ8H6XEeOazrC8xQ9gxw"
+      name="getCurrentPerson"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getCurrentPerson"
+      type="Person"
+      typeParameterNames="">
+    <description>Returns the person who has initiates the current model processing request. For instance, the person who has submitted a to-do or called a web service. In cases of receiving time events or signals the technical person “ProcessAgent” is returned.</description>
+  </functions>
+  <functions
+      xmi:id="_bnp_EH6XEeOazrC8xQ9gxw"
+      name="getPersonFullName"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getPersonFullName"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_bnp_EX6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <description><![CDATA[Returns the full name of the specified person.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_c4hKAH6XEeOazrC8xQ9gxw"
+      name="getPersonProperties"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getPersonProperties"
+      type="Map&lt;String, String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_c4hKAX6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <description><![CDATA[Returns the additional properties of the specified person.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_d5DZ8H6XEeOazrC8xQ9gxw"
+      name="getPersonRoles"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.orgstructure.function.OrgStructureFunctions.getPersonRoles"
+      type="Set&lt;Role>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_d5DZ8X6XEeOazrC8xQ9gxw"
+        name="person"
+        parameterType="Person"
+        required="true"/>
+    <description><![CDATA[Returns a set of organization roles from the current model directly as signed to the specified person.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_6P8XAH6XEeOazrC8xQ9gxw"
+      name="emailAddresses"
+      type="Set&lt;String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_6P8XAX6XEeOazrC8xQ9gxw"
+        name="roleUnit"
+        parameterType="RoleUnit"
+        required="true">
+      <description></description>
+    </parameters>
+    <description>Returns set of email addresses of all persons in the role.</description>
+    <expression><![CDATA[collect( 
+	remove(
+		personsWith(roleUnit),
+		null
+	), 
+	{person:Person -> person.email}
+)]]></expression>
+  </functions>
+  <functions
+      xmi:id="_6kviUH6XEeOazrC8xQ9gxw"
+      name="emailAddresses"
+      variadic="true"
+      type="Set&lt;String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_6kviUX6XEeOazrC8xQ9gxw"
+        name="roleUnits"
+        parameterType="RoleUnit"
+        required="true"/>
+    <description>Returns set of email addresses of all persons in the roles.</description>
+    <expression><![CDATA[remove(
+	fold(collect(toSet(roleUnits), {roleUnit:RoleUnit -> emailAddresses(roleUnit)}), {}, {a:Set<String>, b:Set<String> -> addAll(a, b)}),
+	null
+)		]]></expression>
+  </functions>
+  <functions
+      xmi:id="_7COvkH6XEeOazrC8xQ9gxw"
+      name="emailAddresses"
+      type="Set&lt;String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_7COvkX6XEeOazrC8xQ9gxw"
+        name="performers"
+        parameterType="Set&lt;Performer>"
+        required="true"/>
+    <description>Returns set of email addresses of the performers. If a performer is of type Person its email address is added to the result. If a performer is of type RoleUnit email addresses of all persons in the role are added to the result. </description>
+    <expression><![CDATA[remove(
+	fold(
+		collect(
+			performers, 
+			{performer:Performer -> if isInstance(performer,type(Person)) then {cast(performer,type(Person)).email} else emailAddresses(cast(performer,type(RoleUnit))) end }
+		),
+		{},
+		{a:Set<String>, b:Set<String> -> addAll(a, b)}
+	),
+	null
+)	
+	]]></expression>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

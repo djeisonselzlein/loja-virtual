@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.hints:Hints
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.hints="http:///com/whitestein/lsps/modeler/hints.ecore"
+    xmi:id="_CUeHkLY5EeK9HoQD1wj4wg">
+  <hints
+      xmi:id="_DFhxELY5EeK9HoQD1wj4wg"
+      name="html-class"
+      components="UIComponent"
+      type="String">
+    <options
+        xmi:id="_4JguEI9CEeOVS9IbpEeojQ"
+        label="no-text">
+      <expression><![CDATA[#"l-no-text"]]></expression>
+    </options>
+    <options
+        xmi:id="_M1Vc4I9DEeOVS9IbpEeojQ"
+        label="no-border">
+      <expression><![CDATA[#"l-border-none"]]></expression>
+    </options>
+    <options
+        xmi:id="_ByurEI9DEeOVS9IbpEeojQ"
+        label="border-left">
+      <expression><![CDATA[#"l-border-left"]]></expression>
+    </options>
+    <options
+        xmi:id="_Gl2b0I9DEeOVS9IbpEeojQ"
+        label="border-top">
+      <expression><![CDATA[#"l-border-top"]]></expression>
+    </options>
+    <options
+        xmi:id="_IXYD0I9DEeOVS9IbpEeojQ"
+        label="border-right">
+      <expression><![CDATA[#"l-border-right"]]></expression>
+    </options>
+    <options
+        xmi:id="_KMAqMI9DEeOVS9IbpEeojQ"
+        label="border-bottom">
+      <expression><![CDATA[#"l-border-bottom"]]></expression>
+    </options>
+    <options
+        xmi:id="_QY31EI9DEeOVS9IbpEeojQ"
+        label="content-highlight">
+      <expression><![CDATA[#"l-highlighted"]]></expression>
+    </options>
+    <options
+        xmi:id="_VKP5YI9DEeOVS9IbpEeojQ"
+        label="content-emphasized">
+      <expression><![CDATA[#"l-emphasized"]]></expression>
+    </options>
+    <options
+        xmi:id="_XouuAI9DEeOVS9IbpEeojQ"
+        label="content-grayed">
+      <expression><![CDATA[#"l-grayed"]]></expression>
+    </options>
+    <options
+        xmi:id="_MOWmcLTUEeOFm8LT0zx5oA"
+        label="popup-close-button">
+      <expression><![CDATA[#"l-popup-close-button"]]></expression>
+    </options>
+    <options
+        xmi:id="_Z0OVANXrEeOSfNwlg1rFBw"
+        label="allow-overflow">
+      <expression><![CDATA[#"l-overflow-visible"]]></expression>
+    </options>
+    <options
+        xmi:id="_j7pO0NMAEeSL9qIsEVEmsQ"
+        label="border">
+      <expression><![CDATA[#"l-border"]]></expression>
+    </options>
+    <description>Value of this hint ends up as a class attribute of the html element.</description>
+  </hints>
+  <hints
+      xmi:id="_JtVuULTsEeO-G84GdpBnRw"
+      name="page-length"
+      components="ComboBox"
+      type="Decimal">
+    <options
+        xmi:id="_O3pQALTsEeO-G84GdpBnRw"
+        label="disable-lazy">
+      <expression>0</expression>
+    </options>
+    <options
+        xmi:id="_T1aKgLTsEeO-G84GdpBnRw"
+        label="default">
+      <expression>10</expression>
+    </options>
+    <description>Sets the page length for the suggestion popup. Setting the page length to 0 will disable suggestion popup paging (all items visible).</description>
+  </hints>
+  <hints
+      xmi:id="_1EiXELNmEeOZzNpf_5gfzg"
+      name="suffix"
+      components="TextBox"
+      type="String">
+    <description>Adds suffix to this TextBox preserving existing layout. Used to show currency symbols or custom texts related to the input.</description>
+  </hints>
+  <hints
+      xmi:id="_sc0pEI50EeOIXfBreLLTgw"
+      name="icon"
+      components="UIComponent"
+      type="String">
+    <description>Defines icon for the component.</description>
+  </hints>
+  <hints
+      xmi:id="_7hctwImxEeOMa-gVlVjLfw"
+      name="mobile"
+      components="VerticalLayout,HorizontalLayout"
+      type="Boolean">
+    <options
+        xmi:id="_dLFW0ImyEeOMa-gVlVjLfw"
+        label="&quot;false&quot;">
+      <expression>false</expression>
+    </options>
+    <options
+        xmi:id="_d4gdgImyEeOMa-gVlVjLfw"
+        label="&quot;true&quot;">
+      <expression>true</expression>
+    </options>
+    <description><![CDATA[If the value of this hint is false or null, the "old" "desktop" layout is used, which does no drawing on its own, it merely positions its child components. However, Touchkit adds new horizontal/vertical layouts which are activated by setting this hint to true. This hint is ignored in the desktop version. The properties of these specialized layouts are as follows:
+
+1. Touchkit Vertical Layout only adds display properties: it draws a white border underneath itself and its children, and separates its children by thin horizontal line. Also, it displays component label to the left, component contents to the right of the layout. Aside from this, it works just like the "desktop" version of vertical layout.
+
+2. Touchkit Horizontal Layout differs greatly from the "desktop" horizontal layout as it is intended only for visual button grouping, as shown here: https://vaadin.com/add-ons/touchkit (search for the ButtonGroup component). It forces its height to 40px, therefore it is nearly unusable for any other child components besides buttons.]]></description>
+  </hints>
+  <hints
+      xmi:id="_QuQ3oLY5EeK9HoQD1wj4wg"
+      name="width"
+      components="UIComponent"
+      type="String">
+    <options
+        xmi:id="_Nt79YLY9EeK9HoQD1wj4wg"
+        label="100%">
+      <expression><![CDATA[#"100%"]]></expression>
+    </options>
+    <options
+        xmi:id="_PrDxYLY9EeK9HoQD1wj4wg"
+        label="10em">
+      <expression><![CDATA[#"10em"]]></expression>
+    </options>
+    <options
+        xmi:id="_4DaeEKQzEeOm2YWhVD0DAA"
+        label="Wrap Content">
+      <expression><![CDATA[#"wrap-content"]]></expression>
+    </options>
+    <options
+        xmi:id="_50Z6kKQzEeOm2YWhVD0DAA"
+        label="Fill Parent">
+      <expression><![CDATA[#"fill-parent"]]></expression>
+    </options>
+    <description><![CDATA[Width of the component. The value can be expressed in any unit supported by vaadin - com.vaadin.terminal.Sizeable.Unit (px, pt, pc, em, ex, mm, cm, in, %). 
+
+Column width can be specified in pixels only.
+
+Wrap-Content makes the component width wide enough to contain all children without overlapping. Equal to setting this value to null. Fill-Parent makes the component as wide as its parent. Equal to "100%".]]></description>
+  </hints>
+  <hints
+      xmi:id="_8lHl0LY9EeK9HoQD1wj4wg"
+      name="height"
+      components="UIComponent"
+      type="String">
+    <options
+        xmi:id="_lnbFkLY-EeK9HoQD1wj4wg"
+        label="100%">
+      <expression><![CDATA[#"100%"]]></expression>
+    </options>
+    <options
+        xmi:id="_nDIOkLY-EeK9HoQD1wj4wg"
+        label="10em">
+      <expression><![CDATA[#"10em"]]></expression>
+    </options>
+    <options
+        xmi:id="_qGNG4KQ0EeObkYC11xT0HQ"
+        label="Wrap Content">
+      <expression><![CDATA[#"wrap-content"]]></expression>
+    </options>
+    <options
+        xmi:id="_oa40kKQ0EeObkYC11xT0HQ"
+        label="Fill Parent">
+      <expression><![CDATA[#"fill-parent"]]></expression>
+    </options>
+    <description><![CDATA[Height of the component. The value can be expressed in any unit supported by vaadin - com.vaadin.terminal.Sizeable.Unit (px, pt, pc, em, ex, mm, cm, in, %)
+
+Wrap-Content makes the component width high enough to contain all children without overlapping. Equal to setting this value to null. Fill-Parent makes the component as high as its parent. Equal to "100%".]]></description>
+  </hints>
+  <hints
+      xmi:id="_qXxPILY-EeK9HoQD1wj4wg"
+      name="expand"
+      components="TableColumn, UIComponent"
+      type="Decimal">
+    <options
+        xmi:id="_OmBKALY_EeK9HoQD1wj4wg"
+        label="Full">
+      <expression>1</expression>
+    </options>
+    <description><![CDATA[Sets the expand ratio for a column or component.
+
+Expand ratios can be defined to customize the way how excess space is divided among columns in a table or among components in a vertical / horizontal layout. Table can have excess space if it has its width defined and there is horizontally more space than columns consume naturally. Excess space is the space that is not used by columns with explicit width or with natural width (no width nor expand ratio).]]></description>
+  </hints>
+  <hints
+      xmi:id="_hWWOIMemEeKE0fx03dR45A"
+      name="align"
+      components="UIComponent"
+      type="String">
+    <options
+        xmi:id="_jbBboMemEeKE0fx03dR45A"
+        label="Top left (default)">
+      <expression><![CDATA[#"top left"]]></expression>
+    </options>
+    <options
+        xmi:id="_lBaKoMemEeKE0fx03dR45A"
+        label="Top center">
+      <expression><![CDATA[#"top center"]]></expression>
+    </options>
+    <options
+        xmi:id="_mfjjoMemEeKE0fx03dR45A"
+        label="Top right">
+      <expression><![CDATA[#"top right"]]></expression>
+    </options>
+    <options
+        xmi:id="_nthyoMemEeKE0fx03dR45A"
+        label="Middle left">
+      <expression><![CDATA[#"middle left"]]></expression>
+    </options>
+    <options
+        xmi:id="_qYDfMMemEeKE0fx03dR45A"
+        label="Centered">
+      <expression><![CDATA[#"middle center"]]></expression>
+    </options>
+    <options
+        xmi:id="_r6x2MMemEeKE0fx03dR45A"
+        label="Middle right">
+      <expression><![CDATA[#"middle right"]]></expression>
+    </options>
+    <options
+        xmi:id="_tQYXMMemEeKE0fx03dR45A"
+        label="Bottom left">
+      <expression><![CDATA[#"bottom left"]]></expression>
+    </options>
+    <options
+        xmi:id="_uXHVwMemEeKE0fx03dR45A"
+        label="Bottom center">
+      <expression><![CDATA[#"bottom center"]]></expression>
+    </options>
+    <options
+        xmi:id="_wHMMQMemEeKE0fx03dR45A"
+        label="Bottom right">
+      <expression><![CDATA[#"bottom right"]]></expression>
+    </options>
+    <description><![CDATA[Sets the alignment of the component.
+
+This is applicable only for direct children of VerticalLayout, HorizontalLayout or GridLayout.]]></description>
+  </hints>
+  <hints
+      xmi:id="_GbfG4JPNEeOe8LSABO2QdQ"
+      name="children-align"
+      components="VerticalLayout,HorizontalLayout,GridLayout,TableColumn"
+      type="String">
+    <options
+        xmi:id="_M_4A8JPNEeOe8LSABO2QdQ"
+        label="Top left (default)">
+      <expression><![CDATA[#"top left"]]></expression>
+    </options>
+    <options
+        xmi:id="_O2dIEJPNEeOe8LSABO2QdQ"
+        label="Top center">
+      <expression><![CDATA[#"top center"]]></expression>
+    </options>
+    <options
+        xmi:id="_QzzlkJPNEeOe8LSABO2QdQ"
+        label="Top right">
+      <expression><![CDATA[#"top right"]]></expression>
+    </options>
+    <options
+        xmi:id="_SAn-AJPNEeOe8LSABO2QdQ"
+        label="Middle left">
+      <expression><![CDATA[#"middle left"]]></expression>
+    </options>
+    <options
+        xmi:id="_TUhO0JPNEeOe8LSABO2QdQ"
+        label="Centered">
+      <expression><![CDATA[#"middle center"]]></expression>
+    </options>
+    <options
+        xmi:id="_UvMdEJPNEeOe8LSABO2QdQ"
+        label="Middle right">
+      <expression><![CDATA[#"middle right"]]></expression>
+    </options>
+    <options
+        xmi:id="_Wpip4JPNEeOe8LSABO2QdQ"
+        label="Bottom left">
+      <expression><![CDATA[#"bottom left"]]></expression>
+    </options>
+    <options
+        xmi:id="_X03NgJPNEeOe8LSABO2QdQ"
+        label="Bottom center">
+      <expression><![CDATA[#"bottom center"]]></expression>
+    </options>
+    <options
+        xmi:id="_ZDeVsJPNEeOe8LSABO2QdQ"
+        label="Bottom right">
+      <expression><![CDATA[#"bottom right"]]></expression>
+    </options>
+    <description><![CDATA[Sets the default alignment of all children component. May be overridden using the "align" hint on child components.
+
+This is applicable only for VerticalLayout, HorizontalLayout, GridLayout or TableColumn.]]></description>
+  </hints>
+  <hints
+      xmi:id="_klob8LY_EeK9HoQD1wj4wg"
+      name="size"
+      components="MultiSelectList"
+      type="Integer">
+    <options
+        xmi:id="_xX834LY_EeK9HoQD1wj4wg"
+        label="One row">
+      <expression>1</expression>
+    </options>
+    <options
+        xmi:id="_WFbP8LZBEeK9HoQD1wj4wg"
+        label="Two rows">
+      <expression>2</expression>
+    </options>
+    <options
+        xmi:id="_Zf39kLZBEeK9HoQD1wj4wg"
+        label="Three rows">
+      <expression>3</expression>
+    </options>
+    <description>Determines number of rows. If not specified (or set to 0), number of rows is determined implicitly.</description>
+  </hints>
+  <hints
+      xmi:id="_qTmrYLY_EeK9HoQD1wj4wg"
+      name="resizable"
+      components="Popup"
+      type="Boolean">
+    <options
+        xmi:id="_zIGm4LY_EeK9HoQD1wj4wg"
+        label="True (default)">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_0oie4LY_EeK9HoQD1wj4wg"
+        label="False">
+      <expression>false</expression>
+    </options>
+    <description>Sets the resizability of the popup window. If the hint is not used, popup is resizable.</description>
+  </hints>
+  <hints
+      xmi:id="_eWBNILZBEeK9HoQD1wj4wg"
+      name="layout"
+      components="RadioButtonList,CheckBoxList"
+      type="String">
+    <options
+        xmi:id="_gGPNkLZBEeK9HoQD1wj4wg"
+        label="Horizontal">
+      <expression><![CDATA[#"horizontal"]]></expression>
+    </options>
+    <options
+        xmi:id="_jl7nkLZBEeK9HoQD1wj4wg"
+        label="Vertical (default)">
+      <expression><![CDATA[#"vertical"]]></expression>
+    </options>
+    <description>Determines layout of radio buttons, checkboxes. If not specified, vertical layout is used.</description>
+  </hints>
+  <hints
+      xmi:id="_uREUkLZBEeK9HoQD1wj4wg"
+      name="max-text-size"
+      components="TextBox, TextArea"
+      type="Integer">
+    <options
+        xmi:id="_w4wvkLZBEeK9HoQD1wj4wg"
+        label="255 characters">
+      <expression>255</expression>
+    </options>
+    <description>Sets the maximum number of characters in the field. If not specified or -1, unlimited length is considered.</description>
+  </hints>
+  <hints
+      xmi:id="_gGDK4LZCEeK9HoQD1wj4wg"
+      name="initial-page-size"
+      components="Table"
+      type="Integer">
+    <options
+        xmi:id="_1J274LZCEeK9HoQD1wj4wg"
+        label="10 rows per page">
+      <expression>10</expression>
+    </options>
+    <options
+        xmi:id="_m3__0LZCEeK9HoQD1wj4wg"
+        label="20 rows per page">
+      <expression>20</expression>
+    </options>
+    <options
+        xmi:id="_2XbiQLZCEeK9HoQD1wj4wg"
+        label="30 rows per page">
+      <expression>30</expression>
+    </options>
+    <options
+        xmi:id="_3caNULZCEeK9HoQD1wj4wg"
+        label="50 rows per page">
+      <expression>50</expression>
+    </options>
+    <options
+        xmi:id="_5M3eULZCEeK9HoQD1wj4wg"
+        label="100 rows per page">
+      <expression>100</expression>
+    </options>
+    <description>Number of rows per page of the paged table when it is first displayed. If not specified, 20 rows per page is considered.</description>
+  </hints>
+  <hints
+      xmi:id="_w5a3QMeiEeKE0fx03dR45A"
+      name="tab-order"
+      components="InputComponent, Button, ActionLink, NavigationLink, FileDownload"
+      type="Integer">
+    <description>Value of this hint ends up as a tabindex attribute of the html element. Having two components with the same tabindex is not treated in any special way (i.e. tab order is undefined). </description>
+  </hints>
+  <hints
+      xmi:id="_aLHTUMeiEeKE0fx03dR45A"
+      name="initial-focus"
+      components="InputComponent"
+      type="Boolean">
+    <options
+        xmi:id="_f166AMeiEeKE0fx03dR45A"
+        label="True">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_gd5gAMeiEeKE0fx03dR45A"
+        label="False (default)">
+      <expression>false</expression>
+    </options>
+    <description>If the value is true, this element will have initial focus. If multiple components have this property, behaviour is unspecified. </description>
+  </hints>
+  <hints
+      xmi:id="_n8v3MMeiEeKE0fx03dR45A"
+      name="open-in-new-window"
+      components="NavigationLink"
+      type="Boolean">
+    <options
+        xmi:id="_pfO9oMeiEeKE0fx03dR45A"
+        label="True">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_qCHBMMeiEeKE0fx03dR45A"
+        label="False (default)">
+      <expression>false</expression>
+    </options>
+    <description>Determines whether the link target will be opened in current or new window. </description>
+  </hints>
+  <hints
+      xmi:id="_EQKpgMejEeKE0fx03dR45A"
+      name="hidden"
+      components="TableColumn"
+      type="Boolean">
+    <options
+        xmi:id="_Fl_0AMejEeKE0fx03dR45A"
+        label="True">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_GJLZkMejEeKE0fx03dR45A"
+        label="False (default)">
+      <expression>false</expression>
+    </options>
+    <description>If the value is true, table column is hidden by default.</description>
+  </hints>
+  <hints
+      xmi:id="_BIzuYMhQEeKE0fx03dR45A"
+      name="file-upload-mime"
+      components="FileUpload"
+      type="String">
+    <options
+        xmi:id="_H16fkMhQEeKE0fx03dR45A"
+        label="All files (default)">
+      <expression>null</expression>
+    </options>
+    <options
+        xmi:id="_GmVuEMhQEeKE0fx03dR45A"
+        label="Images">
+      <expression><![CDATA[#"image/*"]]></expression>
+    </options>
+    <options
+        xmi:id="_J5_QIMhQEeKE0fx03dR45A"
+        label="Videos">
+      <expression><![CDATA[#"video/*"]]></expression>
+    </options>
+    <options
+        xmi:id="_M7erMMhQEeKE0fx03dR45A"
+        label="Sound files">
+      <expression><![CDATA[#"audio/*"]]></expression>
+    </options>
+    <description>Restricts files which can be uploaded by mime type. Support varies by browser and thus it may be ignored.</description>
+  </hints>
+  <hints
+      xmi:id="_wAfOAF2pEeOkAbDSuZo7fw"
+      name="spacing"
+      components="GridLayout, HorizontalLayout, VerticalLayout, TabbedLayout, Popup, Panel"
+      type="Boolean">
+    <options
+        xmi:id="_09pEgF2pEeOkAbDSuZo7fw"
+        label="Enabled">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_36U4EF2pEeOkAbDSuZo7fw"
+        label="Disabled">
+      <expression>false</expression>
+    </options>
+    <description>Enables/disables spacing of inner content. Default value for GridLayout, HorizontalLayout, VerticalLayout is disabled, for TabbedLayout, Popup, Panel is enabled.</description>
+  </hints>
+  <hints
+      xmi:id="_6LPKwF2pEeOkAbDSuZo7fw"
+      name="margin"
+      components="GridLayout, HorizontalLayout, VerticalLayout, TabbedLayout, Popup, Panel"
+      type="Boolean">
+    <options
+        xmi:id="_6LPKwV2pEeOkAbDSuZo7fw"
+        label="Enabled">
+      <expression>true</expression>
+    </options>
+    <options
+        xmi:id="_6LPKwl2pEeOkAbDSuZo7fw"
+        label="Disabled">
+      <expression>false</expression>
+    </options>
+    <description>Enables/disables margin around this container, in case of TabbedLayout margin is around inner content. Default value for GridLayout, HorizontalLayout, VerticalLayout, Panel is disabled, for TabbedLayout, Popup is enabled.</description>
+  </hints>
+  <hints
+      xmi:id="_l-fwwK6fEeOnHr92_XTdBw"
+      name="breadcrumbs"
+      components="HorizontalLayout"
+      type="String">
+    <options
+        xmi:id="_0HgnkLEhEeSxV7dNskMUfA"
+        label="Numbered">
+      <expression><![CDATA[#"numbered"]]></expression>
+    </options>
+    <options
+        xmi:id="_o6QXQK6fEeOnHr92_XTdBw"
+        label="Plain">
+      <expression><![CDATA[#"plain"]]></expression>
+    </options>
+    <options
+        xmi:id="_lXlFQK6gEeOnHr92_XTdBw"
+        label="Disabled">
+      <expression>null</expression>
+    </options>
+    <description>Enables breadcrumbs inside this layout. All ActionLinks will act like breadcrumbs.</description>
+  </hints>
+  <hints
+      xmi:id="_ittDUPe6EeO3WsmZ7JNIGw"
+      name="disable-runtime-performance-warnings"
+      components="Table"
+      type="Object">
+    <options
+        xmi:id="_oKcY0Pe6EeO3WsmZ7JNIGw"
+        label="Yes">
+      <expression>null</expression>
+    </options>
+  </hints>
+</com.whitestein.lsps.modeler.hints:Hints>

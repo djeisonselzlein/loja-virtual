@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_qeF9YM8JEeSlbtajzcPm_w">
+  <functions
+      xmi:id="_tB7zIM8JEeSlbtajzcPm_w"
+      name="addTab"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.addTab"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zIc8JEeSlbtajzcPm_w"
+        name="tabbedLayout"
+        parameterType="TabbedLayout"
+        required="true"/>
+    <parameters
+        xmi:id="_tB7zIs8JEeSlbtajzcPm_w"
+        name="tab"
+        parameterType="Tab"
+        required="true"/>
+    <description>Dynamically adds a tab to given tabbed layout. If the tab is already present in the tabbed layout, this function does nothing.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zI88JEeSlbtajzcPm_w"
+      name="removeTab"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.removeTab"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zJM8JEeSlbtajzcPm_w"
+        name="tabbedLayout"
+        parameterType="TabbedLayout"
+        required="true"/>
+    <parameters
+        xmi:id="_tB7zJc8JEeSlbtajzcPm_w"
+        name="tab"
+        parameterType="Tab"
+        required="true"/>
+    <description>Dynamically removes a tab to given tabbed layout. If the tab is not yet present in the tabbed layout, this function does nothing.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zJs8JEeSlbtajzcPm_w"
+      name="selectTab"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.selectTab"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zJ88JEeSlbtajzcPm_w"
+        name="tabbedLayout"
+        parameterType="TabbedLayout"
+        required="true"/>
+    <parameters
+        xmi:id="_tB7zKM8JEeSlbtajzcPm_w"
+        name="tab"
+        parameterType="Tab"
+        required="true"/>
+    <description>Selects given tab on given tabbed layout. Does nothing if the tabbed layout does not contain such tab.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zKc8JEeSlbtajzcPm_w"
+      name="invoke"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.invoke"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zKs8JEeSlbtajzcPm_w"
+        name="targets"
+        parameterType="Collection&lt;Container>"
+        required="true">
+      <description>Invoke the method on these containers</description>
+    </parameters>
+    <parameters
+        xmi:id="_tB7zK88JEeSlbtajzcPm_w"
+        name="methodName"
+        parameterType="String"
+        required="true">
+      <description>The method name</description>
+    </parameters>
+    <parameters
+        xmi:id="_tB7zLM8JEeSlbtajzcPm_w"
+        name="parameters"
+        parameterType="List&lt;Object>"
+        required="true">
+      <description>Method parameters</description>
+    </parameters>
+  </functions>
+  <functions
+      xmi:id="_tB7zLc8JEeSlbtajzcPm_w"
+      name="findTopmostComponents"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.findTopmostComponents"
+      type="List&lt;T>"
+      typeParameterNames="T extends UIComponent">
+    <parameters
+        xmi:id="_tB7zLs8JEeSlbtajzcPm_w"
+        name="type"
+        parameterType="Type&lt;T>"
+        required="true">
+      <description>The type of the components to find</description>
+    </parameters>
+    <parameters
+        xmi:id="_tB7zL88JEeSlbtajzcPm_w"
+        name="root"
+        parameterType="UIComponent"
+        required="true">
+      <description>Start search from this component</description>
+    </parameters>
+  </functions>
+  <functions
+      xmi:id="_tB7zMM8JEeSlbtajzcPm_w"
+      name="findTopmostContainers"
+      type="List&lt;Container>">
+    <parameters
+        xmi:id="_tB7zMc8JEeSlbtajzcPm_w"
+        name="root"
+        parameterType="UIComponent"
+        required="true">
+      <description>Start search from this component</description>
+    </parameters>
+    <expression>findTopmostComponents(type(Container), root)</expression>
+  </functions>
+  <functions
+      xmi:id="_tB7zMs8JEeSlbtajzcPm_w"
+      name="refresh"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.refresh"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zM88JEeSlbtajzcPm_w"
+        name="components"
+        parameterType="Collection&lt;UIComponent>">
+      <description>A list of components to refresh</description>
+    </parameters>
+    <description>Slates given components for refresh. The components are refreshed when the listener ends.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zNM8JEeSlbtajzcPm_w"
+      name="persist"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.persist"
+      type="Null">
+    <description>Persists immediately.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zNc8JEeSlbtajzcPm_w"
+      name="requestSubmit"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.requestSubmit"
+      type="Null">
+    <description>Requests submit after all listeners are processed</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zNs8JEeSlbtajzcPm_w"
+      name="requestSubmitAndNavigate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.requestSubmitAndNavigate"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zN88JEeSlbtajzcPm_w"
+        name="navigateTo"
+        parameterType="Navigation"
+        required="true"/>
+    <description>Requests submit and navigation after all listeners are processed</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zOM8JEeSlbtajzcPm_w"
+      name="merge"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.merge"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zOc8JEeSlbtajzcPm_w"
+        name="viewModels"
+        parameterType="Collection&lt;ViewModel>"
+        required="true"/>
+    <description>Merges given view models to upper levels (one level up).</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zOs8JEeSlbtajzcPm_w"
+      name="clear"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.clear"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zO88JEeSlbtajzcPm_w"
+        name="viewModels"
+        parameterType="Collection&lt;ViewModel>"
+        required="true"/>
+    <description>Clears given view models.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zPM8JEeSlbtajzcPm_w"
+      name="showConstraintViolations"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.showConstraintViolations"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zPc8JEeSlbtajzcPm_w"
+        name="constraintViolations"
+        parameterType="List&lt;ConstraintViolation>"
+        required="true"/>
+    <description>Maps given constraint violations to Vaadin components, according to the exclude/include rules.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zPs8JEeSlbtajzcPm_w"
+      name="createAndShow"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.createAndShow"
+      type="Popup"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_tB7zP88JEeSlbtajzcPm_w"
+        name="def"
+        parameterType="Popup"
+        required="true">
+      <description>The definition record of popup that is to be shown.</description>
+    </parameters>
+    <description>Creates a Vaadin instance of popup, bound to given definition record, and shows it. Does nothing if there already is popup bound to this instance of definition record.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zQM8JEeSlbtajzcPm_w"
+      name="hideAndDestroy"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.hideAndDestroy"
+      type="Null">
+    <parameters
+        xmi:id="_tB7zQc8JEeSlbtajzcPm_w"
+        name="def"
+        parameterType="Popup"
+        required="true">
+      <description>The definition record of popup which is to be destroyed.</description>
+    </parameters>
+    <description>Hides Vaadin popup, bound to given definition record, and destroys it. Does nothing if there is no popup registered to given record.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zQs8JEeSlbtajzcPm_w"
+      name="createAndAdd"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.createAndAdd"
+      type="T"
+      typeParameterNames="T extends UIComponent">
+    <parameters
+        xmi:id="_tB7zQ88JEeSlbtajzcPm_w"
+        name="what"
+        parameterType="T"
+        required="true">
+      <description>What component to create dynamically. Do not use with popups and table columns.</description>
+    </parameters>
+    <parameters
+        xmi:id="_tB7zRM8JEeSlbtajzcPm_w"
+        name="where"
+        parameterType="UIComponent"
+        required="true">
+      <description>Where to add the component. Only horizontal layout, vertical layout and form layout are supported</description>
+    </parameters>
+    <description>Creates a Vaadin instance for given component definition and adds it to given layout.</description>
+  </functions>
+  <functions
+      xmi:id="_tB7zRc8JEeSlbtajzcPm_w"
+      name="addColumn"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.addColumn"
+      type="TableColumn">
+    <parameters
+        xmi:id="_tB7zRs8JEeSlbtajzcPm_w"
+        name="what"
+        parameterType="TableColumn"
+        required="true">
+      <description>The table column to add</description>
+    </parameters>
+    <parameters
+        xmi:id="_tB7zR88JEeSlbtajzcPm_w"
+        name="where"
+        parameterType="UIComponent"
+        required="true">
+      <description>Table or TreeTable2</description>
+    </parameters>
+    <description>Creates a Vaadin instance for given table column definition and adds it to given table. Does nothing if there already is table column present for given definition.</description>
+  </functions>
+  <functions
+      xmi:id="_IaTh8NR6EeSDTNYEFn4icg"
+      name="removeAndDestroy"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.removeAndDestroy"
+      type="Null">
+    <parameters
+        xmi:id="_L3c-QNR6EeSDTNYEFn4icg"
+        name="what"
+        parameterType="UIComponent"
+        required="true">
+      <description>Which component to remove and destroy. Must not be a popup nor a table column.</description>
+    </parameters>
+    <parameters
+        xmi:id="_bfEzYNR6EeSDTNYEFn4icg"
+        name="where"
+        parameterType="UIComponent">
+      <description>Where to add the component. Only horizontal layout, vertical layout and form layout are supported. Ignored when called from a listener.</description>
+    </parameters>
+    <description><![CDATA[Removes and destroys given component. If called from a listener, the "where" parameter is ignored. When called from form initializer, "where" must point to "what"'s parent.]]></description>
+  </functions>
+  <functions
+      xmi:id="_E7UVwNR-EeSYrMJfbPgZIA"
+      name="removeAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.removeAll"
+      type="Null">
+    <parameters
+        xmi:id="_GBEc4NR-EeSYrMJfbPgZIA"
+        name="container"
+        parameterType="UIComponent"
+        required="true">
+      <description>Container whose children are to be removed. Only horizontal layout, vertical layout and form layout are supported.</description>
+    </parameters>
+    <description>Removes all children from given container. Only horizontal layout, vertical layout and form layout are supported.</description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

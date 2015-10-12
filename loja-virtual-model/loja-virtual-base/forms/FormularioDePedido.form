@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_M2P2MANGEeOGxZgWE420cg"
+    name="FormularioDePedido"
+    newUI="true">
+  <parameters
+      xmi:id="_Htmq8ANSEeOGxZgWE420cg"
+      name="produtosSelecionados"
+      parameterType="Reference&lt;Set&lt;Produto>>">
+    <description></description>
+  </parameters>
+  <parameters
+      xmi:id="_LnUHcANSEeOGxZgWE420cg"
+      name="pedido"
+      parameterType="Pedido"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_M2P2MQNGEeOGxZgWE420cg"
+      componentID="ROOT">
+    <listeners
+        xmi:id="_YLgLQAQXEeO4Z4YwFdbhJw"
+        name="VALIDATE"
+        listenerType="ACTION_LISTENER">
+      <validators
+          xmi:id="_YLgLQQQXEeO4Z4YwFdbhJw"
+          placement="METODO_DE_PAGAMENTO">
+        <message><![CDATA[if isEmpty(pedido.metodoDePagamento) then "Forneça um método de pagamento" end]]></message>
+      </validators>
+    </listeners>
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_q5WGUANaEeOWEu0LJiG9cA">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_rKsVAgNaEeOWEu0LJiG9cA"
+          componentID="SELECAO_DE_PRODUTOS">
+        <expression>SelecaoDeProdutos(produtosSelecionados)</expression>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+          xmi:id="_uAxxUANaEeOWEu0LJiG9cA"
+          horizontal="true">
+        <hints
+            xmi:id="_CEjBoANbEeOWEu0LJiG9cA"
+            key="width"
+            option="100%"/>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+            xmi:id="_rKsVBANaEeOWEu0LJiG9cA">
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+              xmi:id="_rKsVBQNaEeOWEu0LJiG9cA">
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdCheckBox"
+                xmi:id="_rKsVBgNaEeOWEu0LJiG9cA">
+              <binding><![CDATA[&pedido.urgente]]></binding>
+              <label><![CDATA["Entrega Urgente"]]></label>
+            </components>
+            <components
+                xsi:type="com.whitestein.lsps.modeler.form:NfdComboBox"
+                xmi:id="_rKsVBwNaEeOWEu0LJiG9cA"
+                componentID="METODO_DE_PAGAMENTO">
+              <listeners
+                  xmi:id="_rKsVCANaEeOWEu0LJiG9cA"
+                  refresh="PAYMENT_METHOD_DETAILS"
+                  executeOnlyIfVisible=""
+                  clearViewModel=""
+                  mergeViewModel=""
+                  description="">
+                <handle></handle>
+                <viewModelInit></viewModelInit>
+              </listeners>
+              <triggerProcessingOnChange>true</triggerProcessingOnChange>
+              <binding><![CDATA[&pedido.metodoDePagamento]]></binding>
+              <required>true</required>
+              <label><![CDATA["Método de Pagamento:"]]></label>
+              <createNewOption></createNewOption>
+              <options><![CDATA[[new Option(
+   value ->
+     "cc",
+   label ->
+     "Cartão de Crédito"),
+ new ui::Option(
+   value ->
+     "fatura",
+   label ->
+     "Fatura enviada ao endereço de entrega")]]]></options>
+            </components>
+          </child>
+          <title><![CDATA["Detalhes do Pedido"]]></title>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+            xmi:id="_rKsVDANaEeOWEu0LJiG9cA"
+            componentID="PAYMENT_METHOD_DETAILS">
+          <components
+              xsi:type="com.whitestein.lsps.modeler.form:NfdConditional"
+              xmi:id="_rKsVDQNaEeOWEu0LJiG9cA">
+            <child
+                xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+                xmi:id="_rKsVDgNaEeOWEu0LJiG9cA"
+                componentID="DETALHES_CARTAO_CREDITO">
+              <expression>CartaoDeCreditoDetalhe(pedido.cartaoCredito, false)</expression>
+            </child>
+            <visibleExpression><![CDATA[pedido.metodoDePagamento = "cc"]]></visibleExpression>
+            <show></show>
+          </components>
+        </components>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_rKsVCgNaEeOWEu0LJiG9cA"
+          componentID="ENDERECO_DETALHE">
+        <expression>EnderecoDetalhe(pedido.cliente.enderecoDeEntrega, false)</expression>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_fewx8AQhEeO4Z4YwFdbhJw">
+        <listenerRefs
+            xmi:id="_2W3yIAQhEeO4Z4YwFdbhJw"
+            name="SUBMETER"
+            componentID="ROOT"
+            listenerName="VALIDATE"/>
+        <listenerRefs
+            xmi:id="_3ahAcAQhEeO4Z4YwFdbhJw"
+            name="SUBMETER"
+            componentID="SELECAO_DE_PRODUTOS"
+            listenerName="VALIDATE"/>
+        <listenerRefs
+            xmi:id="_49SawAQhEeO4Z4YwFdbhJw"
+            name="SUBMETER"
+            componentID="DETALHES_CARTAO_CREDITO"
+            listenerName="VALIDATE"/>
+        <listenerRefs
+            xmi:id="_6HN3QAQhEeO4Z4YwFdbhJw"
+            name="SUBMETER"
+            componentID="ENDERECO_DETALHE"
+            listenerName="VALIDATE"/>
+        <expression>PainelDeBotoes(true)</expression>
+      </components>
+    </child>
+  </formItem>
+</com.whitestein.lsps.modeler.form:FormDefinition>

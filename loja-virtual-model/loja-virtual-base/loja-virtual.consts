@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleConstants
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_SQfgwF-fEeWkFqOSSwSe_Q">
+  <constants
+      xmi:id="_Ss5v8F-fEeWkFqOSSwSe_Q"
+      name="PROVEM_DE_COMPRA"
+      type="String">
+    <expression><![CDATA["Comprado"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_YU5TMF-fEeWkFqOSSwSe_Q"
+      name="PROVEM_DE_PRODUCAO"
+      type="String">
+    <expression><![CDATA["Produzido"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_cQJAwF-fEeWkFqOSSwSe_Q"
+      name="PROVEM_DE_ESTOQUE"
+      type="String">
+    <expression><![CDATA["Em estoque"]]></expression>
+  </constants>
+  <constants
+      xmi:id="_gD60YF-fEeWkFqOSSwSe_Q"
+      name="LIMITE_DE_CUSTO"
+      type="Decimal">
+    <expression>10</expression>
+  </constants>
+</com.whitestein.lsps.modeler.func:ModuleConstants>

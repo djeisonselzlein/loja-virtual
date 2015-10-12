@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/test/java" including="**/*.java"/>
+  <classpathentry kind="output" path="eclipse-target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/tester/lsps-tester/3.0.1004/lsps-tester-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/tester/lsps-tester/3.0.1004/lsps-tester-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4.jar" sourcepath="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar" sourcepath="M2_REPO/junit/junit/4.11/junit-4.11-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" sourcepath="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/tools/lsps-tools-components/3.0.1004/lsps-tools-components-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/tools/lsps-tools-components/3.0.1004/lsps-tools-components-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/common/lsps-common-client/3.0.1004/lsps-common-client-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/common/lsps-common-client/3.0.1004/lsps-common-client-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/lang/lsps-lang-core/3.0.1004/lsps-lang-core-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/lang/lsps-lang-core/3.0.1004/lsps-lang-core-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar" sourcepath="M2_REPO/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/common/lsps-common/3.0.1004/lsps-common-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/common/lsps-common/3.0.1004/lsps-common-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/javaee-api/5.0/javaee-api-5.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/engine/lsps-engine-client/3.0.1004/lsps-engine-client-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/engine/lsps-engine-client/3.0.1004/lsps-engine-client-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar" sourcepath="M2_REPO/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/engine/lsps-engine-model/3.0.1004/lsps-engine-model-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/engine/lsps-engine-model/3.0.1004/lsps-engine-model-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/lang/lsps-lang-query/3.0.1004/lsps-lang-query-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/lang/lsps-lang-query/3.0.1004/lsps-lang-query-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/human-processes/lsps-human-client/3.0.1004/lsps-human-client-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/human-processes/lsps-human-client/3.0.1004/lsps-human-client-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/org-structure/lsps-os-client/3.0.1004/lsps-os-client-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/org-structure/lsps-os-client/3.0.1004/lsps-os-client-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/whitestein/lsps/monitoring/lsps-monitoring-client/3.0.1004/lsps-monitoring-client-3.0.1004.jar">
+    <attributes>
+      <attribute value="jar:file:/Users/djeisonselzlein/.m2/repository/com/whitestein/lsps/monitoring/lsps-monitoring-client/3.0.1004/lsps-monitoring-client-3.0.1004-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-jdk14/1.7.5/slf4j-jdk14-1.7.5.jar" sourcepath="M2_REPO/org/slf4j/slf4j-jdk14/1.7.5/slf4j-jdk14-1.7.5-sources.jar"/>
+</classpath>

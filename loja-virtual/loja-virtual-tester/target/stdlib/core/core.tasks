@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.tasklib:TaskLibrary xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.tasklib="http:///com/whitestein/lsps/modeler/tasklib.ecore" xmi:id="0">
+  <taskTypes
+      xmi:id="Activate"
+      name="Activate"
+      classname="com.whitestein.lsps.stdlib.task.ReactivateGoal">
+    <signature
+        xmi:id="1"
+        name="goal"
+        parameterType="Goal"
+        required="true">
+      <description>Goal to be (re)activated.</description>
+    </signature>
+    <description><![CDATA[(Re)activates an inactive or finished goal. If the goal is active, the task type does nothing.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FinishedProcessInstanceError" if the process instance of the activated goal is finished.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="Assign"
+      name="Assign"
+      classname="com.whitestein.lsps.stdlib.task.Assign"
+      deprecated="true">
+    <signature
+        xmi:id="2"
+        name="slots"
+        parameterType="Map&lt;Reference&lt;Object>, Object>"
+        required="true">
+      <description>Sets objects as values of slots, whereas the slots are being pointed to by reference. References to the changed slots are given by the keys and corresponding objects by the values. References in the slots map cannot be null.</description>
+    </signature>
+    <description><![CDATA[DEPRECATED. Writes values to slots.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"IncompatibleTypeError" if the type of an assigning value is not compatible with the type of the slot it is being assigned to.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="CreateModelInstance"
+      name="CreateModelInstance"
+      classname="com.whitestein.lsps.stdlib.task.CreateModelInstance">
+    <signature
+        xmi:id="3"
+        name="model"
+        parameterType="Model"
+        required="true">
+      <description>Model to be instantiated.</description>
+    </signature>
+    <signature
+        xmi:id="5"
+        name="properties"
+        parameterType="Map&lt;String, String>">
+      <description>Map of model instance initialization properties. If null, an empty map is created in the instantiated model.</description>
+    </signature>
+    <signature
+        xmi:id="6"
+        name="modelInstance"
+        parameterType="Reference&lt;ModelInstance>">
+      <description>Reference to the created model instance. If the created model instance throws a runtime exception during its initialization, the referred slot is set to null.</description>
+    </signature>
+    <description><![CDATA[Creates a new model instance.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"ModelInstaniationError" if the model instance did not start due to an internal initiation error, not due to a model interpretation error.
+
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="Deactivate"
+      name="Deactivate"
+      classname="com.whitestein.lsps.stdlib.task.DeactivateGoal">
+    <signature
+        xmi:id="7"
+        name="goal"
+        parameterType="Goal"
+        required="true">
+      <description>Goal to be deactivated.</description>
+    </signature>
+    <description><![CDATA[Deactivates a not finished goal. If the goal is finished or the goal’s process is finished, the task type does nothing.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_tw1YYGiiEd-8cYykKgU-ag"
+      name="DeleteSharedRecords"
+      classname="com.whitestein.lsps.stdlib.task.DeleteSharedRecords">
+    <signature
+        xmi:id="_tw1YYWiiEd-8cYykKgU-ag"
+        name="data"
+        parameterType="Set&lt;Object>"
+        required="true">
+      <description>Set of shared records to delete.</description>
+    </signature>
+    <description><![CDATA[Deletes the specified shared records and all related data relationships navigable from the deleted shared records from database. Deletes the specified shared records from database.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"IncompatibleTypeError" if the data parameter contains an object which is not a shared record.
+-"RecordNotFoundError" if the data parameter contains a shared record with incorrect reference to a database record.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="Lock"
+      name="Lock"
+      classname="com.whitestein.lsps.stdlib.task.Lock">
+    <signature
+        xmi:id="8"
+        name="lockName"
+        parameterType="String"
+        required="true">
+      <description>Name (identifier) of the lock.</description>
+    </signature>
+    <signature
+        xmi:id="9"
+        name="message"
+        parameterType="String">
+      <description>Description of the lock.</description>
+    </signature>
+    <signature
+        xmi:id="10"
+        name="result"
+        parameterType="Reference&lt;Boolean>"
+        required="true">
+      <description>If true, a new lock was successfully created. If false, a lock with the same name already exists.</description>
+    </signature>
+    <signature
+        xmi:id="11"
+        name="existingMessage"
+        parameterType="Reference&lt;String>"
+        required="true">
+      <description>If the result is true, the value of the referred string is not changed. If the result is false, the value of the referred string is replaced with the message of an already existing lock with the same name.</description>
+    </signature>
+    <description><![CDATA[Creates a model instance-independent lock.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="Log"
+      name="Log"
+      classname="com.whitestein.lsps.stdlib.task.AddProcessLog">
+    <signature
+        xmi:id="12"
+        name="message"
+        parameterType="String"
+        required="true">
+      <description>Message to be logged.</description>
+    </signature>
+    <signature
+        xmi:id="_P7hbUFfWEeGkAazwdS-spw"
+        name="level"
+        parameterType="Integer">
+      <description>Log level. Unspecified level value logs at the “Info” level.</description>
+    </signature>
+    <description><![CDATA[Logs a specified message to the application log at the specified log level.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_sH650GiiEd-8cYykKgU-ag"
+      name="RemoveBinaryData"
+      classname="com.whitestein.lsps.stdlib.task.RemoveBinaryData"
+      deprecated="true">
+    <signature
+        xmi:id="_sH7g4GiiEd-8cYykKgU-ag"
+        name="handle"
+        parameterType="BinaryHandle"
+        required="true">
+      <description>Binary handle pointing to the binary data to be removed. The fields of the handle are cleaned up as well (set to the default values).</description>
+    </signature>
+    <description><![CDATA[Permanently removes the specified binary data from the database.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="RepeatGoals"
+      name="RepeatGoals"
+      classname="com.whitestein.lsps.stdlib.task.RepeatGoals">
+    <signature
+        xmi:id="13"
+        name="goals"
+        parameterType="List&lt;RepeatedGoal>"
+        required="true">
+      <description>Goals to be repeated. A runtime exception is thrown when the list includes a pair of achieve goals from which one goal is a subgoal of the other. Another runtime exception is thrown when process instance of any of the repeated goals is terminated.</description>
+    </signature>
+    <description><![CDATA[Repeats a set of goals. In principle, this task type deactivates the specified achieve goals, then sets the slots with the desired values, and finally reactivates the goals.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FinishedProcessInstanceError" if the process instance of the activated goal is finished.
+-"ParentGoals" if the goals list includes a pair of goals from which one goal is a subgoal of the other.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="TerminateModelInstance"
+      name="TerminateModelInstance"
+      classname="com.whitestein.lsps.stdlib.task.TerminateModelInstance">
+    <signature
+        xmi:id="14"
+        name="modelInstance"
+        parameterType="ModelInstance"
+        required="true">
+      <description>Model instance to be terminated.</description>
+    </signature>
+    <description><![CDATA[Terminates a running model instance.
+
+Throws:
+-"NullParameterError" if mandatory parameter is not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="Unlock"
+      name="Unlock"
+      classname="com.whitestein.lsps.stdlib.task.Unlock">
+    <signature
+        xmi:id="15"
+        name="lockName"
+        parameterType="String"
+        required="true">
+      <description>Name of the lock to be removed.</description>
+    </signature>
+    <description><![CDATA[Unlocks (removes) a previously created lock.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_dHjzEC3hEeCrfe5Vd3satg"
+      name="ParseXml"
+      classname="com.whitestein.lsps.xml.task.ParseXmlTask"
+      deprecated="true">
+    <signature
+        xmi:id="_dHjzES3hEeCrfe5Vd3satg"
+        name="xml"
+        parameterType="String"
+        required="true">
+      <description><![CDATA[The XML document to parse.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_dHjzEi3hEeCrfe5Vd3satg"
+        name="output"
+        parameterType="Reference&lt;Object>"
+        required="true">
+      <description><![CDATA[Reference to a slot where the result is stored. The type of reference
+provided determines which object should be parsed from XML. The
+referred object must be record type, otherwise an exception is
+thrown.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_dHjzEy3hEeCrfe5Vd3satg"
+        name="useDefaultMapping"
+        parameterType="Boolean">
+      <description><![CDATA[If true, the default LSPS XML mapping is used. Otherwise, the meta-
+data defined on record types are taken into account when parsing
+XML. Parsing of types generated from XSD requires setting of this
+parameter to false. The default value is false.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_dHjzFC3hEeCrfe5Vd3satg"
+        name="typesNamespace"
+        parameterType="String"
+        required="true">
+      <description><![CDATA[If the default mapping is used, this parameter determines XML
+namespace used for elements. If the default mapping is not used,
+this parameter is ignored. The default value is null.
+]]></description>
+    </signature>
+    <description><![CDATA[Parses XML document to internal data structures.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+- “IncompatibleTypeError” - if the type of the output is not record.
+- “UnableToParseXml” - if the specified xml cannot be parsed to output.
+
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_eh5DEC3hEeCrfe5Vd3satg"
+      name="ConvertToXml"
+      classname="com.whitestein.lsps.xml.task.ConvertToXmlTask"
+      deprecated="true">
+    <signature
+        xmi:id="_eh5DES3hEeCrfe5Vd3satg"
+        name="object"
+        parameterType="Object"
+        required="true">
+      <description><![CDATA[The object to be converted. It must be an instance of a record type,
+otherwise an exception is thrown.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_eh5DEi3hEeCrfe5Vd3satg"
+        name="output"
+        parameterType="Reference&lt;String>"
+        required="true">
+      <description><![CDATA[Reference to the variable where the output XML document is
+stored.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_eh5DEy3hEeCrfe5Vd3satg"
+        name="useDefaultMapping"
+        parameterType="Boolean">
+      <description><![CDATA[If true, the default LSPS XML mapping is used. Otherwise, the meta-
+data defined on record types are taken into account when creating
+XML. Creating XML from an object of which type was generated
+from XSD requires setting of this parameter to false. The default val-
+ue is false.
+]]></description>
+    </signature>
+    <signature
+        xmi:id="_eh5DFC3hEeCrfe5Vd3satg"
+        name="typesNamespace"
+        parameterType="String">
+      <description><![CDATA[If the default mapping is used, this parameter determines XML
+namespace used for elements. If the default mapping is not used,
+this parameter is ignored. The default value is null.
+]]></description>
+    </signature>
+    <description><![CDATA[Converts internal data structures to XML document.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+- “IncompatibleTypeError” - The type of the object is not record.
+- “UnableToConvertToXml” - An error occured during conversion.
+
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_iNgUMFUoEeCwkZbsTPeGiA"
+      name="DeleteModelInstanceLogs"
+      classname="com.whitestein.lsps.stdlib.task.DeleteModelInstanceLogs">
+    <signature
+        xmi:id="_lJ3XoFUoEeCwkZbsTPeGiA"
+        name="modelInstances"
+        parameterType="Set&lt;ModelInstance>"
+        required="true">
+      <description>A set of model instances of which logs are deleted.</description>
+    </signature>
+    <description><![CDATA[Permanently removes process logs of the specified finished model instances from the database.
+
+Throws:
+- “NullParameterError” - Mandatory parameter is null.
+- “ModelInstanceNotFinishedError” - At least one of the specified model instances is not finished.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_01yCAAB-EeGgUZ0cbKllIg"
+      name="HttpCall"
+      classname="com.whitestein.lsps.wsclient.task.HttpClientTask">
+    <signature
+        xmi:id="_U7eWoACAEeGgUZ0cbKllIg"
+        name="httpMethod"
+        parameterType="String"
+        required="true">
+      <description>Type of the method to be performed. Possible values are “GET”, “POST”, “PUT”, and “DELETE”.</description>
+    </signature>
+    <signature
+        xmi:id="_gfXQkACAEeGgUZ0cbKllIg"
+        name="url"
+        parameterType="String"
+        required="true">
+      <description>Endpoint address of the target HTTP service.</description>
+    </signature>
+    <signature
+        xmi:id="_51TQAAB-EeGgUZ0cbKllIg"
+        name="request"
+        parameterType="Object">
+      <description><![CDATA[Request payload. Can be either String or core::BinaryHandle. All other
+objects are converted to String. String is converted to data stream
+honoring charset specified in the requestContentType parameter. If
+there is no charset specified, UTF-8 is used. If core::BinaryHandle
+object is used, request payload will contain data from this handle.]]></description>
+    </signature>
+    <signature
+        xmi:id="_AEn5AAB_EeGgUZ0cbKllIg"
+        name="requestContentType"
+        parameterType="String">
+      <description>Content type (MIME) of the request payload.</description>
+    </signature>
+    <signature
+        xmi:id="_HfkAkAB_EeGgUZ0cbKllIg"
+        name="response"
+        parameterType="Reference&lt;String>">
+      <description>Reference where the response payload is to be stored.</description>
+    </signature>
+    <signature
+        xmi:id="_YGLYEACAEeGgUZ0cbKllIg"
+        name="responseCode"
+        parameterType="Reference&lt;Integer>">
+      <description>Reference to the response code.</description>
+    </signature>
+    <signature
+        xmi:id="_pVT9kACAEeGgUZ0cbKllIg"
+        name="login"
+        parameterType="String">
+      <description>Login for the HTTP BASIC authentication.</description>
+    </signature>
+    <signature
+        xmi:id="_t6lfkACAEeGgUZ0cbKllIg"
+        name="password"
+        parameterType="String">
+      <description>Password for the HTTP BASIC authentication.</description>
+    </signature>
+    <signature
+        xmi:id="_lhefkACAEeGgUZ0cbKllIg"
+        name="readTimeout"
+        parameterType="Integer">
+      <description>Socket timeout for the call.</description>
+    </signature>
+    <signature
+        xmi:id="_xMUWEACAEeGgUZ0cbKllIg"
+        name="requestHeaders"
+        parameterType="Map&lt;String,String>">
+      <description>Map of the request HTTP headers to be sent together with the request.</description>
+    </signature>
+    <signature
+        xmi:id="_1cnGkACAEeGgUZ0cbKllIg"
+        name="responseHeaders"
+        parameterType="Reference&lt;Map&lt;String,String>>">
+      <description>Reference to the map of the HTTP response headers.</description>
+    </signature>
+    <signature
+        xmi:id="_aW0vkACBEeGgUZ0cbKllIg"
+        name="isSynchronous"
+        parameterType="Boolean">
+      <description>If true, the task is executed synchronously in the context of process instance. If false or null, the task is executed asynchronously, outside of the process context.</description>
+    </signature>
+    <description><![CDATA[Request payload. Can be either String or Binary. All other objects are converted to String. String is converted to data stream honoring charset specified in the requestContentType parameter. If there is no charset specified, UTF-8 is used.
+
+Throws:
+- “NullParameterError” - Mandatory parameter is null.
+- “HttpCallError” - An error occured during the HTTP call.
+]]></description>
+  </taskTypes>
+</com.whitestein.lsps.modeler.tasklib:TaskLibrary>

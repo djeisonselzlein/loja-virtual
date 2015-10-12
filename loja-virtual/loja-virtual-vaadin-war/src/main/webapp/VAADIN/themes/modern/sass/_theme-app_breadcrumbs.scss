@@ -1,0 +1,223 @@
+$theme_breadcrumbs_background_color: $theme__default_border_color !default;
+$theme_breadcrumbs_text_color: $theme__default_text_color !default;
+$theme_breadcrumbs_height: 36px !default;
+$theme_breadcrumbs_hover_background_color: $theme__accent_color !default;
+$theme_breadcrumbs_hover_text_color: $theme__contrast_color !default;
+$theme_breadcrumbs_internal_padding: 0 35px 0 60px !default;
+$theme_breadcrumbs_count_background_color: $theme__secondary_border_color !default;
+$theme_breadcrumbs_count_text_color: #fff !default;
+$theme_breadcrumbs_disabled_background_color: #f3f3f3 !default;
+$theme_breadcrumbs_disabled_text_color: #aaa !default;
+$theme_breadcrumbs_disabled_count_background_color: lighten($theme__secondary_border_color, 40%) !default;
+$theme_breadcrumbs_disabled_count_text_color: #fff !default;
+
+@mixin theme-app-breadcrumbs{
+	.l-breadcrumbs {
+		display: inline-block;
+		overflow: hidden;
+		counter-reset: flag; 
+
+		.v-slot{
+			overflow: visible;
+		}
+
+		.v-spacing{
+			display: none;
+		}
+
+		.link {
+			text-align: center !important;
+			outline: none;
+			display: block;
+			float: left;
+			width: 100%;
+			line-height: $theme_breadcrumbs_height;
+			/*need more margin on the left of links to accomodate the numbers*/
+			padding: $theme_breadcrumbs_internal_padding;
+			background: $theme_breadcrumbs_background_color;
+			position: relative;
+
+			.v-button-wrap{
+				position: relative;
+				z-index: 2;
+			}
+
+			.v-button-caption{
+				text-decoration: none;
+				color: $theme_breadcrumbs_text_color;
+				font-size: 15px;
+				font-size: 1.5rem;
+
+				@include theme-mixins-transition(color, 0.2s);
+			}
+
+			&.l-highlighted, &:hover{
+				background: $theme_breadcrumbs_hover_background_color;
+
+				&:after{
+					background: $theme_breadcrumbs_hover_background_color;
+				}
+
+				.v-button-caption{
+					color: $theme_breadcrumbs_hover_text_color;
+				}
+			}
+
+			&.l-highlighted{
+				pointer-events: none;
+			}
+
+			&.v-disabled{
+				background: $theme_breadcrumbs_disabled_background_color;
+				opacity: 1;
+
+				&.v-button{
+					border-style: none !important;
+				}
+
+				.v-button-caption{
+					color: $theme_breadcrumbs_disabled_text_color;
+				}
+
+				&:before{
+					background: $theme_breadcrumbs_disabled_count_background_color;
+					color: $theme_breadcrumbs_disabled_count_text_color;
+				}
+
+				&:after{
+					background: $theme_breadcrumbs_disabled_background_color;
+				}
+			}
+
+			&:after{
+				content: "";
+				color: transparent;
+				position: absolute;
+				top: -3px; 
+				right: 0px - $theme_breadcrumbs_height/2 - 3px / 2; /*half of square's length*/
+				/*same dimension as the line-height of .breadcrumb a */
+				width: $theme_breadcrumbs_height + 3px; 
+				height: $theme_breadcrumbs_height + 3px;
+				/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+				length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+				if diagonal required = 1; length = 1/1.414 = 0.707*/
+				transform: scale(0.707) rotate(45deg);
+				-webkit-transform: scale(0.707) rotate(45deg);
+				-moz-transform: scale(0.707) rotate(45deg);
+				-o-transform: scale(0.707) rotate(45deg);
+				-ms-transform: scale(0.707) rotate(45deg);
+				@include theme-mixins-transition(all, 0.2s);
+				z-index: 1;
+				background: $theme_breadcrumbs_background_color;
+				border-top: 5px solid white;
+				border-right: 5px solid white;
+			}
+
+			&:before {
+				counter-increment: flag;
+				border-radius: 100%;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				margin: 8px 0;
+				position: absolute;
+				top: 0;
+				left: 30px;
+				background: $theme_breadcrumbs_count_background_color;
+				color: $theme_breadcrumbs_count_text_color;
+				font-weight: bold;
+			}
+		}
+
+		.v-slot-link{
+			&:last-child {
+				.link{
+					&:after{
+						content: none;
+					}
+				}
+			}
+
+			&:first-child{
+				.link{
+					padding-left: 50px;
+
+					&:before {
+						left: 14px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.v-slot .v-slot-link{
+			&:last-child {
+				.link{
+					&:after{
+						content: "";
+					}
+				}
+			}
+
+			&:first-child{
+				.link{
+					padding-left: 60px;
+
+					&:before {
+						left: 30px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.v-slot:last-child .v-slot-link{
+			&:last-child {
+				.link{
+					// padding-right: 20px;
+
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}
+
+		.v-slot:first-child .v-slot-link{
+			&:first-child{
+				.link{
+					padding-left: 50px;
+
+					&:before {
+						left: 14px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		&.l-breadcrumbs-plain{
+			.link{
+				padding-left: 50px !important;
+
+				&:before{
+					content: none;
+				}
+			}
+		}
+
+		&.l-breadcrumbs-numbered{
+			.link{
+				&:before{
+					content: counter(flag);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_MrT8gOMQEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_OJHXQOMQEeK4rchgp2zFsA"
+      name="createBinaryHandle"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DataFunctions.createBinaryHandle"
+      type="BinaryHandle"
+      typeParameterNames=""
+      deprecated="true"
+      sideEffect="true">
+    <parameters
+        xmi:id="_OJHXQeMQEeK4rchgp2zFsA"
+        name="fileName"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_OJHXQuMQEeK4rchgp2zFsA"
+        name="description"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_OJHXQ-MQEeK4rchgp2zFsA"
+        name="content"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_OJHXROMQEeK4rchgp2zFsA"
+        name="mime"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_OJHXReMQEeK4rchgp2zFsA"
+        name="charset"
+        parameterType="String"/>
+    <description><![CDATA[Creates a binary handle representing a newly created file with the specified fileName, content, description, mime type and charset encoding. If the mime parameter is not specified, the MIME type is determined from the file extension automatically. If the charset is not specified, “UTF-8” is used by default.
+
+Throws:
+- “NullParameterError” - Mandatory parameter is null.
+- “UnsupportedEncodingError” - The specified charset is not supported.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OJHXRuMQEeK4rchgp2zFsA"
+      name="getBinaryHandle"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DataFunctions.getBinaryHandle"
+      type="BinaryHandle"
+      typeParameterNames=""
+      deprecated="true">
+    <parameters
+        xmi:id="_OJH-UOMQEeK4rchgp2zFsA"
+        name="id"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a binary handle of the specified identifier.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.
+-"BinaryHandleNotFoundError" if there is no such a binary handle.]]></description>
+    <expression></expression>
+  </functions>
+  <functions
+      xmi:id="_OJH-UeMQEeK4rchgp2zFsA"
+      name="getBinaryHandleMetadata"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.getBinaryDataMetadata"
+      type="Map&lt;String, String>">
+    <parameters
+        xmi:id="_OJH-UuMQEeK4rchgp2zFsA"
+        name="binaryData"
+        parameterType="core::BinaryHandle"
+        required="true">
+      <description></description>
+    </parameters>
+    <description><![CDATA[Returns a binary handle metadata
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OJH-U-MQEeK4rchgp2zFsA"
+      name="resource"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DataFunctions.resource"
+      type="BinaryHandle"
+      typeParameterNames=""
+      deprecated="true"
+      sideEffect="true">
+    <parameters
+        xmi:id="_OJH-VOMQEeK4rchgp2zFsA"
+        name="module"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_OJH-VeMQEeK4rchgp2zFsA"
+        name="path"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Creates a binary handle from a module's resource located at the specified path.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"ResourceNotFoundError" if the specified module is not available or the resource is not found at the given path.]]></description>
+  </functions>
+  <functions
+      xmi:id="_XzkY4POvEeKee8ORzwNChg"
+      name="getResource"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DataFunctions.resource"
+      type="File">
+    <parameters
+        xmi:id="_a8Yj8POvEeKee8ORzwNChg"
+        name="module"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_a8Yj8fOvEeKee8ORzwNChg"
+        name="path"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Creates a file from a module's resource located at the specified path.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"ResourceNotFoundError" if the specified module is not available or the resource is not found at the given path.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

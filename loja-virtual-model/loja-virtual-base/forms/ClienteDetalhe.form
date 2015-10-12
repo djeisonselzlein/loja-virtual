@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_GrEjwAP-EeO4Z4YwFdbhJw"
+    name="ClienteDetalhe"
+    newUI="true">
+  <parameters
+      xmi:id="_SVC3kAP-EeO4Z4YwFdbhJw"
+      name="cliente"
+      parameterType="Cliente"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_GrEjwQP-EeO4Z4YwFdbhJw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+        xmi:id="_O0lBgAP-EeO4Z4YwFdbhJw">
+      <child
+          xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+          xmi:id="_pYj2gAP-EeO4Z4YwFdbhJw">
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+            xmi:id="_qCI_AAP-EeO4Z4YwFdbhJw">
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+              xmi:id="_GiPicAP_EeO4Z4YwFdbhJw">
+            <readonly>true</readonly>
+            <binding><![CDATA[&nome]]></binding>
+            <label><![CDATA["Nome:"]]></label>
+          </child>
+          <title><![CDATA["Identificador"]]></title>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+            xmi:id="_rf5WcAP-EeO4Z4YwFdbhJw">
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+              xmi:id="_cLiJoAQAEeO4Z4YwFdbhJw">
+            <expression>EnderecoDetalhe(cliente.enderecoDeEntrega, true)</expression>
+          </child>
+          <title><![CDATA["Endereço de Entrega"]]></title>
+        </components>
+      </child>
+      <title><![CDATA["Detalhes do Cliente"]]></title>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_Km2K4AQAEeO4Z4YwFdbhJw"
+      name="nome"
+      variableType="String">
+    <description></description>
+    <initialValueExpression>cliente.user.name</initialValueExpression>
+  </variables>
+  <description>Readonly form for Customer.</description>
+</com.whitestein.lsps.modeler.form:FormDefinition>

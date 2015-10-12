@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_9pbb0ANHEeOGxZgWE420cg"
+    name="CartaoDeCreditoDetalhe"
+    newUI="true">
+  <parameters
+      xmi:id="_SdwpkANMEeOGxZgWE420cg"
+      name="cartao"
+      parameterType="'loja-virtual-base'::CartãoDeCredito">
+    <description></description>
+  </parameters>
+  <parameters
+      xmi:id="_T8gfgANMEeOGxZgWE420cg"
+      name="somenteLeitura"
+      parameterType="Boolean"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_9pbb0QNHEeOGxZgWE420cg"
+      componentID="ROOT">
+    <listeners
+        xmi:id="_NN5YwAQYEeO4Z4YwFdbhJw"
+        name="VALIDATE"
+        listenerType="ACTION_LISTENER"
+        executeOnlyIfVisible="ROOT">
+      <validators
+          xmi:id="_NN5YwQQYEeO4Z4YwFdbhJw"
+          placement="TIPO_CARTAO">
+        <message><![CDATA[if isEmpty(cartao.tipoCartao) then "Selecione tipo de cartão" end]]></message>
+      </validators>
+      <validators
+          xmi:id="_Pc2HIAQZEeO4Z4YwFdbhJw"
+          placement="NUMERO_CARTAO">
+        <message><![CDATA[if cartao.numero = null or not matches(cartao.numero, "\d{16}") then "Informe um número de cartão de crédito de 16 dígitos" end]]></message>
+      </validators>
+      <validators
+          xmi:id="_Y1yzgQQZEeO4Z4YwFdbhJw"
+          placement="MES_EXPIRA">
+        <message><![CDATA[if cartao.mesExpiracao = null then "Informe mês de expiração" end]]></message>
+      </validators>
+      <validators
+          xmi:id="_Y1yzgAQZEeO4Z4YwFdbhJw"
+          placement="ANO_EXPIRA">
+        <message><![CDATA[if cartao.anoExpiracao = null then "Preencha ano de expiração" end]]></message>
+      </validators>
+    </listeners>
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+        xmi:id="_HjWuUANIEeOGxZgWE420cg">
+      <child
+          xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+          xmi:id="_o_FeQANIEeOGxZgWE420cg">
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdComboBox"
+            xmi:id="_paFYMANIEeOGxZgWE420cg"
+            componentID="TIPO_CARTAO">
+          <readonly>somenteLeitura</readonly>
+          <binding><![CDATA[&cartao.tipoCartao]]></binding>
+          <required>not somenteLeitura</required>
+          <label><![CDATA["Tipo do cartão:"]]></label>
+          <options><![CDATA[[new ui::Option(
+   value ->
+     "Master Card",
+   label ->
+     "Master Card"),
+ new ui::Option(
+   value ->
+     "VISA",
+   label ->
+     "VISA")]]]></options>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+            xmi:id="_sAuDQANIEeOGxZgWE420cg"
+            componentID="NUMERO_CARTAO">
+          <readonly>somenteLeitura</readonly>
+          <binding><![CDATA[&cartao.numero]]></binding>
+          <required>not somenteLeitura</required>
+          <label><![CDATA["Número do cartão de crédito:"]]></label>
+          <format><![CDATA["\d{16}"]]></format>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdComboBox"
+            xmi:id="_su3isANIEeOGxZgWE420cg"
+            componentID="MES_EXPIRA">
+          <readonly>somenteLeitura</readonly>
+          <binding><![CDATA[&cartao.mesExpiracao]]></binding>
+          <required>not somenteLeitura</required>
+          <label><![CDATA["Mês de expiração:"]]></label>
+          <options><![CDATA[[new ui::Option(
+                    value ->
+                      1,
+                    label ->
+                      "Janeiro"),
+                  new ui::Option(
+                    value ->
+                      2,
+                    label ->
+                      "Fevereiro"),
+                  new ui::Option(
+                    value ->
+                      3,
+                    label ->
+                      "Março"),
+                  new ui::Option(
+                    value ->
+                      4,
+                    label ->
+                      "Abril"),
+                  new ui::Option(
+                    value ->
+                      5,
+                    label ->
+                      "Maio"),
+                  new ui::Option(
+                    value ->
+                      6,
+                    label ->
+                      "Junho"),
+                  new ui::Option(
+                    value ->
+                      7,
+                    label ->
+                      "Julho"),
+                  new ui::Option(
+                    value ->
+                      8,
+                    label ->
+                      "Agosto"),
+                  new ui::Option(
+                    value ->
+                      9,
+                    label ->
+                      "Setembro"),
+                  new ui::Option(
+                    value ->
+                      10,
+                    label ->
+                      "Outubro"),
+                  new ui::Option(
+                    value ->
+                      11,
+                    label ->
+                      "Novembro"),
+                  new ui::Option(
+                    value ->
+                      12,
+                    label ->
+                      "Dezembro")]]]></options>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdComboBox"
+            xmi:id="_tJzyQANIEeOGxZgWE420cg"
+            componentID="ANO_EXPIRA">
+          <readonly>somenteLeitura</readonly>
+          <binding><![CDATA[&cartao.anoExpiracao]]></binding>
+          <required>not somenteLeitura</required>
+          <label><![CDATA["Ano de expiração:"]]></label>
+          <options><![CDATA[[new ui::Option(
+                    value ->
+                      2016,
+                    label ->
+                      "2016"),
+                  new ui::Option(
+                    value ->
+                      2017,
+                    label ->
+                      "2017"),
+                  new ui::Option(
+                    value ->
+                      2018,
+                    label ->
+                      "2018"),
+                  new ui::Option(
+                    value ->
+                      2019,
+                    label ->
+                      "2019")]]]></options>
+        </components>
+      </child>
+      <title><![CDATA["Detalhes do Cartão de Crédito"]]></title>
+    </child>
+  </formItem>
+  <description>Readonly or read/write form for CreditCard with validation exposed.</description>
+</com.whitestein.lsps.modeler.form:FormDefinition>

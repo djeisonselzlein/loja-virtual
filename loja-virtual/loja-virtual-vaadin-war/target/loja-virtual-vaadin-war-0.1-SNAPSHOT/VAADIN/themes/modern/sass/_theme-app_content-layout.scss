@@ -1,0 +1,16 @@
+@mixin theme-app-content-layout{
+	.layout-horizontal{
+		.v-select-option{
+			display: inline-block;
+			padding-right: 6px;
+		}
+	}
+  	.v-browserframe > iframe { display: block; }
+  	.l-scrollable{
+  		overflow: auto !important;
+  	}
+	.v-slot-l-substitution{
+		min-height: 200px;
+		overflow-y: auto !important;
+	}
+}

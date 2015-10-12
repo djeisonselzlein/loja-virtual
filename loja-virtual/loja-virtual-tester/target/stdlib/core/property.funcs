@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_BnCHwIm5EeOZO6WnpTP1hw">
+  <functions
+      xmi:id="_CLm0cIm5EeOZO6WnpTP1hw"
+      name="getPropertyName"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getPropertyName"
+      type="String">
+    <parameters
+        xmi:id="_EU0jsIm5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <description><![CDATA[Returns the property name.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_IbHqsIm5EeOZO6WnpTP1hw"
+      name="getPropertyType"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getPropertyType"
+      type="Type&lt;Object>">
+    <parameters
+        xmi:id="_K6kvsIm5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <description><![CDATA[Returns the property type.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OM_isIm5EeOZO6WnpTP1hw"
+      name="getPropertyRecordType"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getPropertyRecordType"
+      type="Type&lt;Record>">
+    <parameters
+        xmi:id="_QYo64Im5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <description><![CDATA[Returns the property record type. It is the record type where the given property is declared.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_UWl-MIm5EeOZO6WnpTP1hw"
+      name="getPropertyMetadata"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getPropertyMetadata"
+      type="Map&lt;String, String>">
+    <parameters
+        xmi:id="_XEegwIm5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <description><![CDATA[Returns the property metadata.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Z6MwsIm5EeOZO6WnpTP1hw"
+      name="getPropertyValue"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getPropertyValue"
+      type="Object">
+    <parameters
+        xmi:id="_b7XXMIm5EeOZO6WnpTP1hw"
+        name="record"
+        parameterType="Record"
+        required="true"/>
+    <parameters
+        xmi:id="_bDX_QIm5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <description><![CDATA[Returns the value of the given property of the given record object.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.
+-"IncompatibleTypeError" if the record the the given property are not compatible]]></description>
+  </functions>
+  <functions
+      xmi:id="_ssfyEIm5EeOZO6WnpTP1hw"
+      name="setPropertyValue"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.setPropertyValue"
+      type="Object">
+    <parameters
+        xmi:id="_ssfyEYm5EeOZO6WnpTP1hw"
+        name="record"
+        parameterType="Record"
+        required="true"/>
+    <parameters
+        xmi:id="_ssfyEom5EeOZO6WnpTP1hw"
+        name="property"
+        parameterType="Property"
+        required="true"/>
+    <parameters
+        xmi:id="_uahaIIm5EeOZO6WnpTP1hw"
+        name="value"
+        parameterType="Object"/>
+    <description><![CDATA[Sets the value of the given property of the given record object.
+Returns null.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.
+-"IncompatibleTypeError" if the record the the given property are not compatible]]></description>
+  </functions>
+  <functions
+      xmi:id="_2FJjgIm5EeOZO6WnpTP1hw"
+      name="getProperties"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.PropertyFunctions.getProperties"
+      type="List&lt;Property>">
+    <parameters
+        xmi:id="_8aCpAIm5EeOZO6WnpTP1hw"
+        name="type"
+        parameterType="Type&lt;Record>"
+        required="true"/>
+    <description><![CDATA[Returns all properties of the given record type.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

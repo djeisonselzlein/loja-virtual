@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_Zp2-AEOYEeKe_vYVtf-04g">
+  <functions
+      xmi:id="_tMmk4EOYEeKe_vYVtf-04g"
+      name="addToRegistrationPoints"
+      variadic="true"
+      type="Map&lt;String, Set&lt;Reference&lt;Set&lt;Listener>>>>"
+      deprecated="true">
+    <parameters
+        xmi:id="_y_GvAEOYEeKe_vYVtf-04g"
+        name="registrationPoints"
+        parameterType="Map&lt;String, Set&lt;Reference&lt;Set&lt;Listener>>>>">
+      <description></description>
+    </parameters>
+    <parameters
+        xmi:id="_2w3JYEOYEeKe_vYVtf-04g"
+        name="key"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_33bv4EOYEeKe_vYVtf-04g"
+        name="components"
+        parameterType="UIComponent"/>
+    <description></description>
+    <expression><![CDATA[def Map<String, Set<Reference<Set<Listener>>>> _registrationPoints := if registrationPoints = null then [->] else registrationPoints end;
+def Set<Reference<Set<Listener>>> _registrationPointsUnderKey := if _registrationPoints[key] = null then {} else _registrationPoints[key] end;
+def Set<Reference<Set<Listener>>> _toBeAdded := toSet(collect(components, {_c:UIComponent -> &_c.listeners}));
+
+add(_registrationPoints, key, addAll(_registrationPointsUnderKey, _toBeAdded))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_dcEZcEOaEeKe_vYVtf-04g"
+      name="addToPublishedListeners"
+      variadic="true"
+      type="Map&lt;String, Set&lt;Listener>>"
+      deprecated="true">
+    <parameters
+        xmi:id="_gw7ccEOaEeKe_vYVtf-04g"
+        name="publishedListeners"
+        parameterType="Map&lt;String, Set&lt;Listener>>"/>
+    <parameters
+        xmi:id="_iLn40EOaEeKe_vYVtf-04g"
+        name="key"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_i2KqoEOaEeKe_vYVtf-04g"
+        name="listeners"
+        parameterType="Listener"/>
+    <description></description>
+    <expression><![CDATA[def Map<String, Set<Listener>> _publishedListeners := if publishedListeners = null then [->] else publishedListeners end;
+def Set<Listener> _publishedListenersUnderKey := if _publishedListeners[key] = null then {} else _publishedListeners[key] end;
+def Set<Listener> _toBeAdded := toSet(listeners);
+
+add(_publishedListeners, key, addAll(_publishedListenersUnderKey, _toBeAdded))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_cMyhACU1EeOxtqWQeZKwAw"
+      name="rgb"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.UiFunctions.rgb"
+      type="String">
+    <parameters
+        xmi:id="_d_X48CU1EeOxtqWQeZKwAw"
+        name="red"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_e2_dcCU1EeOxtqWQeZKwAw"
+        name="green"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_f79hcCU1EeOxtqWQeZKwAw"
+        name="blue"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a string used to represent a color given by red, green and blue components. Each color component is an integers from interval 0 to 255. The result has form of usual hexadecimal color representation, e.g., "#ff0000" for red.]]></description>
+    <expression>//TODO is it possible to write such a format pattern?</expression>
+  </functions>
+  <functions
+      xmi:id="_CTXDcJrqEeOoOPdEA-Z1_g"
+      name="createValidationError"
+      type="UIValidationError">
+    <parameters
+        xmi:id="_CTXDcZrqEeOoOPdEA-Z1_g"
+        name="message"
+        parameterType="String"/>
+    <description><![CDATA[If the given message is not null, this function return a UIValidationError with a given message.
+Otherwise it returns null.
+]]></description>
+    <expression><![CDATA[if message != null then
+	new UIValidationError(message -> message)
+end
+]]></expression>
+  </functions>
+  <functions
+      xmi:id="_3WvaUJroEeOoOPdEA-Z1_g"
+      name="createValidationError"
+      type="UIValidationError">
+    <parameters
+        xmi:id="__xR9sJroEeOoOPdEA-Z1_g"
+        name="message"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_D_rQwJrpEeOoOPdEA-Z1_g"
+        name="placement"
+        parameterType="UIComponent"/>
+    <description><![CDATA[If the given message is not null, this function return a UIValidationError with a given message and placement.
+Otherwise it returns null.
+]]></description>
+    <expression><![CDATA[if message != null then
+	new UIValidationError(message -> message, placement -> {placement})
+end
+]]></expression>
+  </functions>
+  <functions
+      xmi:id="_9jzkEJrpEeOoOPdEA-Z1_g"
+      name="createValidationError"
+      type="UIValidationError">
+    <parameters
+        xmi:id="_9jzkEZrpEeOoOPdEA-Z1_g"
+        name="message"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_9jzkEprpEeOoOPdEA-Z1_g"
+        name="placement"
+        parameterType="Set&lt;UIComponent>"/>
+    <description><![CDATA[If the given message is not null, this function return a UIValidationError with a given message and placement.
+Otherwise it returns null.
+]]></description>
+    <expression><![CDATA[if message != null then
+	new UIValidationError(message -> message, placement -> placement)
+end
+]]></expression>
+  </functions>
+  <functions
+      xmi:id="_uiG6oOgFEeOj4rvRW8edwg"
+      name="getBrowserWindowSize"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.vaadin.VaadinUtils.getBrowserWindowSize"
+      type="Dimension">
+    <description>Retrieves the size, in DIPs, of the current browser window.</description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

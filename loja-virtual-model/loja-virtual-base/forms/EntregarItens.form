@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_9dt40AP8EeO4Z4YwFdbhJw"
+    name="EntregarItens"
+    newUI="true">
+  <parameters
+      xmi:id="_z-IX8AQHEeO4Z4YwFdbhJw"
+      name="pedido"
+      parameterType="Pedido"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_9dt40QP8EeO4Z4YwFdbhJw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_U9FGQAP9EeO4Z4YwFdbhJw">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_VxBrsAP9EeO4Z4YwFdbhJw">
+        <expression>ClienteDetalhe(pedido.cliente)</expression>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+          xmi:id="_6mcaoAQFEeO4Z4YwFdbhJw">
+        <child
+            xsi:type="com.whitestein.lsps.modeler.form:NfdTable"
+            xmi:id="_CiUsEAQGEeO4Z4YwFdbhJw">
+          <columns
+              xmi:id="_EjaaEAQGEeO4Z4YwFdbhJw">
+            <content
+                xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+                xmi:id="_Efef0AQHEeO4Z4YwFdbhJw">
+              <content>item.produto.nome</content>
+            </content>
+            <header><![CDATA["Nome"]]></header>
+          </columns>
+          <columns
+              xmi:id="_E7wBkAQGEeO4Z4YwFdbhJw">
+            <content
+                xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+                xmi:id="_E0KWYAQHEeO4Z4YwFdbhJw">
+              <content>item.quantidade</content>
+            </content>
+            <header><![CDATA["Quantidade"]]></header>
+          </columns>
+          <iterator><![CDATA[&item]]></iterator>
+          <data>{from, count -> pedido.itens}</data>
+          <type>TableType.simple</type>
+        </child>
+        <title><![CDATA["Itens a serem entregues"]]></title>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_ydF80AQkEeO4Z4YwFdbhJw">
+        <expression>PainelDeBotoes(false)</expression>
+      </components>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_uTsaIAQGEeO4Z4YwFdbhJw"
+      name="item"
+      variableType="ItemPedido"/>
+  <description>Read only form for deliver items.</description>
+</com.whitestein.lsps.modeler.form:FormDefinition>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.tasklib:TaskLibrary
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.tasklib="http:///com/whitestein/lsps/modeler/tasklib.ecore"
+    xmi:id="0">
+  <taskTypes
+      xmi:id="_B5Q0UGilEd-8cYykKgU-ag"
+      name="AddPersonToRole"
+      classname="com.whitestein.lsps.orgstructure.task.AddPersonToRole">
+    <signature
+        xmi:id="_B5Q0UWilEd-8cYykKgU-ag"
+        name="person"
+        parameterType="Person"
+        required="true">
+      <description>Person to be added to the role.</description>
+    </signature>
+    <signature
+        xmi:id="_B5Q0UmilEd-8cYykKgU-ag"
+        name="role"
+        parameterType="Role"
+        required="true">
+      <description>Role the person is added to. If the role does not exist in the system yet, it is created.</description>
+    </signature>
+    <description><![CDATA[Adds a person to a role.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_DKXP0GilEd-8cYykKgU-ag"
+      name="RemovePersonFromRole"
+      classname="com.whitestein.lsps.orgstructure.task.RemovePersonFromRole">
+    <signature
+        xmi:id="_DKXP0WilEd-8cYykKgU-ag"
+        name="person"
+        parameterType="Person"
+        required="true">
+      <description>Person that will be removed  from the role.</description>
+    </signature>
+    <signature
+        xmi:id="_DKXP0milEd-8cYykKgU-ag"
+        name="role"
+        parameterType="Role"
+        required="true">
+      <description>Role that the person should be removed from.</description>
+    </signature>
+    <description><![CDATA[Removes the person from the role.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_nWgZQGiiEd-8cYykKgU-ag"
+      name="SendEmail"
+      classname="com.whitestein.lsps.human.task.SendEmail">
+    <signature
+        xmi:id="_nWgZQWiiEd-8cYykKgU-ag"
+        name="subject"
+        parameterType="String">
+      <description>email subject</description>
+    </signature>
+    <signature
+        xmi:id="_nWgZQmiiEd-8cYykKgU-ag"
+        name="body"
+        parameterType="String"
+        required="true">
+      <description>email body paragraphs</description>
+    </signature>
+    <signature
+        xmi:id="_nWgZQ2iiEd-8cYykKgU-ag"
+        name="attachments"
+        parameterType="Set&lt;File>">
+      <description>attachments</description>
+    </signature>
+    <signature
+        xmi:id="_ytYJAFCDEeSe250AkEqArw"
+        name="from"
+        parameterType="String">
+      <description>email address of sender. If not specified, the default (given by application server settings) is used.</description>
+    </signature>
+    <signature
+        xmi:id="_nWgZRGiiEd-8cYykKgU-ag"
+        name="recipientsTo"
+        parameterType="Set&lt;String>"
+        required="true">
+      <description>email addresses of recipients TO</description>
+    </signature>
+    <signature
+        xmi:id="_nWgZRWiiEd-8cYykKgU-ag"
+        name="recipientsCc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients CC</description>
+    </signature>
+    <signature
+        xmi:id="_nWgZRmiiEd-8cYykKgU-ag"
+        name="recipientsBcc"
+        parameterType="Set&lt;String>">
+      <description>email addresses of recipients BCC</description>
+    </signature>
+    <signature
+        xmi:id="_Bocm0O5MEd-QQ5mDmbcjNA"
+        name="charset"
+        parameterType="String">
+      <description><![CDATA[Name of character encoding used for subject and body of e-mail, for
+instance, “ISO-8859-1”, “UTF-8”, “windows-1250”, etc. If not speci-
+fied, the default is “UTF-8”. The supported encodings vary between
+different implementations of the Java 2 platform, see Java docu-
+mentation for details.
+]]></description>
+    </signature>
+    <description>Sends an email. For configuration of the mail server see the implementation of the task.</description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_R8JX0I9iEd-l84kqibqLFA"
+      name="HumanInteraction"
+      classname="com.whitestein.lsps.human.task.HumanInteractionTask"
+      deprecated="true">
+    <signature
+        xmi:id="_WrMg4I9iEd-l84kqibqLFA"
+        name="title"
+        parameterType="String"
+        required="true">
+      <description>Displayed page/section title.</description>
+    </signature>
+    <signature
+        xmi:id="_Y9ON4I9iEd-l84kqibqLFA"
+        name="performers"
+        parameterType="Set&lt;Performer>"
+        required="true">
+      <description>Specification of those process performers who can see the generated to-do.</description>
+    </signature>
+    <signature
+        xmi:id="_dXk5UI9iEd-l84kqibqLFA"
+        name="form"
+        parameterType="FormItem"
+        required="true">
+      <description>Content of the generated to-do.</description>
+    </signature>
+    <signature
+        xmi:id="_hmETAI9iEd-l84kqibqLFA"
+        name="escalationTimeout"
+        parameterType="Duration">
+      <description>Period of time from the start of the task until its escalation. If null, the task never escalates.</description>
+    </signature>
+    <signature
+        xmi:id="_jkegcI9iEd-l84kqibqLFA"
+        name="issuedTodo"
+        parameterType="Reference&lt;Todo>">
+      <description>Reference to a slot used to store a to-do issued by the task. Immediately after issuing a new to-do the task sets the referred slot. If null, no slot is updated.</description>
+    </signature>
+    <description><![CDATA[Human task type used to create form-based to-dos. It enables to simultaneously present information to users and to collect their input.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.
+-"IncompatibleTypeError" if as specified in the items form parameter, the type of a value obtained as a user input is not compatible with the type of the slot where it is being stored to.
+]]></description>
+  </taskTypes>
+  <taskTypes
+      xmi:id="_ChtW0K18EeKiRYwaFksdyA"
+      name="User"
+      classname="com.whitestein.lsps.human.task.UserTask">
+    <signature
+        xmi:id="_ChtW0a18EeKiRYwaFksdyA"
+        name="title"
+        parameterType="String"
+        required="true">
+      <description>The title of the generated to-do.</description>
+    </signature>
+    <signature
+        xmi:id="_ChtW0q18EeKiRYwaFksdyA"
+        name="performers"
+        parameterType="Set&lt;Performer>"
+        required="true">
+      <description>Specification of those process performers who can see the generated to-do.</description>
+    </signature>
+    <signature
+        xmi:id="_ChtW0618EeKiRYwaFksdyA"
+        name="uiDefinition"
+        parameterType="UIDefinition"
+        required="true"
+        dynamic="true">
+      <description>Content of the generated to-do.</description>
+    </signature>
+    <signature
+        xmi:id="_ChtW1K18EeKiRYwaFksdyA"
+        name="escalationTimeout"
+        parameterType="Duration">
+      <description>Period of time from the start of the task until its escalation. If null, the task never escalates.</description>
+    </signature>
+    <signature
+        xmi:id="_ChtW1a18EeKiRYwaFksdyA"
+        name="issueAction"
+        parameterType="{Todo:Object}">
+      <description>Closure executed after the to-do is generated. The generated to-do is passed as input parameter of the closure.</description>
+    </signature>
+    <signature
+        xmi:id="_ChtW1q18EeKiRYwaFksdyA"
+        name="navigation"
+        parameterType="{Set&lt;Todo>:Navigation}">
+      <description>Closure executed after the task is accomplished. The return value of the closure specify where the UI is navigated after submitting the to-do.</description>
+    </signature>
+    <description><![CDATA[Task type used to create form-based to-dos. It enables to simultaneously present information to users and to collect their input.
+
+Throws:
+-"NullParameterError" if mandatory parameter is null.]]></description>
+  </taskTypes>
+</com.whitestein.lsps.modeler.tasklib:TaskLibrary>

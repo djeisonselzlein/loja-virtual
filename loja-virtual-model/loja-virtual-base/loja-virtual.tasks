@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.tasklib:TaskLibrary
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.tasklib="http:///com/whitestein/lsps/modeler/tasklib.ecore"
+    xmi:id="_735nkGRTEeWY2PN5hux4yQ">
+  <taskTypes
+      xmi:id="_8NakkGRTEeWY2PN5hux4yQ"
+      name="AtualizarPrecoProdutoTerceiro"
+      classname="com.selzlein.lojavirtual.ejb.AtualizarPrecoProdutoTerceiro">
+    <signature
+        xmi:id="_u_NzAGRVEeWY2PN5hux4yQ"
+        name="item"
+        parameterType="ItemPedido"
+        required="true"/>
+  </taskTypes>
+</com.whitestein.lsps.modeler.tasklib:TaskLibrary>

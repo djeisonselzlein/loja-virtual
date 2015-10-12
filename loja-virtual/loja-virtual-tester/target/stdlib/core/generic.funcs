@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_GyyRoOMKEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_KD3n4OMKEeK4rchgp2zFsA"
+      name="cast"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.cast"
+      type="E"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_KD3n4eMKEeK4rchgp2zFsA"
+        name="object"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_KD3n4uMKEeK4rchgp2zFsA"
+        name="objectType"
+        parameterType="Type&lt;E>"
+        required="true"/>
+    <description><![CDATA[If the type of the given object is compatible with the specified objectType, the function returns the object casted to the objectType. If not possible, the function throws a runtime exception.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"IncompatibleTypeError" if the type of the object is not compatible with the specified objectType.]]></description>
+  </functions>
+  <functions
+      xmi:id="_KD3n4-MKEeK4rchgp2zFsA"
+      name="clone"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.clone"
+      type="T"
+      typeParameterNames="T"
+      sideEffect="true">
+    <parameters
+        xmi:id="_KD3n5OMKEeK4rchgp2zFsA"
+        name="object"
+        parameterType="T"/>
+    <description>Creates and returns a shallow copy of a collection or of a user-defined record, or returns the object itself if it is of another type.</description>
+  </functions>
+  <functions
+      xmi:id="_UWP2oOMKEeK4rchgp2zFsA"
+      name="isInstance"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.isInstance"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_UWP2oeMKEeK4rchgp2zFsA"
+        name="object"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_UWP2ouMKEeK4rchgp2zFsA"
+        name="objectType"
+        parameterType="Type&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the given object is assignment-compatible with (is kind of) the specified objectType.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OvRAAOMKEeK4rchgp2zFsA"
+      name="isSubtype"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.isSubtype"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OvRAAeMKEeK4rchgp2zFsA"
+        name="subtype"
+        parameterType="Type&lt;Object>"
+        required="true"/>
+    <parameters
+        xmi:id="_OvRAAuMKEeK4rchgp2zFsA"
+        name="supertype"
+        parameterType="Type&lt;Object>"
+        required="true"/>
+    <description><![CDATA[Returns true, if the type specified by the sub-type parameter is a subtype of the type specified by the supertype parameter. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_RWDcEOMKEeK4rchgp2zFsA"
+      name="typeOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.typeOf"
+      type="Type&lt;E>"
+      typeParameterNames="E">
+    <parameters
+        xmi:id="_RWDcEeMKEeK4rchgp2zFsA"
+        name="object"
+        parameterType="E"/>
+    <description>Returns the type of specified object.</description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

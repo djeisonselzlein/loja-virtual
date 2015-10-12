@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_fxEqwAPxEeO4Z4YwFdbhJw"
+    name="Memo"
+    newUI="true">
+  <parameters
+      xmi:id="_g3wmAAPxEeO4Z4YwFdbhJw"
+      name="textos"
+      parameterType="List&lt;String>"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_fxEqwQPxEeO4Z4YwFdbhJw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_VkX3UAQfEeO4Z4YwFdbhJw">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdRepeater"
+          xmi:id="_V0pH8AQfEeO4Z4YwFdbhJw">
+        <content
+            xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+            xmi:id="_V0pH8QQfEeO4Z4YwFdbhJw">
+          <content>isto</content>
+        </content>
+        <iterator><![CDATA[&isto]]></iterator>
+        <data>textos</data>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_LtBlcAQkEeO4Z4YwFdbhJw">
+        <expression>PainelDeBotoes(false)</expression>
+      </components>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_G1iIUAPzEeO4Z4YwFdbhJw"
+      name="isto"
+      variableType="String"/>
+</com.whitestein.lsps.modeler.form:FormDefinition>

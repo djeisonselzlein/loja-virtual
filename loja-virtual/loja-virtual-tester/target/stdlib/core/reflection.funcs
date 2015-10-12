@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_suTmoOMKEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_uMol0OMKEeK4rchgp2zFsA"
+      name="isInState"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.isInState"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_uMol0eMKEeK4rchgp2zFsA"
+        name="goalPlan"
+        parameterType="GoalPlan"
+        required="true"/>
+    <parameters
+        xmi:id="_uMol0uMKEeK4rchgp2zFsA"
+        name="state"
+        parameterType="String"/>
+    <description><![CDATA[Returns true, if the goal or the plan referenced by the goalPlan parameter is in the specified state or any of its sub-states. If the goal or plan parameter is specified correctly, but the state parameter contains an incorrect string representation of a state or is null, the function returns false.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_wIFl4OMKEeK4rchgp2zFsA"
+      name="alive"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.alive"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Alive" state.
+
+Deprecated. Replaced by constant alive.]]></description>
+  </functions>
+  <functions
+      xmi:id="_1fNbkOMKEeK4rchgp2zFsA"
+      name="notFinished"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.notFinished"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Not finished" state.
+
+Deprecated. Replaced by constant notFinished.]]></description>
+  </functions>
+  <functions
+      xmi:id="_93hKUOMKEeK4rchgp2zFsA"
+      name="inactive"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.inactive"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Inactive" state.
+
+Deprecated. Replaced by constant inactive.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Ao_MYOMLEeK4rchgp2zFsA"
+      name="active"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.active"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Active" state.
+
+Deprecated. Replaced by constant active.]]></description>
+  </functions>
+  <functions
+      xmi:id="_BY-e4OMLEeK4rchgp2zFsA"
+      name="achieved"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.achieved"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Achieved" state.
+
+Deprecated. Replaced by constant achieved.]]></description>
+  </functions>
+  <functions
+      xmi:id="_EjU7AOMLEeK4rchgp2zFsA"
+      name="ready"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.ready"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Ready" state.
+
+Deprecated. Replaced by constant ready.]]></description>
+  </functions>
+  <functions
+      xmi:id="_F95bkOMLEeK4rchgp2zFsA"
+      name="running"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.running"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Running" state.
+
+Deprecated. Replaced by constant running.]]></description>
+  </functions>
+  <functions
+      xmi:id="_H0YcEOMLEeK4rchgp2zFsA"
+      name="finished"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.finished"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Finished" state.
+
+Deprecated. Replaced by constant finished.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Kzq3sOMLEeK4rchgp2zFsA"
+      name="failed"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.failed"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Failed" state.
+
+Deprecated. Replaced by constant failed.]]></description>
+  </functions>
+  <functions
+      xmi:id="_PK_dQOMLEeK4rchgp2zFsA"
+      name="deactivated"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.deactivated"
+      type="String"
+      typeParameterNames=""
+      deprecated="true">
+    <description><![CDATA[Returns a string representing "Deactivated" state.
+
+Deprecated. Replaced by constant deactivated.]]></description>
+  </functions>
+  <functions
+      xmi:id="_9aqoYDpZEeSXKZiCvbw2LQ"
+      name="activate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.activate"
+      type="Null">
+    <parameters
+        xmi:id="__x8BwDpZEeSXKZiCvbw2LQ"
+        name="goals"
+        parameterType="Collection&lt;Goal>"/>
+    <description><![CDATA[(Re)activates inactive or finished goals. If a goal from the collection is active, the goal status remains unchanged.
+
+Throws:
+-"NullParameterError" if mandatory parameter is not specified.
+-"FinishedProcessInstanceError" if the process instance of any activated goal is finished.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Ot-jQDpaEeSXKZiCvbw2LQ"
+      name="deactivate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.deactivate"
+      type="Null">
+    <parameters
+        xmi:id="_Ot-jQTpaEeSXKZiCvbw2LQ"
+        name="goals"
+        parameterType="Collection&lt;Goal>"/>
+    <description><![CDATA[deactivate(goals*: Collection<Goal>): Null
+Deactivates not finished goals. If a goal from the collection is finished or the goal’s process is finished, the goal status remains unchanged.
+
+Throws:
+-"NullParameterError" if a mandatory parameter is not specified.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

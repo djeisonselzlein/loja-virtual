@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.validation:ConstraintTypes
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.validation="http:///com/whitestein/lsps/modeler/validation.ecore"
+    xmi:id="__eZlQJ4aEeO1E8pDVBzXrQ">
+  <constraintTypes
+      xmi:id="__w4cYJ4aEeO1E8pDVBzXrQ"
+      name="AssertFalse"
+      appliedTo="Boolean">
+    <parameters
+        xmi:id="_HEa7cJ4bEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String">
+      <description></description>
+    </parameters>
+    <expression>if value != null and value = true then message ?? $AssertFalseError() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_wqoZgJ4bEeO1E8pDVBzXrQ"
+      name="AssertTrue"
+      appliedTo="Boolean">
+    <parameters
+        xmi:id="_xkk5QJ4bEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and value = false then message ?? $AssertTrueError() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_1VF9gJ4bEeO1E8pDVBzXrQ"
+      name="NotNull">
+    <parameters
+        xmi:id="_3hRhMJ4bEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value = null then message ?? $NotNullError() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_6p8iUJ4bEeO1E8pDVBzXrQ"
+      name="Null">
+    <parameters
+        xmi:id="_7QMqAJ4bEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null then message ?? $NullError() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_81w5oJ4bEeO1E8pDVBzXrQ"
+      name="NotEmpty"
+      appliedTo="String">
+    <parameters
+        xmi:id="_9R1xoJ4bEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value = null or trim(value) = "" then message ?? $NotEmptyErrorMsg() end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_SFveYJ4cEeO1E8pDVBzXrQ"
+      name="Empty"
+      appliedTo="String">
+    <parameters
+        xmi:id="_S9u2UJ4cEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null and trim(value) != "" then message ?? $EmptyErrorMsg() end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_VR7GgJ4cEeO1E8pDVBzXrQ"
+      name="Min"
+      appliedTo="Decimal">
+    <parameters
+        xmi:id="_ZsIA8J4cEeO1E8pDVBzXrQ"
+        name="lowerBound"
+        parameterType="Decimal"
+        required="true"/>
+    <parameters
+        xmi:id="_Wu0iUJ4cEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null and value < lowerBound then message ?? $MinErrorMsg(toString(lowerBound)) end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_fk1gwJ4cEeO1E8pDVBzXrQ"
+      name="Max"
+      appliedTo="Decimal">
+    <parameters
+        xmi:id="_hwVvAJ4cEeO1E8pDVBzXrQ"
+        name="upperBound"
+        parameterType="Decimal"
+        required="true"/>
+    <parameters
+        xmi:id="_it904J4cEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and value > upperBound then message ?? $MaxErrorMsg(toString(upperBound)) end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_KvraUJ4dEeO1E8pDVBzXrQ"
+      name="Range"
+      appliedTo="Decimal">
+    <parameters
+        xmi:id="_MoeH8J4dEeO1E8pDVBzXrQ"
+        name="lowerBound"
+        parameterType="Decimal"
+        required="true"/>
+    <parameters
+        xmi:id="_N2mH8J4dEeO1E8pDVBzXrQ"
+        name="upperBound"
+        parameterType="Decimal"
+        required="true"/>
+    <parameters
+        xmi:id="_PJsukJ4dEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null and (value < lowerBound or value > upperBound) then
+	message ?? $SizeErrorMsg(toString(lowerBound),toString(upperBound))
+end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_vccLQJ4fEeO1E8pDVBzXrQ"
+      name="MinLength"
+      appliedTo="String">
+    <parameters
+        xmi:id="_xC0TMJ4fEeO1E8pDVBzXrQ"
+        name="min"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_x6PDYJ4fEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null and length(value) < min then message ?? $MinLengthErrorMsg(toString(min)) end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_1RCAEJ4fEeO1E8pDVBzXrQ"
+      name="MaxLength"
+      appliedTo="String">
+    <parameters
+        xmi:id="_5lAWsJ4fEeO1E8pDVBzXrQ"
+        name="max"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_6SJwkJ4fEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and length(value) > max then message ?? $MaxLengthErrorMsg(toString(max)) end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_9hokUJ4fEeO1E8pDVBzXrQ"
+      name="IsNumber"
+      appliedTo="String">
+    <parameters
+        xmi:id="__5RxIJ4fEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null then
+  try toDecimal(value); null catch null -> message ?? $IsNumberErrorMsg() end
+end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_C3TogJ4gEeO1E8pDVBzXrQ"
+      name="Pattern"
+      appliedTo="String">
+    <parameters
+        xmi:id="_Eym3kJ4gEeO1E8pDVBzXrQ"
+        name="format"
+        parameterType="String"
+        required="true">
+      <description>The Java regular expression syntax (as defined in the java.Functions.regex.Pattern class) is used.</description>
+    </parameters>
+    <parameters
+        xmi:id="_IWoX8J4gEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and not matches(value, format) then message ?? $PatternErrorMsg() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_N7V9sJ4gEeO1E8pDVBzXrQ"
+      name="Email"
+      appliedTo="String">
+    <parameters
+        xmi:id="_PBFdwJ4gEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and not matches(value, EMAIL_REGEXP) then message ?? $EmailErrorMsg() end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_Qx764J4hEeO1E8pDVBzXrQ"
+      name="Past"
+      appliedTo="Date">
+    <parameters
+        xmi:id="_SiwYQJ4hEeO1E8pDVBzXrQ"
+        name="before"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_TQF_YJ4hEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression>if value != null and value >= before then message ?? $PastErrorMsg(toString(before)) end</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_Z1V1EJ4hEeO1E8pDVBzXrQ"
+      name="Future"
+      appliedTo="Date">
+    <parameters
+        xmi:id="_b0m-IJ4hEeO1E8pDVBzXrQ"
+        name="after"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_caZy0J4hEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null and value <= after then message ?? $FutureErrorMsg(toString(after)) end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_hQU_8J4hEeO1E8pDVBzXrQ"
+      name="CardinalityMin"
+      appliedTo="Collection&lt;T>"
+      genericTypes="T">
+    <parameters
+        xmi:id="_lzMHIJ4hEeO1E8pDVBzXrQ"
+        name="min"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_n6ubYJ4hEeO1E8pDVBzXrQ"
+        name="condition"
+        parameterType="{T:Boolean}"/>
+    <parameters
+        xmi:id="_pfSlcJ4hEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null then
+	if (condition = null ? size(value) : count(value, condition)) < min then
+		message ?? $CardinalityMinErrorMsg(toString(min))
+	end
+end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_wZA2UJ4hEeO1E8pDVBzXrQ"
+      name="CardinalityMax"
+      appliedTo="Collection&lt;T>"
+      genericTypes="T">
+    <parameters
+        xmi:id="_0Rj1MJ4hEeO1E8pDVBzXrQ"
+        name="max"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_1UqQ8J4hEeO1E8pDVBzXrQ"
+        name="condition"
+        parameterType="{T:Boolean}"/>
+    <parameters
+        xmi:id="_273fUJ4hEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null then
+	if (condition = null ? size(value) : count(value, condition)) > max then
+		message ?? $CardinalityMaxErrorMsg(toString(max))
+	end
+end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_7P_m8J4hEeO1E8pDVBzXrQ"
+      name="CardinalityRange"
+      appliedTo="Collection&lt;T>"
+      genericTypes="T">
+    <parameters
+        xmi:id="_9okA0J4hEeO1E8pDVBzXrQ"
+        name="min"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_-nvl4J4hEeO1E8pDVBzXrQ"
+        name="max"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="__faNsJ4hEeO1E8pDVBzXrQ"
+        name="condition"
+        parameterType="{T:Boolean}"/>
+    <parameters
+        xmi:id="_AxBmkJ4iEeO1E8pDVBzXrQ"
+        name="message"
+        parameterType="String"/>
+    <expression><![CDATA[if value != null then
+	def Integer s := condition = null ? size(value) : count(value, condition);
+	if s < min or s > max then
+		message ?? $CardinalityRangeErrorMsg(toString(min),toString(max))
+	end
+end]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_G6gGQJ4iEeO1E8pDVBzXrQ"
+      name="ExpressionConstraint"
+      appliedTo="T"
+      genericTypes="T">
+    <parameters
+        xmi:id="_JLQn8J4iEeO1E8pDVBzXrQ"
+        name="expression"
+        parameterType="{T, Map&lt;String,Object>  : String}"
+        required="true"/>
+    <expression>expression(value, context)</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_IgVa0KqHEeOKGdBiCEgPaQ"
+      name="ComplexExpressionConstraint"
+      appliedTo="T"
+      type="COMPLEX"
+      genericTypes="T">
+    <parameters
+        xmi:id="_LWehgKqHEeOKGdBiCEgPaQ"
+        name="expression"
+        parameterType="{T, Map&lt;String,Object>, Collection&lt;Tag>  : List&lt;ConstraintViolation>}"
+        required="true"/>
+    <expression>expression(value, context, tags)</expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_Vq2FAKU8EeOq-L7HeYcWEg"
+      name="RecordValidity"
+      appliedTo="Record"
+      type="COMPLEX">
+    <expression><![CDATA[validate(value, null, tags, context)
+]]></expression>
+  </constraintTypes>
+  <constraintTypes
+      xmi:id="_cD2MQKBLEeOmp_En-N5wtg"
+      name="RecordCollectionValidity"
+      appliedTo="Collection&lt;Record>"
+      type="COMPLEX">
+    <expression><![CDATA[validate(value, null, tags, context)
+]]></expression>
+  </constraintTypes>
+</com.whitestein.lsps.modeler.validation:ConstraintTypes>

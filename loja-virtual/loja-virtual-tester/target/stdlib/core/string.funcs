@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_4kzMIOMNEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_6c6kUOMNEeK4rchgp2zFsA"
+      name="length"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.length"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_6c6kUeMNEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns the length of the specified string.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_80kYMOMNEeK4rchgp2zFsA"
+      name="toDecimal"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.toDecimal"
+      type="Decimal"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_80kYMeMNEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[If possible, converts the specified string to a decimal. If not possible, the function throws a runtime exception.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the string does not represents a decimal value.]]></description>
+  </functions>
+  <functions
+      xmi:id="_9YN30OMNEeK4rchgp2zFsA"
+      name="toInteger"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.toInteger"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_9YN30eMNEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[If possible, converts the specified string to an integer. If not possible, the function throws a runtime exception.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the string does not represents a integer value.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-d3RQOMNEeK4rchgp2zFsA"
+      name="toLowerCase"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.toLowerCase"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-d3RQeMNEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Converts all characters of the specified string to lower case.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="__CbW4OMNEeK4rchgp2zFsA"
+      name="toString"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.toString"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="__CbW4eMNEeK4rchgp2zFsA"
+        name="object"
+        parameterType="Object"/>
+    <description>Converts the specified object to a string.</description>
+  </functions>
+  <functions
+      xmi:id="__fP1wOMNEeK4rchgp2zFsA"
+      name="toUpperCase"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.toUpperCase"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="__fP1weMNEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Converts all characters of the specified string to upper case.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_DI-8kOMOEeK4rchgp2zFsA"
+      name="indexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.indexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_DI-8keMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_DI_joOMOEeK4rchgp2zFsA"
+        name="substring"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns the index of the first occurrence of the specified substring with in the string.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_DsocMOMOEeK4rchgp2zFsA"
+      name="indexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.indexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_DsocMeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_DsocMuMOEeK4rchgp2zFsA"
+        name="substring"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_DsocM-MOEeK4rchgp2zFsA"
+        name="fromIndex"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns the index of the first occurrence of the specified substring with in the string, starting at the specified index.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.
+-"OutOfBoundsError" if the index is out of range (index < 0 or index >= length(string)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_G3M6wOMOEeK4rchgp2zFsA"
+      name="lastIndexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.lastIndexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_G3M6weMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_G3M6wuMOEeK4rchgp2zFsA"
+        name="substring"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns the index of the rightmost occurrence of the specified substring within the string.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_HUZNEOMOEeK4rchgp2zFsA"
+      name="lastIndexOf"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.lastIndexOf"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_HUZNEeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_HUZNEuMOEeK4rchgp2zFsA"
+        name="substring"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_HUZNE-MOEeK4rchgp2zFsA"
+        name="fromIndex"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns the index of the last occurrence of the specified substring with in the string, searching backward starting at the specified index.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.
+-"OutOfBoundsError" if the index is out of range (index < 0 or index >= length(string)).]]></description>
+  </functions>
+  <functions
+      xmi:id="_JTNqMOMOEeK4rchgp2zFsA"
+      name="matches"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.matches"
+      type="Boolean"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_JTNqMeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_JTNqMuMOEeK4rchgp2zFsA"
+        name="regexp"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns true, if the specified string matches the regular expression given by the regexp parameter, otherwise returns false. The Java regular expression syntax (as defined in the java.Functions.regex.Pattern class) is used.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_KkrSEOMOEeK4rchgp2zFsA"
+      name="substring"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.substring"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_Kkr5IOMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_Kkr5IeMOEeK4rchgp2zFsA"
+        name="fromIndex"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_Kkr5IuMOEeK4rchgp2zFsA"
+        name="toIndex"
+        parameterType="Integer"/>
+    <description><![CDATA[Returns a substring of the specified string starting at the position (inclusive) given by the fromIndex parameter and ending at the position (exclusive) given by the toIndex parameter. If the specified fromIndex is null or is less than 0, the substring starts from beginning of the string (index 0). If the specified toIndex is null or equal/higher than the length of the string, the substring ends at the end of the string (index given by length(string)-1). Throws a runtime exception if fromIndex > toIndex.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if fromIndex > toIndex.]]></description>
+  </functions>
+  <functions
+      xmi:id="_MQAygOMOEeK4rchgp2zFsA"
+      name="replaceAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.replaceAll"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_MQAygeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_MQAyguMOEeK4rchgp2zFsA"
+        name="regexp"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_MQAyg-MOEeK4rchgp2zFsA"
+        name="replacement"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Replaces each substring of the specified string that matches the regular expression given by the regexp parameter with the string specified by the replacement parameter. The Java regular expression syntax (as defined in the java.Functions.regex.Pattern class) is used.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Mxfu8OMOEeK4rchgp2zFsA"
+      name="replaceFirst"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.replaceFirst"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_Mxfu8eMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_Mxfu8uMOEeK4rchgp2zFsA"
+        name="regexp"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_Mxfu8-MOEeK4rchgp2zFsA"
+        name="replacement"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Replaces the first substring of the specified string that matches the regular expression given by the regexp parameter with the string specified by the replacement parameter. The Java regular expression syntax (as defined in the java.Functions.regex.Pattern class) is used.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_OsD-MOMOEeK4rchgp2zFsA"
+      name="split"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.split"
+      type="List&lt;String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_OsD-MeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_OsD-MuMOEeK4rchgp2zFsA"
+        name="regexp"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Splits the specified string around matches of the regular expression given by the regexp parameter. The Java regular expression syntax (as defined in the java.Functions.regex.Pattern class) is used.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_PwU3kOMOEeK4rchgp2zFsA"
+      name="find"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.find"
+      type="List&lt;String>">
+    <parameters
+        xmi:id="_PwVeoOMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_PwVeoeMOEeK4rchgp2zFsA"
+        name="regexp"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Finds all occurrences of the regexp in the specified string. All the
+matched strings are returned as a list of strings. The function returns an
+empty list if there is no match. The Java regular expression syntax (as
+defined in the java.util.regex.Pattern class) is used.
+
+Throws:
+- “NullParameterError” - if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_S78fAOMOEeK4rchgp2zFsA"
+      name="format"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.format"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_S78fAeMOEeK4rchgp2zFsA"
+        name="pattern"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_S78fAuMOEeK4rchgp2zFsA"
+        name="arguments"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a string created by formatting the objects given by the arguments parameter with the format specified by the pattern parameter. The pattern parameter uses the syntax defined in the java.util.Formatter Java class restricted to formatting commands applied only for Java data types used to internally represent GO-BPMN expression language data types. The data types are transformed according to the following table:
+
+Boolean			->	java.lang.Boolean
+String			->	java.lang.String
+Date			->	java.Functions.Date
+Integer			->	java.math.BigDecimal
+Decimal			->	java.math.BigDecimal
+all other data types	->	java.lang.String using the function core::toString
+
+The format() function uses a server locale for formatting numbers and dates.
+Note: The format() function returns incorrect value of time zone offset from GMT for Daylight Saving Time (“$tz” or “$Tz” conversions) on Java 6. It is recommended to use formatDate() function for formatting dates. Java 7 returns correct values of time zone offset.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the specified format is incorrect.]]></description>
+  </functions>
+  <functions
+      xmi:id="_Tjm78OMOEeK4rchgp2zFsA"
+      name="formatWithLocale"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.formatWithLocale"
+      type="String">
+    <parameters
+        xmi:id="_Tjm78eMOEeK4rchgp2zFsA"
+        name="pattern"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_Tjm78uMOEeK4rchgp2zFsA"
+        name="locale"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_Tjm78-MOEeK4rchgp2zFsA"
+        name="arguments"
+        parameterType="Object"/>
+    <description><![CDATA[Returns a string created by formatting the objects given by the arguments parameter with the format specified by the pattern parameter. The pattern parameter uses the syntax defined in the java.util.Formatter Java class restricted to formatting commands applied only for Java data types used to internally represent GO-BPMN expression language data types. The data types are transformed according to the following table:
+
+Boolean			->	java.lang.Boolean
+String			->	java.lang.String
+Date			->	java.Functions.Date
+Integer			->	java.math.BigDecimal
+Decimal			->	java.math.BigDecimal
+all other data types	->	java.lang.String using the function core::toString
+
+The locale parameter determines a locale used for formatting numbers and dates. If it is null, the server locale is used.
+Note: The formatWithLocale() function returns incorrect value of time zone offset from GMT for Daylight Saving Time (“$tz” or “$Tz” conversions) on Java 6. It is recommended to use formatDate() function for formatting dates. Java 7 returns correct values of time zone offset.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the specified format is incorrect.]]></description>
+  </functions>
+  <functions
+      xmi:id="_VVyrQOMOEeK4rchgp2zFsA"
+      name="trim"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.trim"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_VVzSUOMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified string , while omitting the leading and trailing whitespace.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_cyDogOMOEeK4rchgp2zFsA"
+      name="localize"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.localize"
+      type="String"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_cyDogeMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true">
+      <description>string to localize</description>
+    </parameters>
+    <parameters
+        xmi:id="_cyDoguMOEeK4rchgp2zFsA"
+        name="language"
+        parameterType="String"
+        required="true">
+      <description>language code</description>
+    </parameters>
+    <description><![CDATA[Replaces all localizable substrings in the string parameter by the corresponding localized strings from the specified language.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

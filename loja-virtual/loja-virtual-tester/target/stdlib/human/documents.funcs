@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_9uC1kH6XEeOazrC8xQ9gxw">
+  <functions
+      xmi:id="_-OugwH6XEeOazrC8xQ9gxw"
+      name="deleteSavedDocuments"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.human.function.HumanFunctions.deleteSavedDocuments"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_-OugwX6XEeOazrC8xQ9gxw"
+        name="documents"
+        parameterType="Set&lt;SavedDocument>"
+        required="true"/>
+    <description><![CDATA[Deletes the specified saved documents.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

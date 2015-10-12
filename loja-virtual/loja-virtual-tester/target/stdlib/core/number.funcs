@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_keT_AOMNEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_mubngOMNEeK4rchgp2zFsA"
+      name="abs"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.abs"
+      type="Decimal"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mubngeMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns an absolute value of the number.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_mJfucOMNEeK4rchgp2zFsA"
+      name="abs"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.abs"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mJfuceMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns an absolute value of the number.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pLEpEOMNEeK4rchgp2zFsA"
+      name="min"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.min"
+      type="Decimal"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_pLEpEeMNEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns the minimal number from a list of decimals.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_pyNhkOMNEeK4rchgp2zFsA"
+      name="min"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.min"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_pyNhkeMNEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns the minimal number from a list of integers.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_rc9zMOMNEeK4rchgp2zFsA"
+      name="max"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.max"
+      type="Decimal"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_rc9zMeMNEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns the maximal number from a list of decimals.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_sJkagOMNEeK4rchgp2zFsA"
+      name="max"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.max"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_sJkageMNEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns the maximal number from a list of integers.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXSTsOMNEeK4rchgp2zFsA"
+      name="roundCeiling"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundCeiling"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXSTseMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards positive infinity.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXSTsuMNEeK4rchgp2zFsA"
+      name="roundDown"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundDown"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXSTs-MNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards zero.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXS6wOMNEeK4rchgp2zFsA"
+      name="roundFloor"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundFloor"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXS6weMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards negative infinity.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXS6wuMNEeK4rchgp2zFsA"
+      name="roundHalfDown"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundHalfDown"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXS6w-MNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards the "nearest neighbor"; if both neighbors are equidistant, rounds down.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXS6xOMNEeK4rchgp2zFsA"
+      name="roundHalfEven"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundHalfEven"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXS6xeMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards the "nearest neighbor"; if both neighbors are equidistant, rounds towards the even neighbor.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXS6xuMNEeK4rchgp2zFsA"
+      name="roundHalfUp"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundHalfUp"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXS6x-MNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number towards the "nearest neighbor"; if both neighbors are equidistant, rounds up.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vXS6yOMNEeK4rchgp2zFsA"
+      name="roundUp"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.roundUp"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vXS6yeMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns rounding of the specified number away from zero.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_zRs60OMNEeK4rchgp2zFsA"
+      name="scale"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.scale"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_zRs60eMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns the scale of the specified number.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_zxqNQOMNEeK4rchgp2zFsA"
+      name="setScale"
+      type="Decimal"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_zxqNQeMNEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"
+        required="true"/>
+    <parameters
+        xmi:id="_zxqNQuMNEeK4rchgp2zFsA"
+        name="scale"
+        parameterType="Integer"/>
+    <parameters
+        xmi:id="_zxqNQ-MNEeK4rchgp2zFsA"
+        name="roundingMode"
+        parameterType="{Decimal : Integer}"/>
+    <description><![CDATA[Returns a decimal with the specified  scale, and the unscaled value of which is determined by multiplying or dividing the unscaled value of the number by the appropriate power of ten to maintain its overall value. If the scale is reduced by the operation, the unscaled value must be divided and the specified roundingMode is applied to the division. Formally, it can be expressed as roundingMode(number * (10 ** scale)) / (10** scale).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(roundingMode,"roundingMode",roundingMode)(ifNotNull(number,"number",number) * (10 ** ifNotNull(scale,"scale",scale))) / (10 ** ifNotNull(scale,"scale",scale))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_2HSA0OMNEeK4rchgp2zFsA"
+      name="random"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.random"
+      type="Decimal"
+      typeParameterNames="">
+    <description>Returns a pseudorandom, uniformly distributed decimal value between 0.0 (inclusive) and 1.0 (exclusive).</description>
+  </functions>
+  <functions
+      xmi:id="_2HSA0eMNEeK4rchgp2zFsA"
+      name="random"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.NumberFunctions.random"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_2HSA0uMNEeK4rchgp2zFsA"
+        name="upperBound"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a pseudorandom, uniformly distributed integer between 0 (inclusive) and the specified upperBound (exclusive).
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

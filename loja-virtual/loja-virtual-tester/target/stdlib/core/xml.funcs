@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_vOF0EOMQEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_wRtNMOMQEeK4rchgp2zFsA"
+      name="parseXml"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.xml.function.XmlFunctions.parseXml"
+      type="E"
+      typeParameterNames="E"
+      sideEffect="true">
+    <parameters
+        xmi:id="_wRtNMeMQEeK4rchgp2zFsA"
+        name="xml"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_wRtNMuMQEeK4rchgp2zFsA"
+        name="resultType"
+        parameterType="Type&lt;E>"
+        required="true">
+      <description></description>
+    </parameters>
+    <description><![CDATA[Parses XML document to internal data structures. The xml parameter represents the XML document to parse and the resultType parameter determines the type of the returned data. The referred type must be record type, otherwise an exception is thrown.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.
+-“IncompatibleTypeError” - The resultType parameter is not record.
+-“UnableToParseXml” - The specified xml cannot be parsed.]]></description>
+  </functions>
+  <functions
+      xmi:id="_wRtNM-MQEeK4rchgp2zFsA"
+      name="convertToXml"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.xml.function.XmlFunctions.convertToXml"
+      type="String">
+    <parameters
+        xmi:id="_wRtNNOMQEeK4rchgp2zFsA"
+        name="object"
+        parameterType="Object"
+        required="true"/>
+    <description><![CDATA[Converts internal data structures passed to the object parameter to XML document. The object parameter must be an instance of a record type, otherwise an exception is thrown. The function returns a string which represents the output XML document.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.
+-“IncompatibleTypeError” - The type of the object is not record.
+-“UnableToConvertToXml” - An error occurred during conversion.]]></description>
+  </functions>
+  <functions
+      xmi:id="_i6CbwFgwEeO9dMfO8xggWw"
+      name="xmlMarshal"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.xml.function.XmlFunctions2.xmlMarshal"
+      type="String">
+    <parameters
+        xmi:id="_lCrjQFgwEeO9dMfO8xggWw"
+        name="record"
+        parameterType="Record"/>
+  </functions>
+  <functions
+      xmi:id="_Sal3gIjoEeO_qK3pvP6hTA"
+      name="xmlUnmarshal"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.xml.function.XmlFunctions2.xmlUnmarshal"
+      type="T"
+      typeParameterNames="T">
+    <parameters
+        xmi:id="_ZeGWgIjoEeO_qK3pvP6hTA"
+        name="xml"
+        parameterType="Object">
+      <description>A string or org.w3c.dom.Element.</description>
+    </parameters>
+    <parameters
+        xmi:id="_bT4zcIjoEeO_qK3pvP6hTA"
+        name="type"
+        parameterType="Type&lt;T>">
+      <description>The type as which to deserialize.</description>
+    </parameters>
+    <parameters
+        xmi:id="_fj4B8IjoEeO_qK3pvP6hTA"
+        name="mappedAs"
+        parameterType="String">
+      <description>The mapping to XSD base type, optional.</description>
+    </parameters>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

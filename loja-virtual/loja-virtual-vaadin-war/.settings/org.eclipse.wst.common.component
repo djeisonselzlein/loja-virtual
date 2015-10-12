@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="2.0">
+  <wb-module deploy-name="loja-virtual-vaadin-war">
+    <property name="context-root" value="/loja-virtual"/>
+    <wb-resource deploy-path="/" source-path="src/main/webapp"/>
+    <wb-resource deploy-path="/" source-path="src/main/webapp"/>
+    <property name="java-output-path" value="/eclipse-target/classes"/>
+    <dependent-module archiveName="loja-virtual-vaadin.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/loja-virtual-vaadin/loja-virtual-vaadin">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-human-vaadin-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/human-processes/lsps-human-vaadin/3.0.1004/lsps-human-vaadin-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-common-server-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/common/lsps-common-server/3.0.1004/lsps-common-server-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-common-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/common/lsps-common/3.0.1004/lsps-common-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="slf4j-api-1.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="hibernate-entitymanager-4.2.10.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-entitymanager/4.2.10.Final/hibernate-entitymanager-4.2.10.Final.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jboss-logging-3.1.0.GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="dom4j-1.6.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="javassist-3.18.1-GA.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="hibernate-commons-annotations-4.0.2.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="hibernate-core-4.2.10.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-core/4.2.10.Final/hibernate-core-4.2.10.Final.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="antlr-2.7.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/antlr/antlr/2.7.7/antlr-2.7.7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="hibernate-ehcache-4.2.10.Final.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-ehcache/4.2.10.Final/hibernate-ehcache-4.2.10.Final.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="ehcache-core-2.6.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/net/sf/ehcache/ehcache-core/2.6.0/ehcache-core-2.6.0.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-common-client-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/common/lsps-common-client/3.0.1004/lsps-common-client-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-lang-core-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/lang/lsps-lang-core/3.0.1004/lsps-lang-core-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="antlr-runtime-3.5.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="javaee-api-5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/javax/javaee-api/5.0/javaee-api-5.0.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-engine-exp-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/engine/lsps-engine-exp/3.0.1004/lsps-engine-exp-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-engine-model-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/engine/lsps-engine-model/3.0.1004/lsps-engine-model-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-engine-client-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/engine/lsps-engine-client/3.0.1004/lsps-engine-client-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-lang-query-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/lang/lsps-lang-query/3.0.1004/lsps-lang-query-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="joda-time-2.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/joda-time/joda-time/2.3/joda-time-2.3.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-os-client-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/org-structure/lsps-os-client/3.0.1004/lsps-os-client-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-human-client-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/human-processes/lsps-human-client/3.0.1004/lsps-human-client-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-human-exp-3.0.1004.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/human-processes/lsps-human-exp/3.0.1004/lsps-human-exp-3.0.1004.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-vaadin-widgets-2.20.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/lsps-vaadin-widgets/2.20/lsps-vaadin-widgets-2.20.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="lsps-vaadin-extensions-2.20.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/whitestein/lsps/lsps-vaadin-extensions/2.20/lsps-vaadin-extensions-2.20.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-server-7.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/vaadin-server/7.4.1/vaadin-server-7.4.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-sass-compiler-0.9.12.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/vaadin-sass-compiler/0.9.12/vaadin-sass-compiler-0.9.12.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="sac-1.3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/w3c/css/sac/1.3/sac-1.3.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="flute-1.3.0.gg2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/external/flute/flute/1.3.0.gg2/flute-1.3.0.gg2.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-shared-7.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/vaadin-shared/7.4.1/vaadin-shared-7.4.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="streamhtmlparser-jsilver-0.0.10.vaadin1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/external/streamhtmlparser/streamhtmlparser-jsilver/0.0.10.vaadin1/streamhtmlparser-jsilver-0.0.10.vaadin1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="guava-16.0.1.vaadin1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/external/google/guava/16.0.1.vaadin1/guava-16.0.1.vaadin1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jsoup-1.8.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/jsoup/jsoup/1.8.1/jsoup-1.8.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-client-compiled-7.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/vaadin-client-compiled/7.4.1/vaadin-client-compiled-7.4.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-themes-7.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/vaadin-themes/7.4.1/vaadin-themes-7.4.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="popupbutton-2.4.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/vaadin/addons/popupbutton/2.4.1/popupbutton-2.4.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-charts-1.1.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vaadin/addon/vaadin-charts/1.1.7/vaadin-charts-1.1.7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="gson-2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/google/code/gson/gson/2.2/gson-2.2.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="commons-io-1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/commons-io/commons-io/1.4/commons-io-1.4.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="v-leaflet-0.5.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/vaadin/addon/v-leaflet/0.5.7/v-leaflet-0.5.7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="g-leaflet-draw-0.4.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/peimari/g-leaflet-draw/0.4.7/g-leaflet-draw-0.4.7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="g-leaflet-0.4.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/peimari/g-leaflet/0.4.7/g-leaflet-0.4.7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jts-1.13.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/vividsolutions/jts/1.13/jts-1.13.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jackson-databind-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.5.0/jackson-databind-2.5.0.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jackson-annotations-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="jackson-core-2.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/com/fasterxml/jackson/core/jackson-core/2.5.0/jackson-core-2.5.0.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="contextmenu-4.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/vaadin/addons/contextmenu/4.5/contextmenu-4.5.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="filteringtable-0.9.11.v7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/vaadin/addons/filteringtable/0.9.11.v7/filteringtable-0.9.11.v7.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="vaadin-lazyquerycontainer-7.4.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/vaadin/addons/lazyquerycontainer/vaadin-lazyquerycontainer/7.4.0.1/vaadin-lazyquerycontainer-7.4.0.1.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="log4j-over-slf4j-1.7.5.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/M2_REPO/org/slf4j/log4j-over-slf4j/1.7.5/log4j-over-slf4j-1.7.5.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+  </wb-module>
+</project-modules>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_TBX7kATOEeOYtrdguecaaw"
+    name="CobrarCartaoDeCredito"
+    newUI="true">
+  <parameters
+      xmi:id="_dYFQsATOEeOYtrdguecaaw"
+      name="pedido"
+      parameterType="Pedido"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_TBX7kQTOEeOYtrdguecaaw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_VedpEATOEeOYtrdguecaaw">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_WSREkATOEeOYtrdguecaaw">
+        <expression>CartaoDeCreditoDetalhe(pedido.cartaoCredito, true)</expression>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdTextBox"
+          xmi:id="_azLrAATOEeOYtrdguecaaw">
+        <readonly>true</readonly>
+        <binding><![CDATA[&aCobrar]]></binding>
+        <label><![CDATA["Valor a cobrar:"]]></label>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_tn3SAATOEeOYtrdguecaaw">
+        <expression>PainelDeBotoes(false)</expression>
+      </components>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_fdcasATOEeOYtrdguecaaw"
+      name="aCobrar"
+      variableType="String">
+    <description></description>
+    <initialValueExpression><![CDATA["R$ " + toString(getCustoTotal(pedido))]]></initialValueExpression>
+  </variables>
+</com.whitestein.lsps.modeler.form:FormDefinition>

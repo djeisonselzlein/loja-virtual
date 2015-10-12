@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_UQAPQOMLEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_nAXW8OMLEeK4rchgp2zFsA"
+      name="createModelInstance"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.createModelInstance"
+      type="ModelInstance"
+      sideEffect="true">
+    <parameters
+        xmi:id="_nAXW8eMLEeK4rchgp2zFsA"
+        name="synchronous"
+        parameterType="Boolean"
+        required="true"/>
+    <parameters
+        xmi:id="_nAXW8uMLEeK4rchgp2zFsA"
+        name="model"
+        parameterType="Model"
+        required="true"/>
+    <parameters
+        xmi:id="_nAXW8-MLEeK4rchgp2zFsA"
+        name="properties"
+        parameterType="Map&lt;String,String>"/>
+    <description><![CDATA[Returns a new instance of the model having the specified initialization properties. If the properties is null, an empty map is created in the instantiated model. If the synchronous parameter is set to true, the model interpretation phase is performed synchronously and execution of the containing expression waits until its finish. If the synchronous parameter is set to false, the model interpretation phase is performed asynchronously and execution of the containing expression does not wait until its finish. For usage this function in actions of documents, it is recommended to set the synchronous parameter to true, and for usage in processes it is recommended to set the parameter value to false.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.
+-“ModelInstantiationError” - The model instance did not start due to an internal initiation error.
+-“ModelInterpretationError” - The model instance did not start due to an internal model interpretation (startup) error.]]></description>
+  </functions>
+  <functions
+      xmi:id="_gbzdwOMLEeK4rchgp2zFsA"
+      name="findModelInstances"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.findModelInstances"
+      type="Set&lt;ModelInstance>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_gbzdweMLEeK4rchgp2zFsA"
+        name="model"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_gbzdwuMLEeK4rchgp2zFsA"
+        name="version"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_gbzdw-MLEeK4rchgp2zFsA"
+        name="isRunning"
+        parameterType="Boolean"/>
+    <parameters
+        xmi:id="_gbzdxOMLEeK4rchgp2zFsA"
+        name="properties"
+        parameterType="Map&lt;String, String>"/>
+    <description><![CDATA[Returns a set of model instances satisfying the specified filtering criteria. If the corresponding fields of a model instance match the patterns specified as function parameters, the model instance is included in the resulting set. All strings in parameters, including the properties parameter, are specified as wildcard strings patterns. A wildcard string can contain the following wildcards: "*" matching none or several arbitrary characters, and "?" matching exactly one arbitrary character. Any other character in patterns matches itself. Value of the isRunning parameter must match exactly. null specified as the pattern value matches any value of the model instance field (which is equivalent to the "*" pattern). All the specified properties must occur also in the selected model instances.]]></description>
+  </functions>
+  <functions
+      xmi:id="_fHpHMOMLEeK4rchgp2zFsA"
+      name="findModels"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.findModels"
+      type="Set&lt;Model>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_fHpHMeMLEeK4rchgp2zFsA"
+        name="name"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_fHpHMuMLEeK4rchgp2zFsA"
+        name="version"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_fHpHM-MLEeK4rchgp2zFsA"
+        name="latestOnly"
+        parameterType="Boolean"/>
+    <description><![CDATA[Returns a set of all uploaded models satisfying the specified filtering criteria. If the corresponding fields of a model match the patterns specified as function parameters, the model is included in the resulting set. All strings in parameters are specified as wildcard strings patterns. A wildcard string can contain the following wildcards: "*" matching none or several arbitrary characters, and "?" matching exactly one arbitrary character. Any other character in patterns matches itself. ‘null’ specified as the pattern value matches any value of the model field (which is equivalent to the "*" pattern). Setting the latestOnly parameter to true causes including only the most recently uploaded models with given name and version, if there are several models with the same name and version on the server. If the latestOnly parameter is set to false, all models satisfying the filtering criteria are returned; the returned set can contain several models of the same name and version.]]></description>
+  </functions>
+  <functions
+      xmi:id="_hCVSQOMLEeK4rchgp2zFsA"
+      name="findProcessInstances"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.findProcessInstances"
+      type="Set&lt;ProcessInstance>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_hCVSQeMLEeK4rchgp2zFsA"
+        name="filter"
+        parameterType="{ProcessInstance : Boolean}"
+        required="true"/>
+    <description><![CDATA[Returns a set of process instances generated by this model instance up to this point and satisfying the specified filtering criteria. The criteria specified by the filter parameter are given as a Boolean closure with one formal parameter of the type ProcessInstance. If the Boolean expression returns true for a process instance, the process instance is included in the resulting set.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iMWOUOMLEeK4rchgp2zFsA"
+      name="getModel"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.getModel"
+      type="Model"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_iMWOUeMLEeK4rchgp2zFsA"
+        name="name"
+        parameterType="String"
+        required="true">
+      <description></description>
+    </parameters>
+    <parameters
+        xmi:id="_iMWOUuMLEeK4rchgp2zFsA"
+        name="version"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns a model with the specified name and version. If there are several models with the same name and version on the server, the most recently uploaded model is returned.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"ModelNotFoundError" if there is no such a model.]]></description>
+  </functions>
+  <functions
+      xmi:id="_iyCVUOMLEeK4rchgp2zFsA"
+      name="getModelInstance"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.getModelInstance"
+      type="ModelInstance"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_iyCVUeMLEeK4rchgp2zFsA"
+        name="id"
+        parameterType="Decimal"
+        required="true"/>
+    <description><![CDATA[Returns a model instance with the specified id.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"ModelInstanceNotFoundError" if there is no such a model instance.]]></description>
+  </functions>
+  <functions
+      xmi:id="_jipS4OMLEeK4rchgp2zFsA"
+      name="getModelInstanceProperties"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.getModelInstanceProperties"
+      type="Map&lt;String, String>"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_jipS4eMLEeK4rchgp2zFsA"
+        name="modelInstance"
+        parameterType="ModelInstance"
+        required="true"/>
+    <description><![CDATA[Returns a map of initialization properties of the specified model instance.
+
+Throws:
+-"NullParameterError"  if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_rpPmkOMLEeK4rchgp2zFsA"
+      name="thisModel"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.thisModel"
+      type="Model">
+    <description>Returns the model from which context the function was executed.</description>
+  </functions>
+  <functions
+      xmi:id="_sbXnEOMLEeK4rchgp2zFsA"
+      name="thisModelInstance"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.thisModelInstance"
+      type="ModelInstance"
+      typeParameterNames="">
+    <description>Returns the model instance that executed the function.</description>
+  </functions>
+  <functions
+      xmi:id="_0N5ycOMPEeK4rchgp2zFsA"
+      name="thisProcessInstance"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ReflectionFunctions.thisProcessInstance"
+      type="ProcessInstance"
+      typeParameterNames="">
+    <description>Returns the process instance that executed the function; or null, if the function is executed in the global context of a module.</description>
+  </functions>
+  <functions
+      xmi:id="_iL4pYOMNEeK4rchgp2zFsA"
+      name="sendSignal"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.sendSignal"
+      type="Null"
+      sideEffect="true">
+    <parameters
+        xmi:id="_iL4pYeMNEeK4rchgp2zFsA"
+        name="synchronous"
+        parameterType="Boolean"
+        required="true"/>
+    <parameters
+        xmi:id="_iL4pYuMNEeK4rchgp2zFsA"
+        name="recipients"
+        parameterType="Set&lt;ModelInstance>"
+        required="true"/>
+    <parameters
+        xmi:id="_iL4pY-MNEeK4rchgp2zFsA"
+        name="signal"
+        parameterType="Object"
+        required="true"/>
+    <description><![CDATA[Sends a signal object to the specified recipients. If the synchronous parameter is set to true, the signal is sent synchronously and execution of the containing expression waits until the signal is received by recipients. If the synchronous parameter is set to false, the signal is sent asynchronously and execution of the containing expression does not wait until the signal is received by recipients. The function returns always null.
+
+Throws:
+- “NullParameterError” - Mandatory parameter is null.
+- “SendSignalError” - Sending or receiving of the signal was not successful.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

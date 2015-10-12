@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_CK9jMOMQEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_D8KbEOMQEeK4rchgp2zFsA"
+      name="literals"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.EnumerationFunctions.literals"
+      type="List&lt;E>"
+      typeParameterNames="E extends Enumeration">
+    <parameters
+        xmi:id="_D8KbEeMQEeK4rchgp2zFsA"
+        name="enumeration"
+        parameterType="Type&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a list of literals from the specified enumeration.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_D8KbEuMQEeK4rchgp2zFsA"
+      name="literalToName"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.EnumerationFunctions.literalToName"
+      type="String">
+    <parameters
+        xmi:id="_D8KbE-MQEeK4rchgp2zFsA"
+        name="literal"
+        parameterType="Enumeration"
+        required="true"/>
+    <description><![CDATA[Transforms the specified enumeration literal to its name represented as string.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_ypJlsOMQEeK4rchgp2zFsA"
+      name="nameToLiteral"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.EnumerationFunctions.nameToLiteral"
+      type="E"
+      typeParameterNames="E extends Enumeration">
+    <parameters
+        xmi:id="_ypJlseMQEeK4rchgp2zFsA"
+        name="enumeration"
+        parameterType="Type&lt;E>"
+        required="true"/>
+    <parameters
+        xmi:id="_ypJlsuMQEeK4rchgp2zFsA"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Transforms the specified enumeration’s literal name to the corresponding literal value.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.
+-“DoesNotExistError” if the specified name does not corespond to any literal.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

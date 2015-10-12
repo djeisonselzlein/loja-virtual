@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_48UGgOMIEeKrXaCgivXJqA">
+  <functions
+      xmi:id="_5r3UIOMIEeKrXaCgivXJqA"
+      name="findAll"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.QueryFunctions.findAll"
+      type="List&lt;E>"
+      typeParameterNames="E extends Record">
+    <parameters
+        xmi:id="_5r3UIeMIEeKrXaCgivXJqA"
+        name="type"
+        parameterType="Type&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns all shared records of the given type.
+
+Throws:
+- “NullParameterError” - if mandatory parameter is null
+- “IncompatibleTypeError” - if the type parameter is not a shared record type]]></description>
+  </functions>
+  <functions
+      xmi:id="_6fmeMOMIEeKrXaCgivXJqA"
+      name="findById"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.QueryFunctions.findById"
+      type="E"
+      typeParameterNames="E extends Record">
+    <parameters
+        xmi:id="_6fmeMeMIEeKrXaCgivXJqA"
+        name="id"
+        parameterType="Object"
+        required="true"/>
+    <parameters
+        xmi:id="_6fmeMuMIEeKrXaCgivXJqA"
+        name="type"
+        parameterType="Type&lt;E>"
+        required="true"/>
+    <description><![CDATA[Returns a shared record of the specified type and identified by the given primary key id. Composed primary key id is represented as a map of type Map<String, Object> or of type Map<Property, Object>. The keys of the map identifies the properties of the primary key id and values represent the value of the properties. If the key is of type string then it contains the simple property name. If there is no record with the given id, the function returns null.
+
+Throws:
+- “NullParameterError” - Mandatory parameter is null.
+- “IncompatibleTypeError” - The type parameter is not a shared record type.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

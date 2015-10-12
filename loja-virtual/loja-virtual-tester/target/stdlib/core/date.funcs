@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_n6Fs4OMOEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_vtFIEOMOEeK4rchgp2zFsA"
+      name="*"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIEeMOEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"/>
+    <parameters
+        xmi:id="_vtFIEuMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <description>Binary operator which returns a duration obtained by multiplying each field of the duration by the specified number and rounding the value down.</description>
+    <expression>duration * number</expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIE-MOEeK4rchgp2zFsA"
+      name="*"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIFOMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <parameters
+        xmi:id="_vtFIFeMOEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Decimal"/>
+    <description>Binary operator which returns a duration obtained by multiplying each field of the duration by the specified number and rounding the value down.</description>
+    <expression><![CDATA[new Duration(
+years -> roundDown(number * duration.years),
+months -> roundDown(number * duration.months),
+weeks -> roundDown(number * duration.weeks),
+days -> roundDown(number * duration.days),
+hours -> roundDown(number * duration.hours),
+minutes -> roundDown(number * duration.minutes),
+seconds -> roundDown(number * duration.seconds),
+millis -> roundDown(number * duration.millis)
+)]]></expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIFuMOEeK4rchgp2zFsA"
+      name="+"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.addDurationToDate"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIF-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"/>
+    <parameters
+        xmi:id="_vtFIGOMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <description>Binary operator which returns a date obtained by adding the duration to the date.</description>
+  </functions>
+  <functions
+      xmi:id="_vtFIGeMOEeK4rchgp2zFsA"
+      name="+"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIGuMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <description>Unary operator which returns the specified duration.</description>
+    <expression>duration</expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIG-MOEeK4rchgp2zFsA"
+      name="+"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIHOMOEeK4rchgp2zFsA"
+        name="duration1"
+        parameterType="Duration"/>
+    <parameters
+        xmi:id="_vtFIHeMOEeK4rchgp2zFsA"
+        name="duration2"
+        parameterType="Duration"/>
+    <description>Binary operator which returns a duration obtained by adding the values of the corresponding fields of duration1 and duration2.</description>
+    <expression><![CDATA[new Duration(
+years -> duration1.years + duration2.years,
+months -> duration1.months + duration2.months,
+weeks -> duration1.weeks + duration2.weeks,
+days -> duration1.days + duration2.days,
+hours -> duration1.hours + duration2.hours,
+minutes -> duration1.minutes + duration2.minutes,
+seconds -> duration1.seconds + duration2.seconds,
+millis -> duration1.millis + duration2.millis
+)]]></expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIHuMOEeK4rchgp2zFsA"
+      name="-"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIH-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"/>
+    <parameters
+        xmi:id="_vtFIIOMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <description>Binary operator which returns a date obtained by subtracting the duration from the date.</description>
+    <expression>date + (-duration)</expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIIeMOEeK4rchgp2zFsA"
+      name="-"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.subtractDates"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIIuMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"/>
+    <parameters
+        xmi:id="_vtFII-MOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"/>
+    <description><![CDATA[Binary operator which returns a duration obtained by subtracting date2 from date1. The resulting duration is in the "normal form"; i.e., it has the highest possible values (taken in absolute values) in highly ranked fields. If  date2 >  date1, the resulting duration is negative, i.e., all its fields are negative.]]></description>
+  </functions>
+  <functions
+      xmi:id="_vtFIJOMOEeK4rchgp2zFsA"
+      name="-"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIJeMOEeK4rchgp2zFsA"
+        name="duration"
+        parameterType="Duration"/>
+    <description>Unary operator which returns a duration obtained by negating of each field of the specified duration.</description>
+    <expression><![CDATA[new Duration(
+years -> -duration.years,
+months -> -duration.months,
+weeks -> -duration.weeks,
+days -> -duration.days,
+hours -> -duration.hours,
+minutes -> -duration.minutes,
+seconds -> -duration.seconds,
+millis -> -duration.millis
+)]]></expression>
+  </functions>
+  <functions
+      xmi:id="_vtFIJuMOEeK4rchgp2zFsA"
+      name="-"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_vtFIJ-MOEeK4rchgp2zFsA"
+        name="duration1"
+        parameterType="Duration"/>
+    <parameters
+        xmi:id="_vtFIKOMOEeK4rchgp2zFsA"
+        name="duration2"
+        parameterType="Duration"/>
+    <description>Binary operator which returns a duration obtained by subtracting each field of duration2 from the corresponding field of duration1.</description>
+    <expression>duration1 + (-duration2)</expression>
+  </functions>
+  <functions
+      xmi:id="_oIR54OMOEeK4rchgp2zFsA"
+      name="date"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.date"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_oIR54eMOEeK4rchgp2zFsA"
+        name="year"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR54uMOEeK4rchgp2zFsA"
+        name="month"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR54-MOEeK4rchgp2zFsA"
+        name="dayOfMonth"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Creates a date from the values given by the following parameters: year, month (month of year), and dayOfMonth. The created date is given as a sum of all parameter values; i.e., the number of years is added up with the number of months, and then with the number of days of a month. There are no limitations on parameter values.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_oIR55OMOEeK4rchgp2zFsA"
+      name="date"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.date"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_oIR55eMOEeK4rchgp2zFsA"
+        name="year"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR55uMOEeK4rchgp2zFsA"
+        name="month"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR55-MOEeK4rchgp2zFsA"
+        name="dayOfMonth"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR56OMOEeK4rchgp2zFsA"
+        name="hour"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR56eMOEeK4rchgp2zFsA"
+        name="minute"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR56uMOEeK4rchgp2zFsA"
+        name="second"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR56-MOEeK4rchgp2zFsA"
+        name="millis"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Creates a date from the values given by the following parameters: year, month (month of year), dayOfMonth, hour (hour of day), minute (minute of hour), second (second of minute), and millis (millisecond of second). The created date is given as a sum of all parameter values; i.e., the number of years is added up with the number of months, then with the number of days of a month, then with the number of hours, etc. There are no limitations on parameter values.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_oIR57OMOEeK4rchgp2zFsA"
+      name="date"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.date"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_oIR57eMOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Creates a date from the specified string. The format of the input string is a subset of formats given by ISO 86011. It is possible to specify date with the format <date>, or time with the format ‘T’<time>, or to combine dates with times with the format <date>’T’<time>.
+The following formats of dates are allowed: yyyy, yyyy-MM, yyyy-MM-dd, yyyy-DDD, yyyy-Www, and yyyy-Www-e; where yyyy stands for year (0000-9999), MM stands for month in year (01-12), dd stands for day in month (01-31), DDD stands for day in year (001-365), Www stands for week number prefixed by the letter ‘W’ (W01-W53), and e stands for day in week (1-7).
+The following formats of times are allowed: HH, HH:mm, and HH:mm:ss; where HH stands for hour in day (00-23), mm stands for minute in hour (00-59), and ss stands for second in minute (00-59). The following formats of time zones are allowed: <time>’Z’, <time>±HH, <time>±HH:mm, and <time>±HH:mm:ss; where ‘Z’ is used for UTC. Decimal fractions, separated either by comma or by dot, may also be added to hours, minutes or seconds.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the string parameter does not conform to the specified format.
+-"OutOfBoundsError" if the string parameter does not represent a correct date.]]></description>
+  </functions>
+  <functions
+      xmi:id="_oIR57uMOEeK4rchgp2zFsA"
+      name="date"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.date"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_oIR57-MOEeK4rchgp2zFsA"
+        name="string"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_oIR58OMOEeK4rchgp2zFsA"
+        name="pattern"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Creates a date from the specified string, which adheres to the format given by the pattern parameter. The pattern string uses the format defined in the java.text.SimpleDateFormat Java class.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"FormatError" if the pattern parameter does not conform to the specified format, or the string parameter does not conform to the pattern.
+-"OutOfBoundsError" if the string parameter does not represent a correct date.]]></description>
+  </functions>
+  <functions
+      xmi:id="_3Q1NYOMOEeK4rchgp2zFsA"
+      name="formatDate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.formatDate"
+      type="String">
+    <parameters
+        xmi:id="_3Q1NYeMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_3Q1NYuMOEeK4rchgp2zFsA"
+        name="pattern"
+        parameterType="String"
+        required="true">
+      <description></description>
+    </parameters>
+    <parameters
+        xmi:id="_3Q1NY-MOEeK4rchgp2zFsA"
+        name="timeZone"
+        parameterType="String"/>
+    <description><![CDATA[Returns a string created by formatting the date to the specified pattern. The formatted date can also be transformed to a time zone given by the timeZone parameter. The pattern and timeZone parameters use the syntax defined in the Joda class org.joda.time.format.DateTimeFormat3. The syntax is described in the date(string, pattern) function in more details.
+
+Throws:
+-“NullParameterError” if mandatory parameter are not specified.
+-“FormatError” if specified format or timeZone is incorrect.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA0OMOEeK4rchgp2zFsA"
+      name="getDayOfMonth"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getDayOfMonth"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA0eMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the day of the month of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA0uMOEeK4rchgp2zFsA"
+      name="getDayOfWeek"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getDayOfWeek"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA0-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the day of the week of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA1OMOEeK4rchgp2zFsA"
+      name="getDayOfYear"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getDayOfYear"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA1eMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the day of the year of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA1uMOEeK4rchgp2zFsA"
+      name="getHour"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getHour"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA1-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the hour of the day of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA2OMOEeK4rchgp2zFsA"
+      name="getMillis"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getMillis"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA2eMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the millisecond of the second of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA2uMOEeK4rchgp2zFsA"
+      name="getMinute"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getMinute"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA2-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the minute of the hour of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA3OMOEeK4rchgp2zFsA"
+      name="getMonth"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getMonth"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA3eMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the month of the year of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA3uMOEeK4rchgp2zFsA"
+      name="getSecond"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getSecond"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA3-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the second of a minute of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA4OMOEeK4rchgp2zFsA"
+      name="getWeek"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getWeek"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA4eMOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the week of the year of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_5tdA4uMOEeK4rchgp2zFsA"
+      name="getYear"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.getYear"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_5tdA4-MOEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the year of the specified date.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwEOMOEeK4rchgp2zFsA"
+      name="intervalInDays"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInDays"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwEeMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwEuMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of days between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwE-MOEeK4rchgp2zFsA"
+      name="intervalInHours"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInHours"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwFOMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwFeMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of hours between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwFuMOEeK4rchgp2zFsA"
+      name="intervalInMillis"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInMillis"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwF-MOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwGOMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of milliseconds between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwGeMOEeK4rchgp2zFsA"
+      name="intervalInMinutes"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInMinutes"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwGuMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwG-MOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of minutes between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwHOMOEeK4rchgp2zFsA"
+      name="intervalInMonths"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInMonths"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwHeMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwHuMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of months between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwH-MOEeK4rchgp2zFsA"
+      name="intervalInSeconds"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInSeconds"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwIOMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwIeMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of seconds between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwIuMOEeK4rchgp2zFsA"
+      name="intervalInWeeks"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInWeeks"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwI-MOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwJOMOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the number of weeks between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_-wNwJeMOEeK4rchgp2zFsA"
+      name="intervalInYears"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.intervalInYears"
+      type="Integer"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_-wNwJuMOEeK4rchgp2zFsA"
+        name="date1"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_-wNwJ-MOEeK4rchgp2zFsA"
+        name="date2"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns a number of years between two dates, date2 - date1. If date1 > date2, the resulting number is negative.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_CARyoOMPEeK4rchgp2zFsA"
+      name="setDate"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setDate"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CARyoeMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CARyouMPEeK4rchgp2zFsA"
+        name="year"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_CARyo-MPEeK4rchgp2zFsA"
+        name="month"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_CARypOMPEeK4rchgp2zFsA"
+        name="dayOfMonth"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the fields given by year, month, and dayOfMonth parameters updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if any of the parameters is out of range (month < 1 or month > 12 or dayOfMonth < 1 or dayOfMonth > number of days in the month and year).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CARypeMPEeK4rchgp2zFsA"
+      name="setDayOfMonth"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setDayOfMonth"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CARypuMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CARyp-MPEeK4rchgp2zFsA"
+        name="dayOfMonth"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the dayOfMonth field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified  dayOfMonth is out of range (dayOfMonth < 1 or dayOfMonth > number of days in the date's month and year).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CARyqOMPEeK4rchgp2zFsA"
+      name="setDayOfWeek"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setDayOfWeek"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CARyqeMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CARyquMPEeK4rchgp2zFsA"
+        name="dayOfWeek"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the dayOfWeek field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified dayOfWeek is out of range (dayOfWeek < 1 or dayOfWeek > 7).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CARyq-MPEeK4rchgp2zFsA"
+      name="setDayOfYear"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setDayOfYear"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CARyrOMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CARyreMPEeK4rchgp2zFsA"
+        name="dayOfYear"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the dayOfYear field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified dayOfYear is out of range (dayOfYear < 1 or dayOfYear > 365 or 366, depending on the year).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZsOMPEeK4rchgp2zFsA"
+      name="setHour"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setHour"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZseMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZsuMPEeK4rchgp2zFsA"
+        name="hour"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the hour (meaning an hour of a day) field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified hour is out of range (hour < 0 or hour > 23).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZs-MPEeK4rchgp2zFsA"
+      name="setMillis"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setMillis"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZtOMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZteMPEeK4rchgp2zFsA"
+        name="millis"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the date with the specified millis (meaning a millisecond of a second) field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified smillis is out of range (millis < 0 or millis > 999).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZtuMPEeK4rchgp2zFsA"
+      name="setMinute"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setMinute"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZt-MPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZuOMPEeK4rchgp2zFsA"
+        name="minute"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the date with the specified minute (meaning a minute of an hour) field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified minute is out of range (minute < 0 or minute > 59).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZueMPEeK4rchgp2zFsA"
+      name="setMonth"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setMonth"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZuuMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZu-MPEeK4rchgp2zFsA"
+        name="month"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the month field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified month is out of range (month < 1 or month > 12).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZvOMPEeK4rchgp2zFsA"
+      name="setSecond"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setSecond"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZveMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZvuMPEeK4rchgp2zFsA"
+        name="second"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the date with the specified second (meaning a second of a minute) field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified second is out of range (second < 0 or second > 59).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZv-MPEeK4rchgp2zFsA"
+      name="setTime"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setTime"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZwOMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZweMPEeK4rchgp2zFsA"
+        name="hour"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZwuMPEeK4rchgp2zFsA"
+        name="minute"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZw-MPEeK4rchgp2zFsA"
+        name="second"
+        parameterType="Integer"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZxOMPEeK4rchgp2zFsA"
+        name="millis"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the fields given by the hour (meaning an hour of a day), minute (meaning a minute of an hour), second (meaning a second of a minute), and millis (meaning a millisecond of a second) parameters updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if any of the parameters is out of range (hour < 0 or hour > 23 or minute < 0 or minute > 59 or second < 0 or second > 59 or millis < 0 or millis > 999).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZxeMPEeK4rchgp2zFsA"
+      name="setWeek"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setWeek"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZxuMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZx-MPEeK4rchgp2zFsA"
+        name="week"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the week (meaning a week of a year) field updated. 
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.
+-"OutOfBoundsError" if the specified week is out of range (week < 1 or week > 52).]]></description>
+  </functions>
+  <functions
+      xmi:id="_CASZyOMPEeK4rchgp2zFsA"
+      name="setYear"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.setYear"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_CASZyeMPEeK4rchgp2zFsA"
+        name="date"
+        parameterType="Date"
+        required="true"/>
+    <parameters
+        xmi:id="_CASZyuMPEeK4rchgp2zFsA"
+        name="year"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a copy of the specified date with the year field updated.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_FDqrIOMPEeK4rchgp2zFsA"
+      name="now"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.now"
+      type="Date"
+      typeParameterNames="">
+    <description>Returns the current date and time.</description>
+  </functions>
+  <functions
+      xmi:id="_GHuJIOMPEeK4rchgp2zFsA"
+      name="today"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.today"
+      type="Date"
+      typeParameterNames="">
+    <description>Returns the current date in the time zone of the LSPS Server, without specifying the time.</description>
+  </functions>
+  <functions
+      xmi:id="_mUJ0YuMPEeK4rchgp2zFsA"
+      name="millis"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mUJ0Y-MPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of milliseconds.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> 0,
+days -> 0,
+hours -> 0,
+minutes -> 0,
+seconds -> 0,
+millis -> number
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_28QPEOMPEeK4rchgp2zFsA"
+      name="seconds"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_28QPEeMPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of seconds.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> 0,
+days -> 0,
+hours -> 0,
+minutes -> 0,
+seconds -> number,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_mUJ0ZuMPEeK4rchgp2zFsA"
+      name="minutes"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mUJ0Z-MPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of minutes.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> 0,
+days -> 0,
+hours -> 0,
+minutes -> number,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_Vf50EOMPEeK4rchgp2zFsA"
+      name="hours"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_Vf50EeMPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of hours.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> 0,
+days -> 0,
+hours -> number,
+minutes -> 0,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_oIR58eMOEeK4rchgp2zFsA"
+      name="days"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_oIR58uMOEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of days.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> 0,
+days -> number,
+hours -> 0,
+minutes -> 0,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_28QPEuMPEeK4rchgp2zFsA"
+      name="weeks"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_28QPE-MPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of weeks.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> 0,
+weeks -> number,
+days -> 0,
+hours -> 0,
+minutes -> 0,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_mUJ0aOMPEeK4rchgp2zFsA"
+      name="months"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mUJ0aeMPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of months.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> 0,
+months -> number,
+weeks -> 0,
+days -> 0,
+hours -> 0,
+minutes -> 0,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_YQPNsOMPEeK4rchgp2zFsA"
+      name="years"
+      type="Duration"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_YQPNseMPEeK4rchgp2zFsA"
+        name="number"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Returns a duration with the specified number of years.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+    <expression><![CDATA[ifNotNull(number, "number",
+new Duration(
+years -> number,
+months -> 0,
+weeks -> 0,
+days -> 0,
+hours -> 0,
+minutes -> 0,
+seconds -> 0,
+millis -> 0
+))]]></expression>
+  </functions>
+  <functions
+      xmi:id="_mUJ0YOMPEeK4rchgp2zFsA"
+      name="max"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.max"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mUJ0YeMPEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the maximal date from a list of dates.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+  <functions
+      xmi:id="_mUJ0ZOMPEeK4rchgp2zFsA"
+      name="min"
+      variadic="true"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.DateFunctions.min"
+      type="Date"
+      typeParameterNames="">
+    <parameters
+        xmi:id="_mUJ0ZeMPEeK4rchgp2zFsA"
+        name="numbers"
+        parameterType="Date"
+        required="true"/>
+    <description><![CDATA[Returns the minimal date from a list of dates.
+
+Throws:
+-"NullParameterError" if mandatory parameters are not specified.]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

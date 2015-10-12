@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.func:ModuleFunctions
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.func="http:///com/whitestein/lsps/modeler/func.ecore"
+    xmi:id="_1Cy9oOMQEeK4rchgp2zFsA">
+  <functions
+      xmi:id="_59xp4OMQEeK4rchgp2zFsA"
+      name="debugLevel"
+      type="Integer"
+      deprecated="true">
+    <description><![CDATA[Returns an integer (100) representing the “Debug” log level.
+
+Deprecated. Replaced by constant debugLevel.]]></description>
+    <expression>100</expression>
+  </functions>
+  <functions
+      xmi:id="_59xp4eMQEeK4rchgp2zFsA"
+      name="debugLog"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.debugLog"
+      type="String">
+    <parameters
+        xmi:id="_59xp4uMQEeK4rchgp2zFsA"
+        name="message"
+        parameterType="{:String}"
+        required="true"/>
+    <description><![CDATA[Logs a message to the console at the debug logging level. If logging is not enabled for the debug level, the message closure is not even evaluated. The function returns a string that was logged, or null if the message was not logged.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_59xp4-MQEeK4rchgp2zFsA"
+      name="debugLog"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.debugLog"
+      type="String">
+    <parameters
+        xmi:id="_59xp5OMQEeK4rchgp2zFsA"
+        name="message"
+        parameterType="{:String}"
+        required="true"/>
+    <parameters
+        xmi:id="_59xp5eMQEeK4rchgp2zFsA"
+        name="level"
+        parameterType="Integer"
+        required="true"/>
+    <description><![CDATA[Logs a message to the console at the specified logging level. If logging is not enabled at the specified level, the message closure is not even evaluated. The function returns a string that was logged, or null if the message was not logged.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_59xp5uMQEeK4rchgp2zFsA"
+      name="errorLevel"
+      type="Integer"
+      deprecated="true">
+    <description><![CDATA[Returns an integer (400) representing the “Error” log level.
+
+Deprecated. Replaced by constant errorLevel.]]></description>
+    <expression>400</expression>
+  </functions>
+  <functions
+      xmi:id="_59xp5-MQEeK4rchgp2zFsA"
+      name="ifNotNull"
+      public="false"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ObjectFunctions.ifNotNull"
+      type="T"
+      typeParameterNames="T">
+    <parameters
+        xmi:id="_59xp6OMQEeK4rchgp2zFsA"
+        name="objToCheck"
+        parameterType="Object"/>
+    <parameters
+        xmi:id="_59xp6eMQEeK4rchgp2zFsA"
+        name="objToCheckName"
+        parameterType="String"/>
+    <parameters
+        xmi:id="_59yQ8OMQEeK4rchgp2zFsA"
+        name="object"
+        parameterType="T"/>
+    <description>Returns object if the objToCheck is not Null. Otherwise, the function throws a runtime exception in which the objToCheckName is used to identify the object.</description>
+  </functions>
+  <functions
+      xmi:id="_59yQ8eMQEeK4rchgp2zFsA"
+      name="infoLevel"
+      type="Integer"
+      deprecated="true">
+    <description><![CDATA[Returns an integer (200) representing the “Info” log level.
+
+Deprecated. Replaced by constant infoLevel.]]></description>
+    <expression>200</expression>
+  </functions>
+  <functions
+      xmi:id="_59yQ8uMQEeK4rchgp2zFsA"
+      name="log"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ActionFunctions.log"
+      type="Null">
+    <parameters
+        xmi:id="_59yQ8-MQEeK4rchgp2zFsA"
+        name="message"
+        parameterType="String"
+        required="true"/>
+    <parameters
+        xmi:id="_59yQ9OMQEeK4rchgp2zFsA"
+        name="level"
+        parameterType="Integer"/>
+    <description><![CDATA[Logs a specified message to the application log at the specified log level. Unspecified level value logs at the “Info” level (value 200). The function returns always null.
+
+Throws:
+-“NullParameterError” - Mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_59yQ9eMQEeK4rchgp2zFsA"
+      name="warningLevel"
+      type="Integer"
+      deprecated="true">
+    <description><![CDATA[Returns an integer (300) representing the “Warning” log level.
+
+Deprecated. Replaced by constant warningLevel.]]></description>
+    <expression>300</expression>
+  </functions>
+  <functions
+      xmi:id="_59yQ9uMQEeK4rchgp2zFsA"
+      name="getApplicationData"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.ApplicationDataFunctions.getApplicationData"
+      type="Object">
+    <parameters
+        xmi:id="_59yQ9-MQEeK4rchgp2zFsA"
+        name="key"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Returns an application data object with the specified key. At the moment, the “locale” string and the “user” Person are supported by the LSPS Process Application.
+
+Throws:
+-“NullParameterError” if mandatory parameter is null.]]></description>
+  </functions>
+  <functions
+      xmi:id="_103iIBYFEeOA99H8eif9wQ"
+      name="splitPathname"
+      implType="Java"
+      javaClassname="com.whitestein.lsps.stdlib.function.StringFunctions.splitPathname"
+      type="List&lt;String>">
+    <parameters
+        xmi:id="_40c4sBYFEeOA99H8eif9wQ"
+        name="name"
+        parameterType="String"
+        required="true"/>
+    <description><![CDATA[Splits a fully specified element name to names of it components which are separated by the namespace separator (::). For instance, splitPathname("module::'role 1'") results in ["module", "role 1"].
+
+Throws:
+-"NullParameterError" - Mandatory parameter is null.
+-"IncorrectPathname" - Syntax of the specified name is incorrect.
+]]></description>
+  </functions>
+</com.whitestein.lsps.modeler.func:ModuleFunctions>

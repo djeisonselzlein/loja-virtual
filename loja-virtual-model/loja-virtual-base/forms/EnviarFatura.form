@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_UXblAATNEeOYtrdguecaaw"
+    name="EnviarFatura"
+    newUI="true">
+  <parameters
+      xmi:id="_X4oa4ATNEeOYtrdguecaaw"
+      name="pedido"
+      parameterType="Pedido"/>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_UXblAQTNEeOYtrdguecaaw"
+      componentID="ROOT">
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+        xmi:id="_ahTGQATNEeOYtrdguecaaw">
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_bcbRwATNEeOYtrdguecaaw">
+        <expression>ClienteDetalhe(pedido.cliente)</expression>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdFileDownload"
+          xmi:id="_fh88sATNEeOYtrdguecaaw">
+        <text><![CDATA["Fatura (" + pedido.arquivoFatura.filename + ")"]]></text>
+        <content>pedido.arquivoFatura</content>
+      </components>
+      <components
+          xsi:type="com.whitestein.lsps.modeler.form:NfdReusable"
+          xmi:id="_ww24sATNEeOYtrdguecaaw">
+        <expression>PainelDeBotoes(false)</expression>
+      </components>
+    </child>
+  </formItem>
+</com.whitestein.lsps.modeler.form:FormDefinition>

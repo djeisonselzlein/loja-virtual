@@ -1,0 +1,6 @@
+@mixin theme-app-panel{
+	.ui-panel-toggle{
+		color: $v-font-color !important;
+		text-decoration: none;
+	}
+}

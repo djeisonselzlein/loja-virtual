@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.form:FormDefinition
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:com.whitestein.lsps.modeler.form="http:///com/whitestein/lsps/modeler/form.ecore"
+    xmi:id="_BfiYcANNEeOGxZgWE420cg"
+    name="SelecaoDeProdutos"
+    newUI="true">
+  <parameters
+      xmi:id="_KQcNYANNEeOGxZgWE420cg"
+      name="produtosSelecionados"
+      parameterType="Reference&lt;Set&lt;Produto>>">
+    <description></description>
+  </parameters>
+  <formItem
+      xsi:type="com.whitestein.lsps.modeler.form:NfdContainer"
+      xmi:id="_BfiYcQNNEeOGxZgWE420cg"
+      componentID="ROOT">
+    <listeners
+        xmi:id="_jAxWkAQVEeO4Z4YwFdbhJw"
+        name="VALIDATE"
+        listenerType="ACTION_LISTENER"
+        description="Validation listener">
+      <validators
+          xmi:id="_jAxWkQQVEeO4Z4YwFdbhJw"
+          placement="PRODUTOS">
+        <message><![CDATA[if *produtosSelecionados = null or isEmpty(*produtosSelecionados) then "Selecione pelo menos um produto." end]]></message>
+      </validators>
+    </listeners>
+    <child
+        xsi:type="com.whitestein.lsps.modeler.form:NfdPanel"
+        xmi:id="_Pmr5UANNEeOGxZgWE420cg">
+      <child
+          xsi:type="com.whitestein.lsps.modeler.form:NfdLayout"
+          xmi:id="_7R9yAAW0EeOuld4RHdGSLw">
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdConditional"
+            xmi:id="_7wVJAAW0EeOuld4RHdGSLw">
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdSelectList"
+              xmi:id="_7965EAW0EeOuld4RHdGSLw"
+              componentID="PRODUTOS">
+            <binding>produtosSelecionados</binding>
+            <helpText><![CDATA["* the item is currently not available"]]></helpText>
+            <required>true</required>
+            <label><![CDATA["Selecione produtos:"]]></label>
+            <options><![CDATA[collect(
+	produtos, 
+	{ produto -> new ui::Option(value -> produto, 
+		label -> produto.nome + " ( R$ " + produto.valorUnitario + ")" + (if produto.quantidade > 0 then "" else "*" end))})]]></options>
+          </child>
+          <visibleExpression>produtos != null</visibleExpression>
+          <show></show>
+        </components>
+        <components
+            xsi:type="com.whitestein.lsps.modeler.form:NfdConditional"
+            xmi:id="_9khqgAW0EeOuld4RHdGSLw">
+          <child
+              xsi:type="com.whitestein.lsps.modeler.form:NfdOutputText"
+              xmi:id="_HgfkYAW1EeOuld4RHdGSLw">
+            <content><![CDATA["Não existem produtos cadastrados."]]></content>
+          </child>
+          <visibleExpression>produtos = null</visibleExpression>
+          <show></show>
+        </components>
+      </child>
+      <title><![CDATA["Adicione Produtos ao Pedido"]]></title>
+    </child>
+  </formItem>
+  <variables
+      xmi:id="_JRKtQAW0EeOuld4RHdGSLw"
+      name="produtos"
+      variableType="List&lt;Produto>">
+    <description></description>
+    <initialValueExpression>findAll(Produto)</initialValueExpression>
+  </variables>
+  <description>Read/write form for catalog selection with validation exposed.</description>
+</com.whitestein.lsps.modeler.form:FormDefinition>

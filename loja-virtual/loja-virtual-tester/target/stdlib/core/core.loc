@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.whitestein.lsps.modeler.loc:LocBundle
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:com.whitestein.lsps.modeler.loc="http:///com/whitestein/lsps/modeler/loc.ecore"
+    xmi:id="_MkrUQJ31EeOKl4k-ciz1Ig"
+    defaultLanguage="EN">
+  <identifiers
+      xmi:id="_NWvqYJ31EeOKl4k-ciz1Ig"
+      name="AssertFalseError">
+    <translations
+        xmi:id="_PHZIoJ31EeOKl4k-ciz1Ig"
+        language="EN"
+        text="The value must be &quot;false&quot;"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_zvZYwJ4gEeO1E8pDVBzXrQ"
+      name="EmailErrorMsg">
+    <translations
+        xmi:id="_0w1noJ4gEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Not a valid email address"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_3TM64J4ZEeO1E8pDVBzXrQ"
+      name="EmptyErrorMsg">
+    <translations
+        xmi:id="_3wf64J4ZEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be an empty string"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_84nrQJ4ZEeO1E8pDVBzXrQ"
+      name="MinErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_-PxrcJ4ZEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be at least %1"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_MbrJcJ4aEeO1E8pDVBzXrQ"
+      name="SizeErrorMsg"
+      parametersCount="2">
+    <translations
+        xmi:id="_O90WEJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be in range %1..%2"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_Tex_0J4aEeO1E8pDVBzXrQ"
+      name="MinLengthErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_UAN48J4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be at least %1 characters long"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_WY8D0J4aEeO1E8pDVBzXrQ"
+      name="MaxLengthErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_W4r64J4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be at most %1 characters long"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_bH2qAJ4aEeO1E8pDVBzXrQ"
+      name="IsNumberErrorMsg">
+    <translations
+        xmi:id="_boWvAJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be a number"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_eRetYJ4aEeO1E8pDVBzXrQ"
+      name="PatternErrorMsg">
+    <translations
+        xmi:id="_enJbYJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must match given pattern"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_jiNnMJ4aEeO1E8pDVBzXrQ"
+      name="PastErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_j7XuEJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be before %1"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_qhY_0J4aEeO1E8pDVBzXrQ"
+      name="FutureErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_q4qQUJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be after %1"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_ts55kJ4aEeO1E8pDVBzXrQ"
+      name="CardinalityMinErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_v0AI8J4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must contain at least %1 items"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_4FqdIJ4aEeO1E8pDVBzXrQ"
+      name="CardinalityRangeErrorMsg"
+      parametersCount="2">
+    <translations
+        xmi:id="_4ecJgJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must contain %1..%2 items"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_yv9jwJ4aEeO1E8pDVBzXrQ"
+      name="CardinalityMaxErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_0Ti2YJ4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must contain at most %1 items"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_EgxvcJ4aEeO1E8pDVBzXrQ"
+      name="MaxErrorMsg"
+      parametersCount="1">
+    <translations
+        xmi:id="_G16a0J4aEeO1E8pDVBzXrQ"
+        language="EN"
+        text="Must be at most %1"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_mqlGIJ31EeOKl4k-ciz1Ig"
+      name="NotNullError">
+    <translations
+        xmi:id="_nT3TsJ31EeOKl4k-ciz1Ig"
+        language="EN"
+        text="The value must not be null"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_pbKXYJ31EeOKl4k-ciz1Ig"
+      name="NullError">
+    <translations
+        xmi:id="_qUwR0J31EeOKl4k-ciz1Ig"
+        language="EN"
+        text="The value must be null"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_ifHyUJ31EeOKl4k-ciz1Ig"
+      name="AssertTrueError">
+    <translations
+        xmi:id="_i4LykJ31EeOKl4k-ciz1Ig"
+        language="EN"
+        text="The value must be &quot;true&quot;"/>
+  </identifiers>
+  <identifiers
+      xmi:id="_tECikJ31EeOKl4k-ciz1Ig"
+      name="NotEmptyErrorMsg">
+    <translations
+        xmi:id="_tjamMJ31EeOKl4k-ciz1Ig"
+        language="EN"
+        text="The string must not be empty"/>
+  </identifiers>
+</com.whitestein.lsps.modeler.loc:LocBundle>
