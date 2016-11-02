@@ -1,3 +1,3 @@
 # Loja Virtual
 
-Demo application developed as part of final paper required for degree collation at UTFPR as a Analyst and Developer of Systems.
+Demo application developed as part of my final paper required for degree collation at UTFPR (Federal Technologycal University of Paraná) as Analyst and Developer of Systems.
